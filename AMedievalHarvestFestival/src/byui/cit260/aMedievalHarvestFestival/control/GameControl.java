@@ -51,7 +51,7 @@ public class GameControl {
     }
    
     
-    private static void createInventoryList() {
+    public static void createInventoryList() {
         InventoryItem[] inventory = new InventoryItem[Constants.NUMBER_OF_INVENTORY_ITEMS];
         
         InventoryItem clueItem1 = new ClueItem();
@@ -484,8 +484,23 @@ public class GameControl {
         
     }
     
-    public static void sortInventory(InventoryItem[] inventory) {
+    public static void sortActors(Actors actors[]) {
         
+        int i, j;
+        String temp;
+        
+        for (i = 0; i < actors.length - 1; i++)
+        {
+            for (j = i + 1; j < actors.length; j++)
+            {
+                //if (actors[i].compareToIgnoreCase(actors[j]) > 0)
+                {
+                    //temp = actors[i];
+                    actors[i] = actors[j];
+                    //actors[j] = temp;
+                }
+            }
+        }
     }
     
 }
