@@ -10,6 +10,7 @@ import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.control.MapControl;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
+import byui.cit260.aMedievalHarvestFestival.model.Map;
 import java.util.Scanner;
 
 /**
@@ -128,7 +129,33 @@ public class GameMenuView {
         
         return 0;
     }
+    /*
+    public void displayMap() {
+        //get map
+        Location[] location = GameControl.getMap();
+        //display every location in the map
+        for (int row = 0; row < locations.length; row++) {
+            for (int i = 0; i < 101; i++)
+                System.out.println("-");
+            for (int column = 0; i < locations[row].length; column++) {
+                System.out.println("|");
+                Location location = locations[i];
+                if (location.isVisited()) {
+                    Scene = location.getScene();
+                    System.out.println(scene.getMapSymbol());
+                }
+                else {
+                    System.out.println(" ??? ");
+                }
+            }
+        System.out.println("|");
+            
+        }
+            
+    }
     
-    
+    for (int i = 0; i < 101; i++)
+        System.out.println("-");
+    */
 }
 
