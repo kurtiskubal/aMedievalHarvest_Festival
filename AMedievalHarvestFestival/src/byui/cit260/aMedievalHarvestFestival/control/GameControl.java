@@ -487,18 +487,18 @@ public class GameControl {
     public static void sortActors(Actors actors[]) {
         
         int i, j;
-        String temp;
+        Actors temp;
         
         for (i = 0; i < actors.length - 1; i++)
         {
             for (j = i + 1; j < actors.length; j++)
             {
-                //if (actors[i].compareToIgnoreCase(actors[j]) > 0)
+                if (actors[i].getName().compareToIgnoreCase(actors[j].getName()) > 0)
                 {
-                    //temp = actors[i];
+                    temp = actors[i];
                     actors[i] = actors[j];
-                    //actors[j] = temp;
-                }
+                    actors[j] = temp;
+                } 
             }
         }
     }
