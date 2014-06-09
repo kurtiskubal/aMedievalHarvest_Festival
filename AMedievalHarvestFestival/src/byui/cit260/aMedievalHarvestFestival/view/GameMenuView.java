@@ -6,7 +6,9 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
+import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.control.MapControl;
+import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
 import java.util.Scanner;
 
@@ -109,6 +111,24 @@ public class GameMenuView {
         // Print out the description of the current location
         //System.out.println(currentLocation.toString());
     }
+    
+    private int viewInventory() {
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        
+        System.out.println("\nList of Inventory Items");
+        System.out.println("Description" + "\t" + 
+                           "Quanity" + "\t" + 
+                           "Type");
+        
+        for (InventoryItem inventoryItem : inventory) {
+            System.out.println(inventoryItem.getDescription() + "\t" +
+                               inventoryItem.getItemQuanity() + "\t" +
+                               inventoryItem.getInventoryType());
+        }
+        
+        return 0;
+    }
+    
     
 }
 

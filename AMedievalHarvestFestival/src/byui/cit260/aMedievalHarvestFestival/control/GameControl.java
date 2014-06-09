@@ -43,7 +43,7 @@ public class GameControl {
         GameControl.createActorsList();
         GameControl.game.setMap(GameControl.createMap());
         
-        MapControl.moveActorsToLocation(0,3);
+        //MapControl.moveActorsToLocation(map, actors, 0, 3);
     }
     
     public static void startSavedGame(){
@@ -502,6 +502,35 @@ public class GameControl {
             }
         }
     }
+    
+    public static void sortInventory(InventoryItem inventoryList[]) {
+        int i, j;
+        InventoryItem temp;
+        
+        for (i = 0; i < inventoryList.length - 1; i++)
+        {
+            for (j = i + 1; j < inventoryList.length; j++)
+            {
+                if (inventoryList[i].getDescription().compareToIgnoreCase(inventoryList[j].getDescription()) > 0)
+                {
+                    temp = inventoryList[i];
+                    inventoryList[i] = inventoryList[j];
+                    inventoryList[j] = temp;
+                }
+            }
+        }
+    }
+    
+    public static InventoryItem[] getSortedInventoryList() {
+        
+        InventoryItem[] inventoryList = AMedievalHarvestFestival.getCurrentGame().getInventory();
+        
+        GameControl.sortInventory(inventoryList);
+        
+        return inventoryList;
+    }
+
+    
     
 }
 
