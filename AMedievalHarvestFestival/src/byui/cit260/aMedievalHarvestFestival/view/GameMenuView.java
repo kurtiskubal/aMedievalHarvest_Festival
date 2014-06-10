@@ -129,20 +129,22 @@ public class GameMenuView {
         
         return 0;
     }
-    /*
-    public void displayMap() {
+    
+    //public static InventoryItem[] getSortedInventoryList
+    
+    /*public void displayMap() {
         //get map
-        Location[] location = GameControl.getMap();
+        Map location = GameControl.getMap();
         //display every location in the map
-        for (int row = 0; row < locations.length; row++) {
+        for (int row = 0; row < location.length; row++) {
             for (int i = 0; i < 101; i++)
                 System.out.println("-");
-            for (int column = 0; i < locations[row].length; column++) {
+            for (int column = 0; i < location[row].length; column++) {
                 System.out.println("|");
-                Location location = locations[i];
+                Location location = location[i];
                 if (location.isVisited()) {
-                    Scene = location.getScene();
-                    System.out.println(scene.getMapSymbol());
+                    instance = location.getInstance();
+                    System.out.println(instance.getMapSymbol());
                 }
                 else {
                     System.out.println(" ??? ");

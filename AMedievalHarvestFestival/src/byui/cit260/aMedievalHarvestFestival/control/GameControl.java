@@ -19,6 +19,7 @@ import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
 import byui.cit260.aMedievalHarvestFestival.model.Map;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
+import byui.cit260.aMedievalHarvestFestival.model.PuzzleLocation;
 import byui.cit260.aMedievalHarvestFestival.model.RoomInstance;
 import byui.cit260.aMedievalHarvestFestival.model.WeaponItem;
 
@@ -51,7 +52,7 @@ public class GameControl {
     }
    
     
-    public static void createInventoryList() {
+    public static InventoryItem[] createInventoryList() {
         InventoryItem[] inventory = new InventoryItem[Constants.NUMBER_OF_INVENTORY_ITEMS];
         
         InventoryItem clueItem1 = new ClueItem();
@@ -173,6 +174,8 @@ public class GameControl {
         awesomeGift.setDescription("An awesome gift.");
         awesomeGift.setItemQuanity(0);
         inventory[Constants.AWESOME_GIFT] = awesomeGift;
+        
+        return inventory;
     }
 
     private static void createActorsList() {
@@ -530,11 +533,13 @@ public class GameControl {
         return inventoryList;
     }
 
-    public static Map getMap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates 
+    /*public static Map getMap() {
+        
+        
+        return map;
+        
     }
-
-    
+    */
     
 }
 

@@ -17,8 +17,28 @@ public class Location implements Serializable {
     private double row;
     private double column;
     private boolean visited;
+    private InstanceLocation instance;
+    private Actors[] actors;
+
+    public Actors[] getActors() {
+        return actors;
+    }
+
+    public void setActors(Actors[] actors) {
+        this.actors = actors;
+    }
     
     public Location() {
+    }
+    
+    
+
+    public InstanceLocation getInstance() {
+        return instance;
+    }
+
+    public void setInstance(InstanceLocation instance) {
+        this.instance = instance;
     }
 
     public double getRow() {
@@ -84,9 +104,7 @@ public class Location implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setInstance(InstanceLocation stableInstance) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     
     
