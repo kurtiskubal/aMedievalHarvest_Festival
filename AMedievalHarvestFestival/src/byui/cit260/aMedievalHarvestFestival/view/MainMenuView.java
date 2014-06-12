@@ -7,6 +7,8 @@
 package byui.cit260.aMedievalHarvestFestival.view;
 
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
 import java.util.Scanner;
 
@@ -64,11 +66,18 @@ public class MainMenuView {
         return mainInput.toUpperCase();
     }
 
+    private void startNewGame() {
+        GameControl.createNewGame(AMedievalHarvestFestival.getPlayer());
+    
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+    }
+    
+    
     public void doAction(char selection) {
         switch (selection) {
             case 'G':
-                GameMenuView gameMenu = new GameMenuView();
-                gameMenu.displayMenu();
+                startNewGame();
                 break;
             case 'H':
                 HelpMenuView helpMenu = new HelpMenuView();

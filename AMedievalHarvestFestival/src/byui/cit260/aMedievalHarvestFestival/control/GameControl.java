@@ -35,16 +35,23 @@ public class GameControl {
         return game;
     }
     
-    public static void startNewGame(Player player) {
+    public static void createNewGame(Player player) {
         GameControl.game = new Game();
         
         AMedievalHarvestFestival.setCurrentGame(game);
         
-        GameControl.createInventoryList();
-        GameControl.createActorsList();
-        GameControl.game.setMap(GameControl.createMap());
+        GameControl.game.setPlayer(AMedievalHarvestFestival.getPlayer());
         
-        //MapControl.moveActorsToLocation(map, actors, 0, 3);
+        InventoryItem[] inventory = GameControl.createInventoryList();
+        GameControl.game.setInventory(inventory);
+        
+        Actors[] actors = GameControl.createActorsList();
+        GameControl.game.setActors(actors);
+        
+        Map map = GameControl.createMap();
+        GameControl.game.setMap(map);
+        
+        MapControl.moveActorsToLocation(map, actors, 0, 3);
     }
     
     public static void startSavedGame(){
@@ -178,94 +185,93 @@ public class GameControl {
         return inventory;
     }
 
-    private static void createActorsList() {
+    private static Actors[] createActorsList() {
         
         Actors[] actors = new Actors[Constants.NUMBER_OF_ACTORS];
         
-        Actors ladyViolet = new Actors();
+        Actors ladyViolet = new Actors("Lady Violet");
         ladyViolet.setName("Lady Violet");
         ladyViolet.setDialogue("dialogue");
         ladyViolet.setHappiness(0);
         ladyViolet.setHealth(100);
         actors[Constants.VIOLET] = ladyViolet;
         
-        Actors dFred = new Actors();
+        Actors dFred = new Actors("Duke Frederick");
         dFred.setName("Duke Frederick");
         dFred.setDialogue("dialogue");
         dFred.setHappiness(0);
         dFred.setHealth(100);
         actors[Constants.FREDERICK] = dFred;
         
-        Actors dHarold = new Actors();
+        Actors dHarold = new Actors("Duke Harold");
         dHarold.setName("Duke Harold");
         dHarold.setDialogue("dialogue");
         dHarold.setHappiness(0);
         dHarold.setHealth(100);
         actors[Constants.HAROLD] = dHarold;
         
-        Actors dLuis = new Actors();
+        Actors dLuis = new Actors("Duke Luis");
         dLuis.setName("Duke Luis");
         dLuis.setDialogue("dialogue");
         dLuis.setHappiness(0);
         dLuis.setHealth(100);
         actors[Constants.LUIS] = dLuis;
         
-        Actors lCanaway = new Actors();
+        Actors lCanaway = new Actors("Lord Canaway");
         lCanaway.setName("Lord Canaway");
         lCanaway.setDialogue("dialogue");
         lCanaway.setHappiness(0);
         lCanaway.setHealth(100);
         actors[Constants.CANAWAY] = lCanaway;
         
-        Actors pWilliam = new Actors();
+        Actors pWilliam = new Actors("Princess Williams");
         pWilliam.setName("Princess William");
         pWilliam.setDialogue("dialogue");
         pWilliam.setHappiness(0);
         pWilliam.setHealth(100);
         actors[Constants.PRINCESS_WILLIAM] = pWilliam;
         
-        Actors qWilliam = new Actors();
-        qWilliam.setName("Queen William");
+        Actors qWilliam = new Actors("Queen Williams");
+        qWilliam.setName("Queen Williams");
         qWilliam.setDialogue("dialogue");
         qWilliam.setHappiness(0);
         qWilliam.setHealth(100);
         actors[Constants.QUEEN_WILLIAM] = qWilliam;
         
-        Actors kWilliam = new Actors();
-        kWilliam.setName("King William");
+        Actors kWilliam = new Actors("King Williams");
+        kWilliam.setName("King Williams");
         kWilliam.setDialogue("dialogue");
         kWilliam.setHappiness(0);
         kWilliam.setHealth(100);
         actors[Constants.KING_WILLIAM] = kWilliam;
         
-        Actors servantC = new Actors();
+        Actors servantC = new Actors("Servant Charles");
         servantC.setName("Servant Charles");
         servantC.setDialogue("dialogue");
         servantC.setHappiness(0);
         servantC.setHealth(100);
         actors[Constants.SERVANT_CHARLES] = servantC;
         
-        Actors servantD = new Actors();
+        Actors servantD = new Actors("Servant David");
         servantD.setName("Servant David");
         servantD.setDialogue("dialogue");
         servantD.setHappiness(0);
         servantD.setHealth(100);
         actors[Constants.SERVANT_DAVID] = servantD;
         
-        Actors servantL = new Actors();
+        Actors servantL = new Actors("Servant Larry");
         servantL.setName("Servant Larry");
         servantL.setDialogue("dialogue");
         servantL.setHappiness(0);
         servantL.setHealth(100);
         actors[Constants.SERVANT_LARRY] = servantL;
         
+        return actors;
     }
 
-    private static Map createMap() {
-       
-        Map map = new Map(7,3);
+    private static InstanceLocation[] createInstances() {
         
-        Location[][] locations = map.getLocations();
+        InstanceLocation[] instances = new InstanceLocation[Constants.NUMBER_OF_INSTANCES];
         
         InstanceLocation stableInstance = new InstanceLocation();
         stableInstance.setDescription("\nThe stables are large with a single row of four stalls. Three of these stalls are small and designed to "
@@ -280,7 +286,8 @@ public class GameControl {
         stableInstance.setVisited(false);
         stableInstance.setRow(0);
         stableInstance.setColumn(0);
-        locations[0][0].setInstance(stableInstance);
+        stableInstance.setMapSymbol(" STB ");
+        instances[Constants.STABLE_INSTANCE] = stableInstance;
         
         InstanceLocation roomInstance = new InstanceLocation();
         roomInstance.setDescription("");
@@ -291,7 +298,8 @@ public class GameControl {
         roomInstance.setVisited(false);
         roomInstance.setRow(0);
         roomInstance.setColumn(1);
-        locations[0][1].setInstance(roomInstance);
+        roomInstance.setMapSymbol(" LPR ");
+        instances[Constants.MY_ROOM_INSTANCE] = roomInstance;
         
         InstanceLocation ladyVInstance = new InstanceLocation();
         ladyVInstance.setDescription("");
@@ -302,7 +310,8 @@ public class GameControl {
         ladyVInstance.setVisited(false);
         ladyVInstance.setRow(0);
         ladyVInstance.setColumn(2);
-        locations[0][2].setInstance(ladyVInstance);
+        ladyVInstance.setMapSymbol(" LVR ");
+        instances[Constants.LADY_VIOLET_INSTANCE] = ladyVInstance;
         
         InstanceLocation dukeFInstance = new InstanceLocation();
         dukeFInstance.setDescription("");
@@ -311,9 +320,10 @@ public class GameControl {
         dukeFInstance.setFluidsUsed(5);
         dukeFInstance.setType(0);
         dukeFInstance.setVisited(false);
-        dukeFInstance.setRow(1);
-        dukeFInstance.setColumn(0);
-        locations[1][0].setInstance(dukeFInstance);
+        dukeFInstance.setRow(0);
+        dukeFInstance.setColumn(3);
+        dukeFInstance.setMapSymbol(" DFR ");
+        instances[Constants.DUKE_FREDERICK_INSTANCE] = dukeFInstance;
         
         InstanceLocation dukeHInstance = new InstanceLocation();
         dukeHInstance.setDescription("");
@@ -322,9 +332,10 @@ public class GameControl {
         dukeHInstance.setFluidsUsed(5);
         dukeHInstance.setType(0);
         dukeHInstance.setVisited(false);
-        dukeHInstance.setRow(1);
-        dukeHInstance.setColumn(1);
-        locations[1][1].setInstance(dukeHInstance);
+        dukeHInstance.setRow(0);
+        dukeHInstance.setColumn(4);
+        dukeHInstance.setMapSymbol(" DHR ");
+        instances[Constants.DUKE_HAROLD_INSTANCE] = dukeHInstance;
         
         InstanceLocation dukeLInstance = new InstanceLocation();
         dukeLInstance.setDescription("");
@@ -334,8 +345,9 @@ public class GameControl {
         dukeLInstance.setType(0);
         dukeLInstance.setVisited(false);
         dukeLInstance.setRow(1);
-        dukeLInstance.setColumn(2);
-        locations[1][2].setInstance(dukeLInstance);
+        dukeLInstance.setColumn(0);
+        dukeLInstance.setMapSymbol(" DLR ");
+        instances[Constants.DUKE_LUIS_INSTANCE] = dukeLInstance;
         
         InstanceLocation lordCInstance = new InstanceLocation();
         lordCInstance.setDescription("");
@@ -344,9 +356,10 @@ public class GameControl {
         lordCInstance.setFluidsUsed(5);
         lordCInstance.setType(0);
         lordCInstance.setVisited(false);
-        lordCInstance.setRow(2);
-        lordCInstance.setColumn(0);
-        locations[2][0].setInstance(lordCInstance);
+        lordCInstance.setRow(1);
+        lordCInstance.setColumn(1);
+        lordCInstance.setMapSymbol(" LCR ");
+        instances[Constants.LORD_CANAWAY_INSTANCE] = lordCInstance;
         
         InstanceLocation emptyRoomInstance = new InstanceLocation();
         emptyRoomInstance.setDescription("");
@@ -355,9 +368,10 @@ public class GameControl {
         emptyRoomInstance.setFluidsUsed(5);
         emptyRoomInstance.setType(0);
         emptyRoomInstance.setVisited(false);
-        emptyRoomInstance.setRow(2);
-        emptyRoomInstance.setColumn(1);
-        locations[2][1].setInstance(emptyRoomInstance);
+        emptyRoomInstance.setRow(1);
+        emptyRoomInstance.setColumn(2);
+        emptyRoomInstance.setMapSymbol(" ETR ");
+        instances[Constants.EMPTY_ROOM_INSTANCE] = emptyRoomInstance;
         
         InstanceLocation servantsInstance = new InstanceLocation();
         servantsInstance.setDescription("\nThe Servant's quarters are large enough to accommodate half the staff along with their own beds, wardrobes,"
@@ -369,9 +383,10 @@ public class GameControl {
         servantsInstance.setFluidsUsed(5);
         servantsInstance.setType(0);
         servantsInstance.setVisited(false);
-        servantsInstance.setRow(2);
-        servantsInstance.setColumn(2);
-        locations[2][2].setInstance(servantsInstance);
+        servantsInstance.setRow(1);
+        servantsInstance.setColumn(3);
+        servantsInstance.setMapSymbol(" SQU ");
+        instances[Constants.SERVANTS_QUARTERS_INSTANCE] = servantsInstance;
         
         InstanceLocation princessInstance = new InstanceLocation();
         princessInstance.setDescription("");
@@ -380,9 +395,10 @@ public class GameControl {
         princessInstance.setFluidsUsed(5);
         princessInstance.setType(0);
         princessInstance.setVisited(false);
-        princessInstance.setRow(3);
-        princessInstance.setColumn(0);
-        locations[3][0].setInstance(princessInstance);
+        princessInstance.setRow(1);
+        princessInstance.setColumn(4);
+        princessInstance.setMapSymbol(" PWR ");
+        instances[Constants.PRINCESS_INSTANCE] = princessInstance;
         
         InstanceLocation kingsInstance = new InstanceLocation();
         kingsInstance.setDescription("");
@@ -391,9 +407,10 @@ public class GameControl {
         kingsInstance.setFluidsUsed(5);
         kingsInstance.setType(0);
         kingsInstance.setVisited(false);
-        kingsInstance.setRow(3);
-        kingsInstance.setColumn(1);
-        locations[3][1].setInstance(kingsInstance);
+        kingsInstance.setRow(2);
+        kingsInstance.setColumn(0);
+        kingsInstance.setMapSymbol(" KWR ");
+        instances[Constants.KING_INSTANCE] = kingsInstance;
         
         InstanceLocation kingsRRInstance = new InstanceLocation();
         kingsRRInstance.setDescription("");
@@ -402,9 +419,10 @@ public class GameControl {
         kingsRRInstance.setFluidsUsed(5);
         kingsRRInstance.setType(0);
         kingsRRInstance.setVisited(false);
-        kingsRRInstance.setRow(3);
-        kingsRRInstance.setColumn(2);
-        locations[3][2].setInstance(kingsRRInstance);
+        kingsRRInstance.setRow(2);
+        kingsRRInstance.setColumn(1);
+        kingsRRInstance.setMapSymbol(" KRR ");
+        instances[Constants.KING_RESTROOM_INSTANCE] = kingsRRInstance;
 
         InstanceLocation gardenInstance = new InstanceLocation();
         gardenInstance.setDescription("");
@@ -413,9 +431,10 @@ public class GameControl {
         gardenInstance.setFluidsUsed(5);
         gardenInstance.setType(0);
         gardenInstance.setVisited(false);
-        gardenInstance.setRow(4);
-        gardenInstance.setColumn(0);
-        locations[4][0].setInstance(gardenInstance);
+        gardenInstance.setRow(2);
+        gardenInstance.setColumn(2);
+        gardenInstance.setMapSymbol(" GAR ");
+        instances[Constants.GARDEN_INSTANCE] = gardenInstance;
         
         InstanceLocation courtyardInstance = new InstanceLocation();
         courtyardInstance.setDescription("");
@@ -424,9 +443,10 @@ public class GameControl {
         courtyardInstance.setFluidsUsed(5);
         courtyardInstance.setType(0);
         courtyardInstance.setVisited(false);
-        courtyardInstance.setRow(4);
-        courtyardInstance.setColumn(1);
-        locations[4][1].setInstance(courtyardInstance);
+        courtyardInstance.setRow(2);
+        courtyardInstance.setColumn(3);
+        courtyardInstance.setMapSymbol(" COU ");
+        instances[Constants.COURTYARD_INSTANCE] = courtyardInstance;
         
         InstanceLocation restroomInstance = new InstanceLocation();
         restroomInstance.setDescription("");
@@ -435,9 +455,10 @@ public class GameControl {
         restroomInstance.setFluidsUsed(5);
         restroomInstance.setType(0);
         restroomInstance.setVisited(false);
-        restroomInstance.setRow(4);
-        restroomInstance.setColumn(2);
-        locations[4][2].setInstance(restroomInstance);
+        restroomInstance.setRow(2);
+        restroomInstance.setColumn(4);
+        restroomInstance.setMapSymbol(" R-R ");
+        instances[Constants.RESTROOM_INSTANCE] = restroomInstance;
         
         InstanceLocation kitchenInstance = new InstanceLocation();
         kitchenInstance.setDescription("");
@@ -446,9 +467,10 @@ public class GameControl {
         kitchenInstance.setFluidsUsed(5);
         kitchenInstance.setType(0);
         kitchenInstance.setVisited(false);
-        kitchenInstance.setRow(5);
+        kitchenInstance.setRow(3);
         kitchenInstance.setColumn(0);
-        locations[5][0].setInstance(kitchenInstance);
+        kitchenInstance.setMapSymbol(" KIT ");
+        instances[Constants.KITCHEN_INSTANCE] = kitchenInstance;
         
         InstanceLocation chamberInstance = new InstanceLocation();
         chamberInstance.setDescription("");
@@ -457,9 +479,10 @@ public class GameControl {
         chamberInstance.setFluidsUsed(5);
         chamberInstance.setType(0);
         chamberInstance.setVisited(false);
-        chamberInstance.setRow(5);
+        chamberInstance.setRow(3);
         chamberInstance.setColumn(1);
-        locations[5][1].setInstance(chamberInstance);
+        chamberInstance.setMapSymbol(" CCC ");
+        instances[Constants.CHAMBER_INSTANCE] = chamberInstance;
         
         InstanceLocation hallInstance = new InstanceLocation();
         hallInstance.setDescription("");
@@ -468,9 +491,10 @@ public class GameControl {
         hallInstance.setFluidsUsed(5);
         hallInstance.setType(0);
         hallInstance.setVisited(false);
-        hallInstance.setRow(5);
+        hallInstance.setRow(3);
         hallInstance.setColumn(2);
-        locations[5][2].setInstance(hallInstance);
+        hallInstance.setMapSymbol(" DDD ");
+        instances[Constants.HALL_INSTANCE] = hallInstance;
         
         InstanceLocation libraryInstance = new InstanceLocation();
         libraryInstance.setDescription("");
@@ -479,12 +503,62 @@ public class GameControl {
         libraryInstance.setFluidsUsed(5);
         libraryInstance.setType(0);
         libraryInstance.setVisited(false);
-        libraryInstance.setRow(6);
-        libraryInstance.setColumn(0);
-        locations[6][0].setInstance(libraryInstance);
+        libraryInstance.setRow(3);
+        libraryInstance.setColumn(3);
+        libraryInstance.setMapSymbol(" LLL ");
+        instances[Constants.LIBRARY_INSTANCE] = libraryInstance;
+    
+        InstanceLocation poolInstance = new InstanceLocation();
+        poolInstance.setDescription("");
+        poolInstance.setItemsStored(null);
+        poolInstance.setEnergyUsed(10);
+        poolInstance.setFluidsUsed(3);
+        poolInstance.setType(4);
+        poolInstance.setVisited(false);
+        poolInstance.setRow(3);
+        poolInstance.setColumn(4);
+        poolInstance.setMapSymbol(" ~~~ ");
+        instances[Constants.POOL_INSTANCE] = poolInstance;
+        
+        return instances;
+    }
+    
+    public static void assignScenesToLocations(Map map, InstanceLocation[] instances) {
+        
+        Location[][] locations = map.getLocations();
+        
+        locations[0][0].setInstance(instances[Constants.STABLE_INSTANCE]);
+        locations[0][1].setInstance(instances[Constants.MY_ROOM_INSTANCE]);
+        locations[0][2].setInstance(instances[Constants.LADY_VIOLET_INSTANCE]);
+        locations[0][3].setInstance(instances[Constants.DUKE_FREDERICK_INSTANCE]);
+        locations[0][4].setInstance(instances[Constants.DUKE_HAROLD_INSTANCE]);
+        locations[1][0].setInstance(instances[Constants.DUKE_LUIS_INSTANCE]);
+        locations[1][1].setInstance(instances[Constants.LORD_CANAWAY_INSTANCE]);
+        locations[1][2].setInstance(instances[Constants.EMPTY_ROOM_INSTANCE]);
+        locations[1][3].setInstance(instances[Constants.SERVANTS_QUARTERS_INSTANCE]);
+        locations[1][4].setInstance(instances[Constants.PRINCESS_INSTANCE]);
+        locations[2][0].setInstance(instances[Constants.KING_INSTANCE]);
+        locations[2][1].setInstance(instances[Constants.KING_RESTROOM_INSTANCE]);
+        locations[2][2].setInstance(instances[Constants.GARDEN_INSTANCE]);
+        locations[2][3].setInstance(instances[Constants.COURTYARD_INSTANCE]);
+        locations[2][4].setInstance(instances[Constants.RESTROOM_INSTANCE]);
+        locations[3][0].setInstance(instances[Constants.KITCHEN_INSTANCE]);
+        locations[3][1].setInstance(instances[Constants.CHAMBER_INSTANCE]);
+        locations[3][2].setInstance(instances[Constants.HALL_INSTANCE]);
+        locations[3][3].setInstance(instances[Constants.LIBRARY_INSTANCE]);
+        locations[3][4].setInstance(instances[Constants.POOL_INSTANCE]);
+    
+    }
+    
+    private static Map createMap() {
+       
+        Map map = new Map(4,5);
+        
+        InstanceLocation[] instances = createInstances();
+        
+        GameControl.assignScenesToLocations(map, instances);
         
         return map;
-        
     }
     
     public static void sortActors(Actors actors[]) {
@@ -533,13 +607,13 @@ public class GameControl {
         return inventoryList;
     }
 
-    /*public static Map getMap() {
+    public static Location[][] getMapLocations() {
         
-        
-        return map;
+        return AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();
         
     }
-    */
+    
+    
     
 }
 

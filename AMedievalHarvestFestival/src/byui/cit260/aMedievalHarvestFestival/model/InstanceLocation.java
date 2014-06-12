@@ -20,10 +20,19 @@ public class InstanceLocation implements Serializable {
     private String itemsStored;
     private int type;
     private String description;
+
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
+    public void setMapSymbol(String mapSymbol) {
+        this.mapSymbol = mapSymbol;
+    }
     private double energyUsed;
     private double fluidsUsed;
     private double row;
     private double column;
+    private String mapSymbol;
 
     public double getRow() {
         return row;

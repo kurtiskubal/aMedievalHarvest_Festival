@@ -23,6 +23,10 @@ public class Actors implements Serializable {
 
     public Actors() {
     }
+    
+    public Actors(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;

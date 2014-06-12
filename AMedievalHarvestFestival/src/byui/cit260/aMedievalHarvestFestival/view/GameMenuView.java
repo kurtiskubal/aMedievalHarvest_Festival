@@ -7,10 +7,11 @@
 package byui.cit260.aMedievalHarvestFestival.view;
 
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
+import static byui.cit260.aMedievalHarvestFestival.control.GameControl.getSortedInventoryList;
 import byui.cit260.aMedievalHarvestFestival.control.MapControl;
+import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
-import byui.cit260.aMedievalHarvestFestival.model.Map;
 import java.util.Scanner;
 
 /**
@@ -23,6 +24,7 @@ public class GameMenuView {
             + "\n| Game Menu |"
             + "\nM - Move to a new location"
             + "\nL - Examine location"
+            + "\nA - Look at Map"
             + "\nV - View Items in inventory"
             + "\nH - Estimate Hunger"
             + "\nT - Estimate Thirst"
@@ -70,6 +72,16 @@ public class GameMenuView {
         return helpInput.toUpperCase();
     }
     
+    private void displayInventoryList() {
+        InventoryItem[] inventoryList = getSortedInventoryList();
+        System.out.println("List of Items in Inventory\n");
+        for (int i = 0; i < inventoryList.length - 1; i++)
+        {
+            System.out.println(inventoryList[i]);
+        }
+        
+    }
+    
     public void doAction(char selection) {
         switch (selection) {
             case 'M':
@@ -81,9 +93,14 @@ public class GameMenuView {
                 this.displayCurrLocation();
                  
                 break;
+                
+                case 'A':
+                this.displayMap();
+                
+                break;
+                
             case 'V':
-                InventoryView callInventoryView = new InventoryView();
-                callInventoryView.displayInventoryMenu();
+                this.viewInventory();
                 
                 break;
             case 'H':
@@ -117,12 +134,12 @@ public class GameMenuView {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
         System.out.println("\nList of Inventory Items");
-        System.out.println("Description" + "\t" + 
+        System.out.println("\tDescription" + "\t\t\t\t\t\t\t\t" + 
                            "Quanity" + "\t" + 
                            "Type");
         
         for (InventoryItem inventoryItem : inventory) {
-            System.out.println(inventoryItem.getDescription() + "\t" +
+            System.out.println(inventoryItem.getDescription() + "\t\t\t\t\t\t\t\t\t\t" +
                                inventoryItem.getItemQuanity() + "\t" +
                                inventoryItem.getInventoryType());
         }
@@ -130,34 +147,33 @@ public class GameMenuView {
         return 0;
     }
     
-    //public static InventoryItem[] getSortedInventoryList
-    
-    /*public void displayMap() {
+    public void displayMap() {
         //get map
-        Map location = GameControl.getMap();
-        //display every location in the map
-        for (int row = 0; row < location.length; row++) {
-            for (int i = 0; i < 101; i++)
-                System.out.println("-");
-            for (int column = 0; i < location[row].length; column++) {
+        int lineLength = 0;
+        
+        Location[][] locations = GameControl.getMapLocations();
+        int noColumns = locations[0].length;
+        
+        for (Location[] row : locations) {
+            
+            System.out.println("-----------------------------");
+            
+            for (int column = 0; column < noColumns; column++) {
                 System.out.println("|");
-                Location location = location[i];
+                Location location = row[column];
                 if (location.isVisited()) {
-                    instance = location.getInstance();
+                    InstanceLocation instance = location.getInstance();
                     System.out.println(instance.getMapSymbol());
                 }
                 else {
                     System.out.println(" ??? ");
                 }
             }
-        System.out.println("|");
             
+        
+        System.out.println("-----------------------------");
+        
         }
-            
     }
-    
-    for (int i = 0; i < 101; i++)
-        System.out.println("-");
-    */
 }
-
+    

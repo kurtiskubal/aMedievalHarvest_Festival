@@ -15,9 +15,10 @@ import java.io.Serializable;
 public class Map implements Serializable {
     
 //class instance variables
-    private int rowCount;
-    private int columnCount;
+    private int noOfRows;
+    private int noOfColumns;
     private Location[][] locations;
+    
     
     public Map() {
     }
@@ -29,13 +30,14 @@ public class Map implements Serializable {
         return;
         }
         
-        this.rowCount = noOfRows;
-        this.columnCount = noOfColumns;
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
         
         this.locations = new Location[noOfRows][noOfColumns];
-        
-        for (int row = 0; row < noOfColumns; row++){
+                                     //4
+        for (int row = 0; row < noOfRows; row++){
             for (int column = 0; column < noOfColumns; column++) {
+                                                //5
                 Location location = new Location();
                 location.setColumn(column);
                 location.setRow(row);
@@ -45,32 +47,40 @@ public class Map implements Serializable {
             }
         }
     }
-    public double getRowCount() {
-        return rowCount;
+
+    public Location[][] getLocations() {
+        return locations;
     }
 
-    public void setRowCount(int rowCount) {
-        this.rowCount = rowCount;
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+    public double getRowCount() {
+        return noOfRows;
+    }
+
+    public void setRowCount(int noOfRows) {
+        this.noOfRows = noOfRows;
     }
 
     public double getColumnCount() {
-        return columnCount;
+        return noOfColumns;
     }
 
-    public void setColumnCount(int columnCount) {
-        this.columnCount = columnCount;
+    public void setColumnCount(int noOfColumns) {
+        this.noOfColumns = noOfColumns;
     }
 
     @Override
     public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+        return "Map{" + "noOfRows=" + noOfRows + ", noOfColumns=" + noOfColumns + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.rowCount) ^ (Double.doubleToLongBits(this.rowCount) >>> 32));
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.columnCount) ^ (Double.doubleToLongBits(this.columnCount) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.noOfRows) ^ (Double.doubleToLongBits(this.noOfRows) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.noOfColumns) ^ (Double.doubleToLongBits(this.noOfColumns) >>> 32));
         return hash;
     }
 
@@ -83,18 +93,17 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (Double.doubleToLongBits(this.rowCount) != Double.doubleToLongBits(other.rowCount)) {
+        if (Double.doubleToLongBits(this.noOfRows) != Double.doubleToLongBits(other.noOfRows)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.columnCount) != Double.doubleToLongBits(other.columnCount)) {
+        if (Double.doubleToLongBits(this.noOfColumns) != Double.doubleToLongBits(other.noOfColumns)) {
             return false;
+        } else {
         }
         return true;
     }
 
-    public Location[][] getLocations() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     
     
