@@ -148,32 +148,58 @@ public class GameMenuView {
     }
     
     public void displayMap() {
-        //get map
         int lineLength = 0;
         
         Location[][] locations = GameControl.getMapLocations();
         int noColumns = locations[0].length;
         
+        
         for (Location[] row : locations) {
+           int count = 0;
             
-            System.out.println("-----------------------------");
+           System.out.println("-----------------------------");
             
             for (int column = 0; column < noColumns; column++) {
-                System.out.println("|");
+                
+                System.out.print("|");
                 Location location = row[column];
+                count = count + 1;
                 if (location.isVisited()) {
                     InstanceLocation instance = location.getInstance();
-                    System.out.println(instance.getMapSymbol());
+                    if (count == 5) {
+                        System.out.println(instance.getMapSymbol() + "|");
+                        count = 0;
+                    }
+                    else {
+                      System.out.print(instance.getMapSymbol());
+                      
+                    }
                 }
                 else {
-                    System.out.println(" ??? ");
+                    if (count == 5) {
+                      System.out.println(" ??? " + "|"); 
+                      count = 0;
+                    }
+                    else {
+                        System.out.print(" ??? ");
+                       
+                    }
                 }
+            
             }
             
+        }
         
         System.out.println("-----------------------------");
-        
+    }
+    private void printRowDivider(int noColumns) {
+        for (int i = 0; i < noColumns; i++) {
+        System.out.println("-");
         }
     }
+
 }
+
+
+
     
