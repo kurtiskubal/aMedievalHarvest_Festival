@@ -6,6 +6,8 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
+import byui.cit260.aMedievalHarvestFestival.control.GameControl;
+import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import java.util.Scanner;
 
 /**
@@ -19,6 +21,7 @@ public class InventoryView {
             + "\n| Item Menu |"
             + "\nU - Use item"
             + "\nE - Examine Item"
+            + "\nD - Determine item of the greatest quanity"
             + "\nQ - Exit to Game Menu"
             + "\n----------------------------------------------";
     
@@ -72,6 +75,15 @@ public class InventoryView {
                 break;
             case 'E':
                 this.displayItemDescription();
+                 
+                break;
+            case 'D':
+                InventoryItem max = new InventoryItem();
+                max = GameControl.greatestAmount();
+                System.out.println(max.getDescription());
+                max.setDescription(" ");
+                max.setInventoryType(null);
+                max.setItemQuanity(null);
                  
                 break;
             case 'Q':

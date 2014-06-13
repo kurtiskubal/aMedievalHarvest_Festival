@@ -580,7 +580,7 @@ public class GameControl {
         }
     }
     
-    public static void sortInventory(InventoryItem inventoryList[]) {
+    public static void sortInventory(InventoryItem[] inventoryList) {
         int i, j;
         InventoryItem temp;
         
@@ -611,6 +611,23 @@ public class GameControl {
         
         return AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();
         
+    }
+    //for (InventoryItem inventoryItem : inventory) {
+      //      System.out.println(inventoryItem.getDescription() + "\t\t\t\t\t\t\t\t\t\t" +
+        //                       inventoryItem.getItemQuanity()
+    public static InventoryItem greatestAmount() {
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        InventoryItem max = inventory[0];
+        
+        for (InventoryItem inventoryItem : inventory) {
+            if (inventoryItem.getItemQuanity() > max.getItemQuanity()) {
+                inventoryItem = max;
+             }
+        }
+        if (max.getItemQuanity() == 0) 
+            max.setDescription("\n\nThere are no items.");
+            
+        return max;
     }
     
     
