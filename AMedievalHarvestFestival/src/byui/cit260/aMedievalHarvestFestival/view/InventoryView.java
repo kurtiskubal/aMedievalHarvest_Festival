@@ -29,6 +29,9 @@ public class InventoryView {
             
             System.out.println(MENU);
             
+            GameMenuView gameMenuViewInv = new GameMenuView();
+            gameMenuViewInv.viewInventory();
+            
             String input = this.getInput();
             selection = input.charAt(0);
             

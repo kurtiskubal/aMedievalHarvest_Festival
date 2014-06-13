@@ -100,8 +100,8 @@ public class GameMenuView {
                 break;
                 
             case 'V':
-                this.viewInventory();
-                
+                InventoryView inventoryView = new InventoryView();
+                inventoryView.displayInventoryMenu();
                 break;
             case 'H':
                 System.out.println("\n**** Estimate Hunger needs to be learned ****");
@@ -130,7 +130,7 @@ public class GameMenuView {
         //System.out.println(currentLocation.toString());
     }
     
-    private int viewInventory() {
+    public int viewInventory() {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
         System.out.println("\nList of Inventory Items");
