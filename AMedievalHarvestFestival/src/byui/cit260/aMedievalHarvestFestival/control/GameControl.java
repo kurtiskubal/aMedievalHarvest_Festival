@@ -63,125 +63,155 @@ public class GameControl {
         InventoryItem[] inventory = new InventoryItem[Constants.NUMBER_OF_INVENTORY_ITEMS];
         
         InventoryItem clueItem1 = new ClueItem();
+        clueItem1.setName("Lock of Hair");
         clueItem1.setInventoryType(1);
-        clueItem1.setDescription("Lock of Hair");
+        clueItem1.setDescription("A lock of hair, looks suspiciously like the Princess's.");
         clueItem1.setItemQuanity(0);
         inventory[Constants.EVIDENCE_ONE_ITEM] = clueItem1;
         
         InventoryItem clueItem2 = new ClueItem();
+        clueItem2.setName("Suspicious Note");
         clueItem2.setInventoryType(1);
-        clueItem2.setDescription("Secretive Note");
+        clueItem2.setDescription("A ransom note sent to the King, signed by 'The Real Slim Shady', whoever"
+                               +"\n that is.");
         clueItem2.setItemQuanity(0);
         inventory[Constants.EVIDENCE_TWO_ITEM] = clueItem2;
         
         InventoryItem clueItem3 = new ClueItem();
+        clueItem3.setName("Notes From Queen");
         clueItem3.setInventoryType(1);
-        clueItem3.setDescription("Note From Conversation With Queen");
+        clueItem3.setDescription("A note from the conversation with Queen, detailing how there are a couple of "
+                              +"\nmen in the valley with debts.");
         clueItem3.setItemQuanity(0);
         inventory[Constants.EVIDENCE_THREE_ITEM] = clueItem3;
         
         InventoryItem clueItem4 = new ClueItem();
+        clueItem4.setName("Notes from Princess");
         clueItem4.setInventoryType(1);
-        clueItem4.setDescription("Note from Conversation with Princess");
+        clueItem4.setDescription("A note from the conversation with the Princess that details, that she only"
+                              +"\n saw that her kidnapper had a shoe with the sole marked 'SS'.");
         clueItem4.setItemQuanity(0);
         inventory[Constants.EVIDENCE_FOUR_ITEM] = clueItem4;
         
         InventoryItem clueItem5 = new ClueItem();
+        clueItem5.setName("Ransom Note");
         clueItem5.setInventoryType(1);
-        clueItem5.setDescription("Found Ransom Note");
+        clueItem5.setDescription("Found ransom note sent to the Queen.");
         clueItem5.setItemQuanity(0);
         inventory[Constants.EVIDENCE_FIVE_ITEM] = clueItem5;
         
         InventoryItem apple = new FoodItem();
+        apple.setName("Apple");
         apple.setInventoryType(2);
         apple.setDescription("A delicious hand-picked apple.");
         apple.setItemQuanity(0);
         inventory[Constants.APPLE] = apple;
         
         InventoryItem bread = new FoodItem();
+        bread.setName("Bread");
         bread.setInventoryType(2);
         bread.setDescription("Fresh, delicious, homemade bread.");
         bread.setItemQuanity(0);
         inventory[Constants.BREAD] = bread;
         
         InventoryItem corn = new FoodItem();
+        corn.setName("Corn");
         corn.setInventoryType(2);
         corn.setDescription("Freshly husked corn from the William's fields.");
         corn.setItemQuanity(0);
         inventory[Constants.CORN] = corn;
         
         InventoryItem beans = new FoodItem();
+        beans.setName("Beans");
         beans.setInventoryType(2);
         beans.setDescription("Delicious black beans.");
         beans.setItemQuanity(0);
         inventory[Constants.BEANS] = beans;
         
         InventoryItem peas = new FoodItem();
+        peas.setName("Peas");
         peas.setInventoryType(2);
         peas.setDescription("Freshly harvested peas with churned butter.");
         peas.setItemQuanity(0);
         inventory[Constants.PEAS] = peas;
         
         InventoryItem ale = new BeverageItem();
+        ale.setName("Ale");
         ale.setInventoryType(3);
         ale.setDescription("A dark-colored alcoholic liquid, smells funny.");
         ale.setItemQuanity(0);
         inventory[Constants.ALE] = ale;
         
         InventoryItem mead = new BeverageItem();
+        mead.setName("Mead");
         mead.setInventoryType(3);
         mead.setDescription("An alcoholic liquid with the taste of honey and water.");
         mead.setItemQuanity(0);
         inventory[Constants.MEAD] = mead;
         
         InventoryItem water = new BeverageItem();
+        water.setName("Water");
         water.setInventoryType(3);
         water.setDescription("H20, or as it is now called, clear beer.");
         water.setItemQuanity(0);
         inventory[Constants.WATER] = water;
         
         InventoryItem cider = new BeverageItem();
+        cider.setName("Cider");
         cider.setInventoryType(3);
         cider.setDescription("Old apple juice.");
         cider.setItemQuanity(0);
         inventory[Constants.CIDER] = cider;
         
         InventoryItem wine = new BeverageItem();
+        wine.setName("Wine");
         wine.setInventoryType(3);
         wine.setDescription("Old grape juice.");
         wine.setItemQuanity(0);
         inventory[Constants.WINE] = wine;
         
         InventoryItem dagger = new WeaponItem();
+        dagger.setName("Dagger");
         dagger.setInventoryType(4);
         dagger.setDescription("A deadly, sharp, short blade. Looks like it can be hidden easily");
         dagger.setItemQuanity(0);
         inventory[Constants.DAGGER] = dagger;
         
         InventoryItem sword = new WeaponItem();
+        sword.setName("Sword");
         sword.setInventoryType(3);
         sword.setDescription("A long, edged weapon.");
         sword.setItemQuanity(0);
         inventory[Constants.SWORD] = sword;
     
         InventoryItem genericGift = new GiftItem();
+        genericGift.setName("Gift");
         genericGift.setInventoryType(4);
         genericGift.setDescription("A plain, old gift.");
         genericGift.setItemQuanity(0);
         inventory[Constants.GENERIC_GIFT] = genericGift;
         
         InventoryItem gift = new GiftItem();
+        gift.setName("Nice Gift");
         gift.setInventoryType(4);
         gift.setDescription("A pretty nice gift.");
         gift.setItemQuanity(0);
         inventory[Constants.GIFT] = gift;
         
         InventoryItem awesomeGift = new GiftItem();
+        awesomeGift.setName("Great Gift");
         awesomeGift.setInventoryType(4);
         awesomeGift.setDescription("An awesome gift.");
         awesomeGift.setItemQuanity(0);
         inventory[Constants.AWESOME_GIFT] = awesomeGift;
-        
+       
+        InventoryItem maxDetails = new InventoryItem();
+        maxDetails.setName(" ");
+        maxDetails.setInventoryType(0);
+        maxDetails.setItemQuanity(0);
+        maxDetails.setDescription(" ");
+        inventory[Constants.INFO_MAX] = maxDetails;
+       
         return inventory;
     }
 
@@ -588,7 +618,7 @@ public class GameControl {
         {
             for (j = i + 1; j < inventoryList.length; j++)
             {
-                if (inventoryList[i].getDescription().compareToIgnoreCase(inventoryList[j].getDescription()) > 0)
+                if (inventoryList[i].getName().compareToIgnoreCase(inventoryList[j].getName()) > 0)
                 {
                     temp = inventoryList[i];
                     inventoryList[i] = inventoryList[j];
@@ -612,9 +642,7 @@ public class GameControl {
         return AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();
         
     }
-    //for (InventoryItem inventoryItem : inventory) {
-      //      System.out.println(inventoryItem.getDescription() + "\t\t\t\t\t\t\t\t\t\t" +
-        //                       inventoryItem.getItemQuanity()
+
     public static InventoryItem greatestAmount() {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         InventoryItem max = inventory[0];
@@ -625,7 +653,7 @@ public class GameControl {
              }
         }
         if (max.getItemQuanity() == 0) 
-            max.setDescription("\n\nThere are no items.");
+            max.setName("\n\nThere are no items.");
             
         return max;
     }

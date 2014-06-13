@@ -134,14 +134,19 @@ public class GameMenuView {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
         System.out.println("\nList of Inventory Items");
-        System.out.println("\tDescription" + "\t\t\t\t\t\t\t\t" + 
+        System.out.println("\tName" + "\t\t\t\t\t\t\t\t" + 
                            "Quanity" + "\t" + 
                            "Type");
         
         for (InventoryItem inventoryItem : inventory) {
-            System.out.println(inventoryItem.getDescription() + "\t\t\t\t\t\t\t\t\t\t" +
-                               inventoryItem.getItemQuanity() + "\t" +
-                               inventoryItem.getInventoryType());
+            
+            
+            if (inventoryItem.getInventoryType() != null && inventoryItem.getItemQuanity() != null) {
+                System.out.println(inventoryItem.getName() + "\t\t\t\t\t\t\t\t\t\t" +
+                                 inventoryItem.getItemQuanity() + "\t" +
+                                 inventoryItem.getInventoryType());
+            }
+                               
         }
         
         return 0;
@@ -157,7 +162,7 @@ public class GameMenuView {
         for (Location[] row : locations) {
            int count = 0;
             
-           System.out.println("-----------------------------");
+           System.out.println("-------------------------------");
             
             for (int column = 0; column < noColumns; column++) {
                 
@@ -190,14 +195,10 @@ public class GameMenuView {
             
         }
         
-        System.out.println("-----------------------------");
+        System.out.println("-------------------------------");
     }
-    private void printRowDivider(int noColumns) {
-        for (int i = 0; i < noColumns; i++) {
-        System.out.println("-");
-        }
-    }
-
+   
+    
 }
 
 

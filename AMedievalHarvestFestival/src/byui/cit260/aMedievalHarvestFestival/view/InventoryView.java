@@ -35,6 +35,8 @@ public class InventoryView {
             GameMenuView gameMenuViewInv = new GameMenuView();
             gameMenuViewInv.viewInventory();
             
+            System.out.println(" ");
+            
             String input = this.getInput();
             selection = input.charAt(0);
             
@@ -80,8 +82,8 @@ public class InventoryView {
             case 'D':
                 InventoryItem max = new InventoryItem();
                 max = GameControl.greatestAmount();
-                System.out.println(max.getDescription());
-                max.setDescription(" ");
+                System.out.println(max.getName());
+                max.setName(" ");
                 max.setInventoryType(null);
                 max.setItemQuanity(null);
                  

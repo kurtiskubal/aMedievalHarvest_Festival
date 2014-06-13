@@ -18,11 +18,22 @@ public class InventoryItem implements Serializable {
 
 
     //class instance variables
+    private String name;
     private Integer inventoryType;
     private Integer itemQuanity;
     private String description;
 
     public InventoryItem() {
+    }
+    
+    
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
     
     public Integer getInventoryType() {

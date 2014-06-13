@@ -12,7 +12,7 @@ package byui.cit260.aMedievalHarvestFestival.model;
  */
 public class Constants {
     
-    public final static int NUMBER_OF_INVENTORY_ITEMS = 20;
+    public final static int NUMBER_OF_INVENTORY_ITEMS = 21;
     public final static int EVIDENCE_ONE_ITEM = 0;
     public final static int EVIDENCE_TWO_ITEM = 1;
     public final static int EVIDENCE_THREE_ITEM = 2;
@@ -33,6 +33,7 @@ public class Constants {
     public final static int GENERIC_GIFT = 17;
     public final static int GIFT = 18;
     public final static int AWESOME_GIFT = 19;
+    public final static int INFO_MAX = 20;
     
     public final static int NUMBER_OF_ACTORS = 11;
     public final static int VIOLET = 0;
