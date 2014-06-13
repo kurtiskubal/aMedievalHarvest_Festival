@@ -134,7 +134,7 @@ public class GameMenuView {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
         System.out.println("\nList of Inventory Items");
-        System.out.println("\tName" + "\t\t\t\t\t\t\t\t" + 
+        System.out.println("\tName" + "\t\t\t\t\t\t" + 
                            "Quanity" + "\t" + 
                            "Type");
         
@@ -142,7 +142,7 @@ public class GameMenuView {
             
             
             if (inventoryItem.getInventoryType() != null && inventoryItem.getItemQuanity() != null) {
-                System.out.println(inventoryItem.getName() + "\t\t\t\t\t\t\t\t\t\t" +
+                System.out.println(inventoryItem.getName() + "\t\t\t\t\t" +
                                  inventoryItem.getItemQuanity() + "\t" +
                                  inventoryItem.getInventoryType());
             }
