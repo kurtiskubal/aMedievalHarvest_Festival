@@ -141,11 +141,11 @@ public class GameMenuView {
         for (InventoryItem inventoryItem : inventory) {
             
             
-            if (inventoryItem.getInventoryType() != null && inventoryItem.getItemQuanity() != null) {
+            
                 System.out.println(inventoryItem.getName() + "\t\t\t\t\t" +
                                  inventoryItem.getItemQuanity() + "\t" +
                                  inventoryItem.getInventoryType());
-            }
+            
                                
         }
         

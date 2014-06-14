@@ -83,9 +83,7 @@ public class InventoryView {
                 InventoryItem max = new InventoryItem();
                 max = GameControl.greatestAmount();
                 System.out.println(max.getName());
-                max.setName(" ");
-                max.setInventoryType(null);
-                max.setItemQuanity(null);
+                max.setName("                                                                                                                                                                           ");
                  
                 break;
             case 'Q':

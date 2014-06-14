@@ -207,7 +207,7 @@ public class GameControl {
         inventory[Constants.AWESOME_GIFT] = awesomeGift;
        
         InventoryItem maxDetails = new InventoryItem();
-        maxDetails.setName("                                                                                      ");
+        maxDetails.setName("                                                                                                                                  ");
         maxDetails.setInventoryType(0);
         maxDetails.setItemQuanity(0);
         maxDetails.setDescription(" ");
