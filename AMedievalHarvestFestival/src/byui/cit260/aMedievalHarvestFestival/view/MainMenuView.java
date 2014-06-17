@@ -16,7 +16,7 @@ import java.util.Scanner;
  *
  * @author Kurt
  */
-public class MainMenuView {
+public class MainMenuView extends MenuView {
     
     private static final String MENU = "\n"
             + "\n----------------------------------------------"
@@ -27,44 +27,6 @@ public class MainMenuView {
             + "\nE - Exit the Game"
             + "\n----------------------------------------------";
 
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-            
-            System.out.println(MENU);
-            
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doAction(selection);
-        } while (selection != 'E');
-        
-        
-    }
-
-    public String getInput() {
-        boolean valid = false;
-        String mainInput = null;
-        Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid) {
-            
-            mainInput = keyboard.nextLine();
-            mainInput = mainInput.trim();
-            
-            if (mainInput.length() != 1) {
-                System.out.println("Invalid selection - the selection must be non blank" +
-                                   " and only one character in length.");
-            }
-            
-            else {
-                valid = true;
-            }
-        }
-        
-        return mainInput.toUpperCase();
-    }
 
     private void startNewGame() {
         GameControl.createNewGame(AMedievalHarvestFestival.getPlayer());
@@ -74,8 +36,8 @@ public class MainMenuView {
     }
     
     
-    public void doAction(char selection) {
-        switch (selection) {
+    public void doAction(char value) {
+        switch (value) {
             case 'G':
                 startNewGame();
                 break;
