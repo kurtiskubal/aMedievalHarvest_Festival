@@ -10,7 +10,6 @@ package byui.cit260.aMedievalHarvestFestival.view;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
-import java.util.Scanner;
 
 /**
  *
@@ -18,24 +17,26 @@ import java.util.Scanner;
  */
 public class MainMenuView extends MenuView {
     
-    private static final String MENU = "\n"
+    public MainMenuView() {
+        super("\n"
             + "\n----------------------------------------------"
             + "\n| Main Menu                                  |"
             + "\nG - Start the Game"
             + "\nH - How to Play"
             + "\nS - Save your Game"
-            + "\nE - Exit the Game"
-            + "\n----------------------------------------------";
-
+            + "\nQ - Exit the Game"
+            + "\n----------------------------------------------");
+    }
 
     private void startNewGame() {
         GameControl.createNewGame(AMedievalHarvestFestival.getPlayer());
     
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }
     
     
+    @Override
     public void doAction(char value) {
         switch (value) {
             case 'G':
@@ -43,13 +44,13 @@ public class MainMenuView extends MenuView {
                 break;
             case 'H':
                 HelpMenuView helpMenu = new HelpMenuView();
-                helpMenu.displayMenu();
+                helpMenu.display();
                 break;
             case 'S':
                 ProgramControl saveGame = new ProgramControl();
                 saveGame.saveGame();
                 break;
-            case 'E':
+            case 'Q':
                 return;
             case 'P' :
                 PuzzleView puzzleTrial = new PuzzleView();
@@ -57,7 +58,7 @@ public class MainMenuView extends MenuView {
                 break;
             case 'D' :
                 LocationView locationTrial = new LocationView();
-                locationTrial.displayLocationMenu();
+                locationTrial.display();
                 break;
             default:
                 System.out.print("\n*** Invalid selction *** Try Again");

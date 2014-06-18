@@ -6,16 +6,14 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
-
-import java.util.Scanner;
-
 /**
  *
  * @author Kurt
  */
-public class HelpMenuView {
+public class HelpMenuView extends MenuView{
 
-    private static final String MENU = "\n"
+    public HelpMenuView() {
+        super("\n"
             + "\n----------------------------------------------"
             + "\n| How to Play                                |"
             + "\nG - How do I beat the game?"
@@ -28,47 +26,11 @@ public class HelpMenuView {
             + "\nL - How do I determine my location in the game?"
             + "\nS - How do I save my progress?"
             + "\nQ - Leave the How to Play menu"
-            + "\n----------------------------------------------";
-
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-            
-            System.out.println(MENU);
-            
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doAction(selection);
-        } while (selection != 'Q');
-        
-        
+            + "\n----------------------------------------------");
     }
 
-    public String getInput() {
-        boolean valid = false;
-        String helpInput = null;
-        Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid) {
-            
-            helpInput = keyboard.nextLine();
-            helpInput = helpInput.trim();
-            
-            if (helpInput.length() != 1) {
-                System.out.println("Invalid selection - the selection must be non blank" +
-                                   " and only one character in length.");
-            }
-            
-            else {
-                valid = true;
-            }
-        }
-        
-        return helpInput.toUpperCase();
-    }
-
+   
+    @Override
     public void doAction(char selection) {
         switch (selection) {
             case 'G':

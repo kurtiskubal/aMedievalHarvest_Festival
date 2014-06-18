@@ -7,14 +7,15 @@
 package byui.cit260.aMedievalHarvestFestival.view;
 
 import byui.cit260.aMedievalHarvestFestival.control.LocationControl;
-import java.util.Scanner;
 
 /**
  *
  * @author Kurt
  */
-public class LocationView {
-     private static final String MENU = "\n"
+public class LocationView extends MenuView{
+         
+     public LocationView(){
+         super("\n"
             + "\n----------------------------------------------"
             + "\n| Move to a new Location                     |"
             + "\nR - My room"
@@ -38,49 +39,11 @@ public class LocationView {
             + "\nL - Library"
             + "\nM - Look at map"
             + "\nQ - Quit the Move to a New Location menu"
-            + "\n----------------------------------------------";
-
-    public void displayLocationMenu() {
-        
-        char selection = ' ';
-        do {
-            
-            System.out.println(MENU);
-            
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doLocationAction(selection);
-        } while (selection != 'Q');
-        
-        
-    }
-
-    public String getInput() {
-        boolean valid = false;
-        String helpInput = null;
-        Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid) {
-            
-            helpInput = keyboard.nextLine();
-            helpInput = helpInput.trim();
-            
-            if (helpInput.length() != 1) {
-                System.out.println("Invalid selection - the selection must be non blank" +
-                                   " and only one character in length.");
-            }
-            
-            else {
-                valid = true;
-            }
-        }
-        
-        return helpInput.toUpperCase();
-    }
-
-    public void doLocationAction(char selection) {
-        switch (selection) {
+            + "\n----------------------------------------------");
+     }
+    @Override
+    public void doAction(char value) {
+        switch (value) {
             case 'R':
                 LocationControl playerMoveMyRoom = new LocationControl();
                 playerMoveMyRoom.movePlayerToLocation();

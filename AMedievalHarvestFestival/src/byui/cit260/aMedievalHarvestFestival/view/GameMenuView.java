@@ -12,14 +12,15 @@ import byui.cit260.aMedievalHarvestFestival.control.MapControl;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
-import java.util.Scanner;
 
 /**
 *
 * @author Adam Decker
 */
-public class GameMenuView {
-    private static final String MENU = "\n"
+public class GameMenuView extends MenuView{
+    
+    public GameMenuView(){
+        super("\n"
             + "\n----------------------------------------------"
             + "\n| Game Menu |"
             + "\nM - Move to a new location"
@@ -31,46 +32,9 @@ public class GameMenuView {
             + "\nC - Start a conversation"
             + "\nS - Save Game"
             + "\nQ - Exit to Main Menu"
-            + "\n----------------------------------------------";
-    
-    public void displayMenu() {
-        
-        char selection = ' ';
-        do {
-            
-            System.out.println(MENU);
-            
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doAction(selection);
-        } while (selection != 'Q');
-        
-        
+            + "\n----------------------------------------------");
     }
     
-    public String getInput() {
-        boolean valid = false;
-        String helpInput = null;
-        Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid) {
-            
-            helpInput = keyboard.nextLine();
-            helpInput = helpInput.trim();
-            
-            if (helpInput.length() != 1) {
-                System.out.println("Invalid selection - the selection must be non blank" +
-                                   " and only one character in length.");
-            }
-            
-            else {
-                valid = true;
-            }
-        }
-        
-        return helpInput.toUpperCase();
-    }
     
     private void displayInventoryList() {
         InventoryItem[] inventoryList = getSortedInventoryList();
@@ -82,11 +46,12 @@ public class GameMenuView {
         
     }
     
+    @Override
     public void doAction(char selection) {
         switch (selection) {
             case 'M':
                 LocationView callViewLocation = new LocationView();
-                callViewLocation.displayLocationMenu();
+                callViewLocation.display();
 
                 break;
             case 'L':
@@ -100,8 +65,9 @@ public class GameMenuView {
                 break;
                 
             case 'V':
+                this.viewInventory();
                 InventoryView inventoryView = new InventoryView();
-                inventoryView.displayInventoryMenu();
+                inventoryView.display();
                 break;
             case 'H':
                 System.out.println("\n**** Estimate Hunger needs to be learned ****");

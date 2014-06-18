@@ -35,7 +35,7 @@ public abstract class MenuView implements MenuInterface{
             selection = input.charAt(0);
             
             this.doAction(selection);
-        } while (selection != 'E');
+        } while (selection != 'Q');
     }
 
     @Override

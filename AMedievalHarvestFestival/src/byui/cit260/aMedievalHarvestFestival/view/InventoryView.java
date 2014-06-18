@@ -8,68 +8,26 @@ package byui.cit260.aMedievalHarvestFestival.view;
 
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
-import java.util.Scanner;
 
 /**
 *
 * @author Adam Decker
 */
-public class InventoryView {
+public class InventoryView extends MenuView{
     
-    private static final String MENU = "\n"
+    public InventoryView(){
+        super("\n"
             + "\n----------------------------------------------"
             + "\n| Item Menu |"
             + "\nU - Use item"
             + "\nE - Examine Item"
             + "\nD - Determine item of the greatest quanity"
             + "\nQ - Exit to Game Menu"
-            + "\n----------------------------------------------";
-    
-    public void displayInventoryMenu() {
-        
-        char selection = ' ';
-        do {
-            
-            System.out.println(MENU);
-            
-            GameMenuView gameMenuViewInv = new GameMenuView();
-            gameMenuViewInv.viewInventory();
-            
-            System.out.println(" ");
-            
-            String input = this.getInput();
-            selection = input.charAt(0);
-            
-            this.doAction(selection);
-        } while (selection != 'Q');
-        
-        
+            + "\n----------------------------------------------");
     }
     
-    public String getInput() {
-        boolean valid = false;
-        String helpInput = null;
-        Scanner keyboard = new Scanner(System.in);
-        
-        while(!valid) {
-            
-            helpInput = keyboard.nextLine();
-            helpInput = helpInput.trim();
-            
-            if (helpInput.length() != 1) {
-                System.out.println("Invalid selection - the selection must be non blank" +
-                                   " and only one character in length.");
-            }
-            
-            else {
-                valid = true;
-            }
-        }
-        
-        return helpInput.toUpperCase();
-    }
-    
-    public void doAction(char selection) {
+    @Override
+        public void doAction(char selection) {
         switch (selection) {
             case 'U':
                 System.out.println("\n**** decisions still need to be made on how items are used ****");
