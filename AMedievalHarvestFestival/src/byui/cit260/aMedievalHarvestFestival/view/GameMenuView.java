@@ -47,8 +47,8 @@ public class GameMenuView extends MenuView{
     }
     
     @Override
-    public void doAction(char selection) {
-        switch (selection) {
+    public void doAction(char value) {
+        switch (value) {
             case 'M':
                 LocationView callViewLocation = new LocationView();
                 callViewLocation.display();
