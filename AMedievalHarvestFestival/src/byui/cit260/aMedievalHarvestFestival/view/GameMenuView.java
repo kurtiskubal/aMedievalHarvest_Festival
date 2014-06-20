@@ -12,6 +12,8 @@ import byui.cit260.aMedievalHarvestFestival.control.MapControl;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
+import byui.cit260.aMedievalHarvestFestival.model.MatchingGameLocation;
+import byui.cit260.aMedievalHarvestFestival.model.MatchingInstance;
 
 /**
 *
@@ -27,6 +29,7 @@ public class GameMenuView extends MenuView{
             + "\nL - Examine location"
             + "\nA - Look at Map"
             + "\nV - View Items in inventory"
+            + "\nO - Memory Game"
             + "\nH - Estimate Hunger"
             + "\nT - Estimate Thirst"
             + "\nC - Start a conversation"
@@ -68,6 +71,11 @@ public class GameMenuView extends MenuView{
                 this.viewInventory();
                 InventoryView inventoryView = new InventoryView();
                 inventoryView.display();
+                break;
+            case 'O':
+                this.displayMatchingGame();
+                //MatchingGameView matchingGameView = new MatchingGameView();
+                //matchingGameView.display();
                 break;
             case 'H':
                 System.out.println("\n**** Estimate Hunger needs to be learned ****");
@@ -162,6 +170,52 @@ public class GameMenuView extends MenuView{
         }
         
         System.out.println("-------------------------------");
+    }
+    
+    public void displayMatchingGame() {
+        int lineLength = 0;
+        
+        MatchingGameLocation[][] matchingLocations = GameControl.getMatchingGameLocations();
+        int noColumns = matchingLocations[0].length;
+        
+        
+        for (MatchingGameLocation[] row : matchingLocations) {
+           int count = 0;
+            
+           System.out.println("--------------------------");
+            
+            for (int column = 0; column < noColumns; column++) {
+                
+                System.out.print("|");
+                MatchingGameLocation matchingLocation = row[column];
+                count = count + 1;
+                if (matchingLocation.isChoosen()) {
+                    MatchingInstance matchingInstance = matchingLocation.getMatchingInstance();
+                    if (count == 5) {
+                        System.out.println(matchingInstance.getMapSymbol() + "|");
+                        count = 0;
+                    }
+                    else {
+                      System.out.print(matchingInstance.getMapSymbol());
+                      
+                    }
+                }
+                else {
+                    if (count == 5) {
+                      System.out.println(" ?? " + "|"); 
+                      count = 0;
+                    }
+                    else {
+                        System.out.print(" ?? ");
+                       
+                    }
+                }
+            
+            }
+            
+        }
+        
+        System.out.println("--------------------------");
     }
    
     

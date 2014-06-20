@@ -22,6 +22,7 @@ public class Game implements Serializable{
     private InventoryItem[] inventory;
     private Actors[] actors;
     private Map map;
+    private MatchingGame matchingGame;
 
     public Player getPlayer() {
         return player;
@@ -54,6 +55,15 @@ public class Game implements Serializable{
     public void setMap(Map map) {
         this.map = map;
     }
+    
+    public MatchingGame getMatchingGame() {
+        return matchingGame;
+    }
+
+    public void setMatchingGame(MatchingGame matchingGame) {
+        this.matchingGame = matchingGame;
+    }
+    
     public Game() {
     }
 

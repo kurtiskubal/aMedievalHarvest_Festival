@@ -18,9 +18,10 @@ import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
 import byui.cit260.aMedievalHarvestFestival.model.Map;
+import byui.cit260.aMedievalHarvestFestival.model.MatchingGame;
+import byui.cit260.aMedievalHarvestFestival.model.MatchingGameLocation;
+import byui.cit260.aMedievalHarvestFestival.model.MatchingInstance;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
-import byui.cit260.aMedievalHarvestFestival.model.PuzzleLocation;
-import byui.cit260.aMedievalHarvestFestival.model.RoomInstance;
 import byui.cit260.aMedievalHarvestFestival.model.WeaponItem;
 import java.util.Objects;
 
@@ -51,6 +52,9 @@ public class GameControl {
         
         Map map = GameControl.createMap();
         GameControl.game.setMap(map);
+        
+        MatchingGame matchingGame = GameControl.createMatchingGame();
+        GameControl.game.setMatchingGame(matchingGame);
         
         MapControl.moveActorsToLocation(map, actors, 0, 3);
     }
@@ -554,6 +558,8 @@ public class GameControl {
         return instances;
     }
     
+    
+    
     public static void assignScenesToLocations(Map map, InstanceLocation[] instances) {
         
         Location[][] locations = map.getLocations();
@@ -579,6 +585,390 @@ public class GameControl {
         locations[3][3].setInstance(instances[Constants.LIBRARY_INSTANCE]);
         locations[3][4].setInstance(instances[Constants.POOL_INSTANCE]);
     
+    }
+    
+    private static MatchingInstance[] createMatchingInstances() {
+        
+        MatchingInstance[] matchingInstances = new MatchingInstance[Constants.NUMBER_OF_MATCHING_INSTANCES];
+        
+        MatchingInstance matching1 = new MatchingInstance();
+        matching1.setValue(1);
+        matching1.setChoosen(false);
+        matching1.setRow(0);
+        matching1.setColumn(0);
+        matching1.setMapSymbol(" 1_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_FIRST] = matching1;
+        
+        MatchingInstance matching2 = new MatchingInstance();
+        matching2.setValue(17);
+        matching2.setChoosen(false);
+        matching2.setRow(0);
+        matching2.setColumn(1);
+        matching2.setMapSymbol(" 17 ");
+        matchingInstances[Constants.MATCH_INSTANCE_2] = matching2;
+        
+        MatchingInstance matching3 = new MatchingInstance();
+        matching3.setValue(5);
+        matching3.setChoosen(false);
+        matching3.setRow(0);
+        matching3.setColumn(2);
+        matching3.setMapSymbol(" 5_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_3] = matching3;
+        
+        MatchingInstance matching4 = new MatchingInstance();
+        matching4.setValue(6);
+        matching4.setChoosen(false);
+        matching4.setRow(0);
+        matching4.setColumn(3);
+        matching4.setMapSymbol(" 6_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_4] = matching4;
+        
+        MatchingInstance matching5 = new MatchingInstance();
+        matching5.setValue(6);
+        matching5.setChoosen(false);
+        matching5.setRow(0);
+        matching5.setColumn(4);
+        matching5.setMapSymbol(" 6_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_5] = matching5;
+        
+        MatchingInstance matching6 = new MatchingInstance();
+        matching6.setValue(12);
+        matching6.setChoosen(false);
+        matching6.setRow(1);
+        matching6.setColumn(0);
+        matching6.setMapSymbol(" 12 ");
+        matchingInstances[Constants.MATCH_INSTANCE_6] = matching6;
+        
+        MatchingInstance matching7 = new MatchingInstance();
+        matching7.setValue(8);
+        matching7.setChoosen(false);
+        matching7.setRow(1);
+        matching7.setColumn(1);
+        matching7.setMapSymbol(" 8_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_7] = matching7;
+        
+        MatchingInstance matching8 = new MatchingInstance();
+        matching8.setValue(14);
+        matching8.setChoosen(false);
+        matching8.setRow(1);
+        matching8.setColumn(2);
+        matching8.setMapSymbol(" 14 ");
+        matchingInstances[Constants.MATCH_INSTANCE_8] = matching8;
+        
+        MatchingInstance matching9 = new MatchingInstance();
+        matching9.setValue(9);
+        matching9.setChoosen(false);
+        matching9.setRow(1);
+        matching9.setColumn(3);
+        matching9.setMapSymbol(" 9_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_9] = matching9;
+        
+        MatchingInstance matching10 = new MatchingInstance();
+        matching10.setValue(2);
+        matching10.setChoosen(false);
+        matching10.setRow(1);
+        matching10.setColumn(4);
+        matching10.setMapSymbol(" 2_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_10] = matching10;
+        
+        MatchingInstance matching11 = new MatchingInstance();
+        matching11.setValue(10);
+        matching11.setChoosen(false);
+        matching11.setRow(2);
+        matching11.setColumn(0);
+        matching11.setMapSymbol(" 10 ");
+        matchingInstances[Constants.MATCH_INSTANCE_11] = matching11;
+        
+        MatchingInstance matching12 = new MatchingInstance();
+        matching12.setValue(7);
+        matching12.setChoosen(false);
+        matching12.setRow(2);
+        matching12.setColumn(1);
+        matching12.setMapSymbol(" 7_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_12] = matching12;
+        
+        MatchingInstance matching13 = new MatchingInstance();
+        matching13.setValue(12);
+        matching13.setChoosen(false);
+        matching13.setRow(2);
+        matching13.setColumn(2);
+        matching13.setMapSymbol(" 12 ");
+        matchingInstances[Constants.MATCH_INSTANCE_13] = matching13;
+        
+        MatchingInstance matching14 = new MatchingInstance();
+        matching14.setValue(1);
+        matching14.setChoosen(false);
+        matching14.setRow(2);
+        matching14.setColumn(3);
+        matching14.setMapSymbol(" 1_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_14] = matching14;
+        
+        MatchingInstance matching15 = new MatchingInstance();
+        matching15.setValue(4);
+        matching15.setChoosen(false);
+        matching15.setRow(2);
+        matching15.setColumn(4);
+        matching15.setMapSymbol(" 4_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_15] = matching15;
+        
+        MatchingInstance matching16 = new MatchingInstance();
+        matching16.setValue(14);
+        matching16.setChoosen(false);
+        matching16.setRow(3);
+        matching16.setColumn(0);
+        matching16.setMapSymbol(" 14 ");
+        matchingInstances[Constants.MATCH_INSTANCE_16] = matching16;
+        
+        MatchingInstance matching17 = new MatchingInstance();
+        matching17.setValue(10);
+        matching17.setChoosen(false);
+        matching17.setRow(3);
+        matching17.setColumn(1);
+        matching17.setMapSymbol(" 10 ");
+        matchingInstances[Constants.MATCH_INSTANCE_17] = matching17;
+        
+        MatchingInstance matching18 = new MatchingInstance();
+        matching18.setValue(3);
+        matching18.setChoosen(false);
+        matching18.setRow(3);
+        matching18.setColumn(2);
+        matching18.setMapSymbol(" 3_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_18] = matching18;
+        
+        MatchingInstance matching19 = new MatchingInstance();
+        matching19.setValue(11);
+        matching19.setChoosen(false);
+        matching19.setRow(3);
+        matching19.setColumn(3);
+        matching19.setMapSymbol(" 11 ");
+        matchingInstances[Constants.MATCH_INSTANCE_19] = matching19;
+        
+        MatchingInstance matching20 = new MatchingInstance();
+        matching20.setValue(16);
+        matching20.setChoosen(false);
+        matching20.setRow(3);
+        matching20.setColumn(4);
+        matching20.setMapSymbol(" 16 ");
+        matchingInstances[Constants.MATCH_INSTANCE_20] = matching20;
+        
+        MatchingInstance matching21 = new MatchingInstance();
+        matching21.setValue(15);
+        matching21.setChoosen(false);
+        matching21.setRow(4);
+        matching21.setColumn(0);
+        matching21.setMapSymbol(" 15 ");
+        matchingInstances[Constants.MATCH_INSTANCE_21] = matching21;
+        
+        MatchingInstance matching22 = new MatchingInstance();
+        matching22.setValue(5);
+        matching22.setChoosen(false);
+        matching22.setRow(4);
+        matching22.setColumn(1);
+        matching22.setMapSymbol(" 5_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_22] = matching22;
+        
+        MatchingInstance matching23 = new MatchingInstance();
+        matching23.setValue(13);
+        matching23.setChoosen(false);
+        matching23.setRow(4);
+        matching23.setColumn(2);
+        matching23.setMapSymbol(" 13 ");
+        matchingInstances[Constants.MATCH_INSTANCE_23] = matching23;
+        
+        MatchingInstance matching24 = new MatchingInstance();
+        matching24.setValue(18);
+        matching24.setChoosen(false);
+        matching24.setRow(4);
+        matching24.setColumn(3);
+        matching24.setMapSymbol(" 18 ");
+        matchingInstances[Constants.MATCH_INSTANCE_24] = matching24;
+        
+        MatchingInstance matching25 = new MatchingInstance();
+        matching25.setValue(18);
+        matching25.setChoosen(false);
+        matching25.setRow(4);
+        matching25.setColumn(4);
+        matching25.setMapSymbol(" 18 ");
+        matchingInstances[Constants.MATCH_INSTANCE_25] = matching25;
+        
+        MatchingInstance matching26 = new MatchingInstance();
+        matching26.setValue(4);
+        matching26.setChoosen(false);
+        matching26.setRow(5);
+        matching26.setColumn(0);
+        matching26.setMapSymbol(" 4_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_26] = matching26;
+        
+        MatchingInstance matching27 = new MatchingInstance();
+        matching27.setValue(7);
+        matching27.setChoosen(false);
+        matching27.setRow(5);
+        matching27.setColumn(1);
+        matching27.setMapSymbol(" 7_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_27] = matching27;
+        
+        MatchingInstance matching28 = new MatchingInstance();
+        matching28.setValue(19);
+        matching28.setChoosen(false);
+        matching28.setRow(5);
+        matching28.setColumn(2);
+        matching28.setMapSymbol(" 19 ");
+        matchingInstances[Constants.MATCH_INSTANCE_28] = matching28;
+        
+        MatchingInstance matching29 = new MatchingInstance();
+        matching29.setValue(8);
+        matching29.setChoosen(false);
+        matching29.setRow(5);
+        matching29.setColumn(3);
+        matching29.setMapSymbol(" 8_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_29] = matching29;
+        
+        MatchingInstance matching30 = new MatchingInstance();
+        matching30.setValue(2);
+        matching30.setChoosen(false);
+        matching30.setRow(5);
+        matching30.setColumn(4);
+        matching30.setMapSymbol(" 2_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_30] = matching30;
+        
+        MatchingInstance matching31 = new MatchingInstance();
+        matching31.setValue(15);
+        matching31.setChoosen(false);
+        matching31.setRow(6);
+        matching31.setColumn(0);
+        matching31.setMapSymbol(" 15 ");
+        matchingInstances[Constants.MATCH_INSTANCE_31] = matching31;
+        
+        MatchingInstance matching32 = new MatchingInstance();
+        matching32.setValue(9);
+        matching32.setChoosen(false);
+        matching32.setRow(6);
+        matching32.setColumn(1);
+        matching32.setMapSymbol(" 9_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_32] = matching32;
+        
+        MatchingInstance matching33 = new MatchingInstance();
+        matching33.setValue(11);
+        matching33.setChoosen(false);
+        matching33.setRow(6);
+        matching33.setColumn(2);
+        matching33.setMapSymbol(" 11 ");
+        matchingInstances[Constants.MATCH_INSTANCE_33] = matching33;
+        
+        MatchingInstance matching34 = new MatchingInstance();
+        matching34.setValue(20);
+        matching34.setChoosen(false);
+        matching34.setRow(6);
+        matching34.setColumn(3);
+        matching34.setMapSymbol(" 20 ");
+        matchingInstances[Constants.MATCH_INSTANCE_34] = matching34;
+        
+        MatchingInstance matching35 = new MatchingInstance();
+        matching35.setValue(19);
+        matching35.setChoosen(false);
+        matching35.setRow(6);
+        matching35.setColumn(4);
+        matching35.setMapSymbol(" 19 ");
+        matchingInstances[Constants.MATCH_INSTANCE_35] = matching35;
+        
+        MatchingInstance matching36 = new MatchingInstance();
+        matching36.setValue(17);
+        matching36.setChoosen(false);
+        matching36.setRow(7);
+        matching36.setColumn(0);
+        matching36.setMapSymbol(" 17 ");
+        matchingInstances[Constants.MATCH_INSTANCE_36] = matching36;
+        
+        MatchingInstance matching37 = new MatchingInstance();
+        matching37.setValue(16);
+        matching37.setChoosen(false);
+        matching37.setRow(7);
+        matching37.setColumn(1);
+        matching37.setMapSymbol(" 16 ");
+        matchingInstances[Constants.MATCH_INSTANCE_37] = matching37;
+        
+        MatchingInstance matching38 = new MatchingInstance();
+        matching38.setValue(3);
+        matching38.setChoosen(false);
+        matching38.setRow(7);
+        matching38.setColumn(2);
+        matching38.setMapSymbol(" 3_ ");
+        matchingInstances[Constants.MATCH_INSTANCE_38] = matching38;
+        
+        MatchingInstance matching39 = new MatchingInstance();
+        matching39.setValue(13);
+        matching39.setChoosen(false);
+        matching39.setRow(7);
+        matching39.setColumn(3);
+        matching39.setMapSymbol(" 13 ");
+        matchingInstances[Constants.MATCH_INSTANCE_39] = matching39;
+        
+        MatchingInstance matching40 = new MatchingInstance();
+        matching40.setValue(20);
+        matching40.setChoosen(false);
+        matching40.setRow(7);
+        matching40.setColumn(4);
+        matching40.setMapSymbol(" 20 ");
+        matchingInstances[Constants.MATCH_INSTANCE_LAST] = matching40;
+        
+        return matchingInstances;
+    }
+    
+    public static void assignMatchingScenesToMatchingLocations(MatchingGame matchingGame, MatchingInstance[] matchingInstances) {
+        
+        MatchingGameLocation[][] matchingLocations = matchingGame.getMatchingLocations();
+        
+        matchingLocations[0][0].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_FIRST]);
+        matchingLocations[0][1].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_2]);
+        matchingLocations[0][2].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_3]);
+        matchingLocations[0][3].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_4]);
+        matchingLocations[0][4].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_5]);
+        matchingLocations[1][0].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_6]);
+        matchingLocations[1][1].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_7]);
+        matchingLocations[1][2].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_8]);
+        matchingLocations[1][3].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_9]);
+        matchingLocations[1][4].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_10]);
+        matchingLocations[2][0].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_11]);
+        matchingLocations[2][1].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_12]);
+        matchingLocations[2][2].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_13]);
+        matchingLocations[2][3].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_14]);
+        matchingLocations[2][4].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_15]);
+        matchingLocations[3][0].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_16]);
+        matchingLocations[3][1].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_17]);
+        matchingLocations[3][2].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_18]);
+        matchingLocations[3][3].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_19]);
+        matchingLocations[3][4].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_20]);
+        matchingLocations[4][0].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_21]);
+        matchingLocations[4][1].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_22]);
+        matchingLocations[4][2].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_23]);
+        matchingLocations[4][3].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_24]);
+        matchingLocations[4][4].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_25]);
+        matchingLocations[5][0].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_26]);
+        matchingLocations[5][1].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_27]);
+        matchingLocations[5][2].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_28]);
+        matchingLocations[5][3].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_29]);
+        matchingLocations[5][4].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_30]);
+        matchingLocations[6][0].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_31]);
+        matchingLocations[6][1].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_32]);
+        matchingLocations[6][2].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_33]);
+        matchingLocations[6][3].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_34]);
+        matchingLocations[6][4].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_35]);
+        matchingLocations[7][0].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_36]);
+        matchingLocations[7][1].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_37]);
+        matchingLocations[7][2].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_38]);
+        matchingLocations[7][3].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_39]);
+        matchingLocations[7][4].setMatchingInstance(matchingInstances[Constants.MATCH_INSTANCE_LAST]);
+    }
+    
+    private static MatchingGame createMatchingGame() {
+       
+        MatchingGame matchingGame = new MatchingGame(8,5);
+        
+        MatchingInstance[] matchingInstances = createMatchingInstances();
+        
+        GameControl.assignMatchingScenesToMatchingLocations(matchingGame, matchingInstances);
+        
+        return matchingGame;
     }
     
     private static Map createMap() {
@@ -638,6 +1028,12 @@ public class GameControl {
         return inventoryList;
     }
 
+    public static MatchingGameLocation[][] getMatchingGameLocations() {
+        
+        return AMedievalHarvestFestival.getCurrentGame().getMatchingGame().getMatchingLocations();
+        
+    }
+    
     public static Location[][] getMapLocations() {
         
         return AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();

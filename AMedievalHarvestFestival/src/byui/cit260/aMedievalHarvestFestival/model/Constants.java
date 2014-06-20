@@ -72,5 +72,48 @@ public class Constants {
     public final static int HALL_INSTANCE = 17;
     public final static int LIBRARY_INSTANCE = 18;
     public final static int POOL_INSTANCE = 19;
+
+    public final static int NUMBER_OF_MATCHING_INSTANCES = 40;
+    public final static int MATCH_INSTANCE_FIRST = 0;
+    public final static int MATCH_INSTANCE_2 = 1;
+    public final static int MATCH_INSTANCE_3 = 2;
+    public final static int MATCH_INSTANCE_4 = 3;
+    public final static int MATCH_INSTANCE_5 = 4;
+    public final static int MATCH_INSTANCE_6 = 5;
+    public final static int MATCH_INSTANCE_7 = 6;
+    public final static int MATCH_INSTANCE_8 = 7;
+    public final static int MATCH_INSTANCE_9 = 8;
+    public final static int MATCH_INSTANCE_10 = 9;
+    public final static int MATCH_INSTANCE_11 = 10;
+    public final static int MATCH_INSTANCE_12 = 11;
+    public final static int MATCH_INSTANCE_13 = 12;
+    public final static int MATCH_INSTANCE_14 = 13;
+    public final static int MATCH_INSTANCE_15 = 14;
+    public final static int MATCH_INSTANCE_16 = 15;
+    public final static int MATCH_INSTANCE_17 = 16;
+    public final static int MATCH_INSTANCE_18 = 17;
+    public final static int MATCH_INSTANCE_19 = 18;
+    public final static int MATCH_INSTANCE_20 = 19;
+    public final static int MATCH_INSTANCE_21 = 20;
+    public final static int MATCH_INSTANCE_22 = 21;
+    public final static int MATCH_INSTANCE_23 = 22;
+    public final static int MATCH_INSTANCE_24 = 23;
+    public final static int MATCH_INSTANCE_25 = 24;
+    public final static int MATCH_INSTANCE_26 = 25;
+    public final static int MATCH_INSTANCE_27 = 26;
+    public final static int MATCH_INSTANCE_28 = 27;
+    public final static int MATCH_INSTANCE_29 = 28;
+    public final static int MATCH_INSTANCE_30 = 29;
+    public final static int MATCH_INSTANCE_31 = 30;
+    public final static int MATCH_INSTANCE_32 = 31;
+    public final static int MATCH_INSTANCE_33 = 32;
+    public final static int MATCH_INSTANCE_34 = 33;
+    public final static int MATCH_INSTANCE_35 = 34;
+    public final static int MATCH_INSTANCE_36 = 35;
+    public final static int MATCH_INSTANCE_37 = 36;
+    public final static int MATCH_INSTANCE_38 = 37;
+    public final static int MATCH_INSTANCE_39 = 38;
+    public final static int MATCH_INSTANCE_LAST = 39;
+
 }
 
