@@ -20,27 +20,26 @@ public class MatchingGameView extends MenuView {
             + "\n--------------------------");
     }
     
-    public void doMatchingAction(String selection) {
-        switch (selection) {
-            case "00":
-             //   MatchingControl. = ;
-            break;    
-        }
-        
-    }
-
     @Override
     public void doAction(char value) {
         switch(value) {
             case 'C':
-            System.out.println("\nPlease select a location using the coodinates of"
+                System.out.println("\nPlease select a location using the coodinates of"
                              + "\nshown in matching game map.     ");
-            this.doMatchingAction(null);
-            break;
+                MatchingView matchingView = new MatchingView();
+                matchingView.display();
+                break;
+            case 'Q':
+                return;
+            default:
+                System.out.print("\n*** Invalid selction *** Try Again");
+                break;
         }
         
     }
     
+    
+        
             
         
     

@@ -75,8 +75,8 @@ public class GameMenuView extends MenuView{
                 break;
             case 'O':
                 this.displayMatchingGame();
-                //MatchingGameView matchingGameView = new MatchingGameView();
-                //matchingGameView.display();
+                MatchingGameView matchingGameView = new MatchingGameView();
+                matchingGameView.display();
                 break;
             case 'R':
                 this.displayRhymes();
@@ -181,15 +181,14 @@ public class GameMenuView extends MenuView{
         
         MatchingGameLocation[][] matchingLocations = GameControl.getMatchingGameLocations();
         int noColumns = matchingLocations[0].length;
-        
-        
+        int i = 0;
+         System.out.println("   0    1    2    3    4 ");
         for (MatchingGameLocation[] row : matchingLocations) {
            int count = 0;
-            
-           System.out.println("--------------------------");
-            
+           
+           System.out.println("---------------------------");
+            System.out.print(i);
             for (int column = 0; column < noColumns; column++) {
-                
                 System.out.print("|");
                 MatchingGameLocation matchingLocation = row[column];
                 count = count + 1;
@@ -216,10 +215,10 @@ public class GameMenuView extends MenuView{
                 }
             
             }
-            
+            i++;
         }
         
-        System.out.println("--------------------------");
+        System.out.println("---------------------------");
     }
 
     private void displayRhymes() {

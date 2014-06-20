@@ -12,8 +12,8 @@ package byui.cit260.aMedievalHarvestFestival.control;
  */
 public class MatchingControl {
 
-    public void makeSelection(int matchInput) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void showSelection(String value) {
+        System.out.println("***makeSelection stub function called***" + value);
     }
     
 }
