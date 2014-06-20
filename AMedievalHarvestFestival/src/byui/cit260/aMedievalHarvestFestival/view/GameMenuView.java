@@ -30,6 +30,7 @@ public class GameMenuView extends MenuView{
             + "\nA - Look at Map"
             + "\nV - View Items in inventory"
             + "\nO - Memory Game"
+            + "\nR - Read a Nursery Rhyme"
             + "\nH - Estimate Hunger"
             + "\nT - Estimate Thirst"
             + "\nC - Start a conversation"
@@ -76,6 +77,9 @@ public class GameMenuView extends MenuView{
                 this.displayMatchingGame();
                 //MatchingGameView matchingGameView = new MatchingGameView();
                 //matchingGameView.display();
+                break;
+            case 'R':
+                this.displayRhymes();
                 break;
             case 'H':
                 System.out.println("\n**** Estimate Hunger needs to be learned ****");
@@ -216,6 +220,11 @@ public class GameMenuView extends MenuView{
         }
         
         System.out.println("--------------------------");
+    }
+
+    private void displayRhymes() {
+        NurseryRhymes bookOfRhymes = new NurseryRhymes();
+        bookOfRhymes.display();
     }
    
     
