@@ -22,8 +22,15 @@ public class Player implements Serializable{
     private double health;
     private double hunger;
     private double thirst;
+    private Location playerLocation;
     
-
+    public Location getPlayerLocation() {
+        return playerLocation;
+    }
+    
+    public void setPlayerLocation(Location playerLocation) {
+        this.playerLocation = playerLocation;
+    }
     public Player() {
     }
     

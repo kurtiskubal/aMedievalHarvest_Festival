@@ -28,9 +28,6 @@ public class AMedievalHarvestFestival {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
         
-        ConsumableView startConView = new ConsumableView();
-        startConView.determineConsumableValue();
-
     }
 
     public static Game getCurrentGame() {
