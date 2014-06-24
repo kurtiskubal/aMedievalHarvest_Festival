@@ -56,7 +56,9 @@ public class GameControl {
         MatchingGame matchingGame = GameControl.createMatchingGame();
         GameControl.game.setMatchingGame(matchingGame);
         
-        MapControl.moveActorsToLocation(map, actors, 0, 3);
+        //player.setPlayerLocation(map.getLocations()[0][1]);
+        
+        MapControl.moveActorsToLocation(map, actors, 3, 1);
     }
     
     public static void startSavedGame(){
