@@ -56,7 +56,7 @@ public class GameControl {
         MatchingGame matchingGame = GameControl.createMatchingGame();
         GameControl.game.setMatchingGame(matchingGame);
         
-        //player.setPlayerLocation(map.getLocations()[0][1]);
+        player.setPlayerLocation(map.getLocations()[0][1]);
         
         MapControl.moveActorsToLocation(map, actors, 3, 1);
     }
@@ -327,7 +327,7 @@ public class GameControl {
         instances[Constants.STABLE_INSTANCE] = stableInstance;
         
         InstanceLocation roomInstance = new InstanceLocation();
-        roomInstance.setDescription("");
+        roomInstance.setDescription("Standard guest room with all the needed luxaries.");
         roomInstance.setItemsStored(null);
         roomInstance.setEnergyUsed(10);
         roomInstance.setFluidsUsed(5);

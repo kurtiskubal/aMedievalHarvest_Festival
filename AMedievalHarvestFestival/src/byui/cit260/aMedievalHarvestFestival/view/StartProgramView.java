@@ -6,6 +6,7 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 import java.util.Scanner;
@@ -25,6 +26,8 @@ public class StartProgramView {
         return;
     
     Player player = ProgramControl.createPlayer(playersName);
+    
+    AMedievalHarvestFestival.setPlayer(player);
     
     this.displayWelcomeMessage(player);
     
