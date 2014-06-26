@@ -229,6 +229,8 @@ public class GameControl {
         ladyViolet.setDialogue("dialogue");
         ladyViolet.setHappiness(0);
         ladyViolet.setHealth(100);
+        ladyViolet.setDialogueGift("Gift dialogue");
+        ladyViolet.setDialogueHappy("Happy dialogue");
         actors[Constants.VIOLET] = ladyViolet;
         
         Actors dFred = new Actors("Duke Frederick");
@@ -257,13 +259,20 @@ public class GameControl {
         lCanaway.setDialogue("dialogue");
         lCanaway.setHappiness(0);
         lCanaway.setHealth(100);
+        lCanaway.setDialogueGift("Gift dialogue");
+        lCanaway.setDialogueHappy("Happy dialogue");
         actors[Constants.CANAWAY] = lCanaway;
+        
         
         Actors pWilliam = new Actors("Princess Williams");
         pWilliam.setName("Princess William");
         pWilliam.setDialogue("dialogue");
         pWilliam.setHappiness(0);
         pWilliam.setHealth(100);
+        pWilliam.setEvidence(true);
+        pWilliam.setDialogueEvidence("Evidence dialogue");
+        pWilliam.setDialogueGift("Gift dialogue");
+        pWilliam.setDialogueHappy("Happy dialogue");
         actors[Constants.PRINCESS_WILLIAM] = pWilliam;
         
         Actors qWilliam = new Actors("Queen Williams");
@@ -271,6 +280,8 @@ public class GameControl {
         qWilliam.setDialogue("dialogue");
         qWilliam.setHappiness(0);
         qWilliam.setHealth(100);
+        qWilliam.setEvidence(true);
+        qWilliam.setDialogueEvidence("Evidence dialogue");
         actors[Constants.QUEEN_WILLIAM] = qWilliam;
         
         Actors kWilliam = new Actors("King Williams");
@@ -294,12 +305,12 @@ public class GameControl {
         servantD.setHealth(100);
         actors[Constants.SERVANT_DAVID] = servantD;
         
-        Actors servantL = new Actors("Servant Larry");
-        servantL.setName("Servant Larry");
+        Actors servantL = new Actors("Servant Lilly");
+        servantL.setName("Servant Lilly");
         servantL.setDialogue("dialogue");
         servantL.setHappiness(0);
         servantL.setHealth(100);
-        actors[Constants.SERVANT_LARRY] = servantL;
+        actors[Constants.SERVANT_LILLY] = servantL;
         
         return actors;
     }

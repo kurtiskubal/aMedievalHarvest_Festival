@@ -91,7 +91,8 @@ public class GameMenuView extends MenuView{
                 System.out.println("\n**** Conversations needs to be learned ****");
                 break;
             case 'S':
-                System.out.println("\"\\n**** Saving Game needs to be learned ****\"");
+                ConversationsView haveConv = new ConversationsView();
+                haveConv.haveConv();
                 break;
             case 'Q':
                 return;
