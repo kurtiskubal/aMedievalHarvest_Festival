@@ -18,9 +18,13 @@ public class Actors implements Serializable {
     // class instance variables
     private String name;
     private String dialogue;
+    private String dialogueHappy;
+    private String dialogueEvidence;
+    private String dialogueGift;
     private double happiness;
     private double health;
-
+    private boolean evidence;
+    
     public Actors() {
     }
     
@@ -28,6 +32,38 @@ public class Actors implements Serializable {
         this.name = name;
     }
 
+    public void setDialogueHappy(String dialogueHappy) {
+        this.dialogueHappy = dialogueHappy;
+    }
+
+    public void setDialogueEvidence(String dialogueEvidence) {
+        this.dialogueEvidence = dialogueEvidence;
+    }
+
+    public void setDialogueGift(String dialogueGift) {
+        this.dialogueGift = dialogueGift;
+    }
+    
+    public String getDialogueHappy() {
+        return dialogueHappy;
+    }
+
+    public String getDialogueEvidence() {
+        return dialogueEvidence;
+    }
+
+    public String getDialogueGift() {
+        return dialogueGift;
+    }
+
+    public boolean isEvidence() {
+        return evidence;
+    }
+
+    public void setEvidence(boolean evidence) {
+        this.evidence = evidence;
+    }
+    
     public String getName() {
         return name;
     }
