@@ -9,6 +9,7 @@ package byui.cit260.aMedievalHarvestFestival.view;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import static byui.cit260.aMedievalHarvestFestival.control.GameControl.getSortedInventoryList;
+import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
@@ -106,11 +107,7 @@ public class GameMenuView extends MenuView{
     private void displayCurrLocation() {
         
         System.out.println(AMedievalHarvestFestival.getPlayer().getPlayerLocation().getInstance().getDescription());
-        AMedievalHarvestFestival.getPlayer().getPlayerLocation().setVisited(Boolean.TRUE);
-        // call Control function to get the player's current location
-        //Location currentLocation = MapControl.getCurrentLocation();
-        // Print out the description of the current location
-        //System.out.println(currentLocation.toString());
+        
     }
     
     public int viewInventory() {

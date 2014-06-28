@@ -7,6 +7,7 @@
 package byui.cit260.aMedievalHarvestFestival.model;
 
 import java.util.Objects;
+import java.util.Random;
 
 /**
  * @version Adam
@@ -14,10 +15,19 @@ import java.util.Objects;
  */
 public class BeverageItem extends InventoryItem {
     
+    private static final Random random = new Random();
+    public static double randomInRange(double min, double max) {
+        double range = max - min;
+        double scaled = random.nextDouble() * range;
+        double shifted = scaled + min;
+        return shifted;
+    }
 
     //class instance variables
-    private Double quenchFactor;
-
+    private Double beverageType;
+    private final Double volume = randomInRange(1,10);
+    private final Double quenchFactor = beverageType * volume;
+    
     public BeverageItem() {
     }
     
@@ -25,24 +35,24 @@ public class BeverageItem extends InventoryItem {
         return quenchFactor;
     }
 
-    public void setQuenchFactor(Double quenchFactor) {
-        this.quenchFactor = quenchFactor;
+    public Double getBeverageType() {
+        return beverageType;
     }
 
-    @Override
-    public String toString() {
-        // this pulls down the super class data
-        return super.toString() + "BeverageItem{" + "quenchFactor=" + quenchFactor + '}';
-    // <--end
+    public void setBeverageType(Double beverageType) {
+        this.beverageType = beverageType;
+    }
+
+    public Double getVolume() {
+        return volume;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 97 * hash + Objects.hashCode(this.quenchFactor);
-        // this pulls down the super class data
-        hash = hash + super.hashCode();
-// <--end
+        hash = 41 * hash + Objects.hashCode(this.beverageType);
+        hash = 41 * hash + Objects.hashCode(this.volume);
+        hash = 41 * hash + Objects.hashCode(this.quenchFactor);
         return hash;
     }
 
@@ -55,15 +65,22 @@ public class BeverageItem extends InventoryItem {
             return false;
         }
         final BeverageItem other = (BeverageItem) obj;
+        if (!Objects.equals(this.beverageType, other.beverageType)) {
+            return false;
+        }
+        if (!Objects.equals(this.volume, other.volume)) {
+            return false;
+        }
         if (!Objects.equals(this.quenchFactor, other.quenchFactor)) {
             return false;
         }
-        // this pulls down the super class data
-        boolean isEqual = super.equals(obj);
-        return isEqual;
-// <--end
+        return true;
     }
 
+    @Override
+    public String toString() {
+        return "BeverageItem{" + "beverageType=" + beverageType + ", volume=" + volume + ", quenchFactor=" + quenchFactor + '}';
+    }
     
 }
 

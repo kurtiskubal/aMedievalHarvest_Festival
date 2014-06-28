@@ -10,6 +10,7 @@ package byui.cit260.aMedievalHarvestFestival.view;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
+import byui.cit260.aMedievalHarvestFestival.model.Game;
 
 /**
  *
@@ -29,6 +30,7 @@ public class MainMenuView extends MenuView {
     }
 
     private void startNewGame() {
+        
         GameControl.createNewGame(AMedievalHarvestFestival.getPlayer());
     
         GameMenuView gameMenu = new GameMenuView();

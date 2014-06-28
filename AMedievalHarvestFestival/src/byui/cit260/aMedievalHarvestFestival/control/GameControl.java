@@ -44,6 +44,9 @@ public class GameControl {
         
         GameControl.game.setPlayer(AMedievalHarvestFestival.getPlayer());
         
+        game.setGameEvent(true);
+        
+        
         InventoryItem[] inventory = GameControl.createInventoryList();
         GameControl.game.setInventory(inventory);
         
@@ -57,6 +60,7 @@ public class GameControl {
         GameControl.game.setMatchingGame(matchingGame);
         
         player.setPlayerLocation(map.getLocations()[0][1]);
+        game.setGameEventLocation(map.getLocations()[3][1]);
         
         MapControl.moveActorsToLocation(map, actors, 3, 1);
     }
@@ -322,6 +326,7 @@ public class GameControl {
         InstanceLocation[] instances = new InstanceLocation[Constants.NUMBER_OF_INSTANCES];
         
         InstanceLocation stableInstance = new InstanceLocation();
+        stableInstance.setName("Stables");
         stableInstance.setDescription("\nThe stables are large with a single row of four stalls. Three of these stalls are small and designed to "
                                     + "\nready horses for riding. The fourth is larger and holds sick or pregnant horses when needed. Across the "
                                     + "\nwalkway are several storage closets to hold the King's and his guest's riding tack. Around the corner is"
@@ -338,6 +343,7 @@ public class GameControl {
         instances[Constants.STABLE_INSTANCE] = stableInstance;
         
         InstanceLocation roomInstance = new InstanceLocation();
+        roomInstance.setName("Lord Pharaoh's Room");
         roomInstance.setDescription("Standard guest room with all the needed luxaries.");
         roomInstance.setItemsStored(null);
         roomInstance.setEnergyUsed(10);
@@ -350,6 +356,7 @@ public class GameControl {
         instances[Constants.MY_ROOM_INSTANCE] = roomInstance;
         
         InstanceLocation ladyVInstance = new InstanceLocation();
+        ladyVInstance.setName("Lady Violet's Room");
         ladyVInstance.setDescription("");
         ladyVInstance.setItemsStored(null);
         ladyVInstance.setEnergyUsed(10);
@@ -362,6 +369,7 @@ public class GameControl {
         instances[Constants.LADY_VIOLET_INSTANCE] = ladyVInstance;
         
         InstanceLocation dukeFInstance = new InstanceLocation();
+        dukeFInstance.setName("Duke Frederick's Room");
         dukeFInstance.setDescription("");
         dukeFInstance.setItemsStored(null);
         dukeFInstance.setEnergyUsed(10);
@@ -374,6 +382,7 @@ public class GameControl {
         instances[Constants.DUKE_FREDERICK_INSTANCE] = dukeFInstance;
         
         InstanceLocation dukeHInstance = new InstanceLocation();
+        dukeHInstance.setName("Duke Harold's Room");
         dukeHInstance.setDescription("");
         dukeHInstance.setItemsStored(null);
         dukeHInstance.setEnergyUsed(10);
@@ -386,6 +395,7 @@ public class GameControl {
         instances[Constants.DUKE_HAROLD_INSTANCE] = dukeHInstance;
         
         InstanceLocation dukeLInstance = new InstanceLocation();
+        dukeLInstance.setName("Duke Luis' Room");
         dukeLInstance.setDescription("");
         dukeLInstance.setItemsStored(null);
         dukeLInstance.setEnergyUsed(10);
@@ -398,6 +408,7 @@ public class GameControl {
         instances[Constants.DUKE_LUIS_INSTANCE] = dukeLInstance;
         
         InstanceLocation lordCInstance = new InstanceLocation();
+        lordCInstance.setName("Lord Caraway's Room");
         lordCInstance.setDescription("");
         lordCInstance.setItemsStored(null);
         lordCInstance.setEnergyUsed(10);
@@ -410,6 +421,7 @@ public class GameControl {
         instances[Constants.LORD_CANAWAY_INSTANCE] = lordCInstance;
         
         InstanceLocation emptyRoomInstance = new InstanceLocation();
+        emptyRoomInstance.setName("Empty Room");
         emptyRoomInstance.setDescription("");
         emptyRoomInstance.setItemsStored(null);
         emptyRoomInstance.setEnergyUsed(10);
@@ -422,6 +434,7 @@ public class GameControl {
         instances[Constants.EMPTY_ROOM_INSTANCE] = emptyRoomInstance;
         
         InstanceLocation servantsInstance = new InstanceLocation();
+        servantsInstance.setName("Servant's Quarters");
         servantsInstance.setDescription("\nThe Servant's quarters are large enough to accommodate half the staff along with their own beds, wardrobes,"
                                       + "\ndressers, and large chests for their personal belongings. Half of the furniture is pushed up     " 
                                       + "\nagainst the back wall as most servants are married and live in a house out in the nearby      " 
@@ -437,6 +450,7 @@ public class GameControl {
         instances[Constants.SERVANTS_QUARTERS_INSTANCE] = servantsInstance;
         
         InstanceLocation princessInstance = new InstanceLocation();
+        princessInstance.setName("Princess Williams' Room");
         princessInstance.setDescription("");
         princessInstance.setItemsStored(null);
         princessInstance.setEnergyUsed(10);
@@ -449,6 +463,7 @@ public class GameControl {
         instances[Constants.PRINCESS_INSTANCE] = princessInstance;
         
         InstanceLocation kingsInstance = new InstanceLocation();
+        kingsInstance.setName("King and Queen Williams' Room");
         kingsInstance.setDescription("");
         kingsInstance.setItemsStored(null);
         kingsInstance.setEnergyUsed(10);
@@ -461,6 +476,7 @@ public class GameControl {
         instances[Constants.KING_INSTANCE] = kingsInstance;
         
         InstanceLocation kingsRRInstance = new InstanceLocation();
+        kingsRRInstance.setName("Williams' Private Restroom");
         kingsRRInstance.setDescription("");
         kingsRRInstance.setItemsStored(null);
         kingsRRInstance.setEnergyUsed(10);
@@ -473,6 +489,7 @@ public class GameControl {
         instances[Constants.KING_RESTROOM_INSTANCE] = kingsRRInstance;
 
         InstanceLocation gardenInstance = new InstanceLocation();
+        gardenInstance.setName("Garden");
         gardenInstance.setDescription("");
         gardenInstance.setItemsStored(null);
         gardenInstance.setEnergyUsed(10);
@@ -485,6 +502,7 @@ public class GameControl {
         instances[Constants.GARDEN_INSTANCE] = gardenInstance;
         
         InstanceLocation courtyardInstance = new InstanceLocation();
+        courtyardInstance.setName("Courtyard");
         courtyardInstance.setDescription("");
         courtyardInstance.setItemsStored(null);
         courtyardInstance.setEnergyUsed(10);
@@ -497,6 +515,7 @@ public class GameControl {
         instances[Constants.COURTYARD_INSTANCE] = courtyardInstance;
         
         InstanceLocation restroomInstance = new InstanceLocation();
+        restroomInstance.setName("Public Restroom");
         restroomInstance.setDescription("");
         restroomInstance.setItemsStored(null);
         restroomInstance.setEnergyUsed(10);
@@ -509,6 +528,7 @@ public class GameControl {
         instances[Constants.RESTROOM_INSTANCE] = restroomInstance;
         
         InstanceLocation kitchenInstance = new InstanceLocation();
+        kitchenInstance.setName("Kitchen");
         kitchenInstance.setDescription("");
         kitchenInstance.setItemsStored(null);
         kitchenInstance.setEnergyUsed(10);
@@ -521,6 +541,7 @@ public class GameControl {
         instances[Constants.KITCHEN_INSTANCE] = kitchenInstance;
         
         InstanceLocation chamberInstance = new InstanceLocation();
+        chamberInstance.setName("Audience Chamber");
         chamberInstance.setDescription("");
         chamberInstance.setItemsStored(null);
         chamberInstance.setEnergyUsed(10);
@@ -533,6 +554,7 @@ public class GameControl {
         instances[Constants.CHAMBER_INSTANCE] = chamberInstance;
         
         InstanceLocation hallInstance = new InstanceLocation();
+        hallInstance.setName("Dining Hall");
         hallInstance.setDescription("");
         hallInstance.setItemsStored(null);
         hallInstance.setEnergyUsed(10);
@@ -545,6 +567,7 @@ public class GameControl {
         instances[Constants.HALL_INSTANCE] = hallInstance;
         
         InstanceLocation libraryInstance = new InstanceLocation();
+        libraryInstance.setName("Library");
         libraryInstance.setDescription("");
         libraryInstance.setItemsStored(null);
         libraryInstance.setEnergyUsed(10);
@@ -557,6 +580,7 @@ public class GameControl {
         instances[Constants.LIBRARY_INSTANCE] = libraryInstance;
     
         InstanceLocation poolInstance = new InstanceLocation();
+        poolInstance.setName("Pool");
         poolInstance.setDescription("");
         poolInstance.setItemsStored(null);
         poolInstance.setEnergyUsed(10);
@@ -579,6 +603,7 @@ public class GameControl {
         
         locations[0][0].setInstance(instances[Constants.STABLE_INSTANCE]);
         locations[0][1].setInstance(instances[Constants.MY_ROOM_INSTANCE]);
+        locations[0][1].setVisited(true);
         locations[0][2].setInstance(instances[Constants.LADY_VIOLET_INSTANCE]);
         locations[0][3].setInstance(instances[Constants.DUKE_FREDERICK_INSTANCE]);
         locations[0][4].setInstance(instances[Constants.DUKE_HAROLD_INSTANCE]);

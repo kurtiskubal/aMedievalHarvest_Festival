@@ -19,12 +19,21 @@ public class InstanceLocation implements Serializable {
     private Boolean visited;
     private String itemsStored;
     private int type;
+    private String name;
     private String description;
     private double energyUsed;
     private double fluidsUsed;
     private double row;
     private double column;
     private String mapSymbol;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getMapSymbol() {
         return mapSymbol;
@@ -102,19 +111,18 @@ public class InstanceLocation implements Serializable {
     }
 
     @Override
-    public String toString() {
-        return "InstanceLocation{" + "visited=" + visited + ", itemsStored=" + itemsStored + ", type=" + type + ", description=" + description + ", energyUsed=" + energyUsed + ", fluidsUsed=" + fluidsUsed + '}';
-    }
-
-    @Override
     public int hashCode() {
         int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.visited);
-        hash = 97 * hash + Objects.hashCode(this.itemsStored);
-        hash = 97 * hash + Objects.hashCode(this.type);
-        hash = 97 * hash + Objects.hashCode(this.description);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.energyUsed) ^ (Double.doubleToLongBits(this.energyUsed) >>> 32));
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.fluidsUsed) ^ (Double.doubleToLongBits(this.fluidsUsed) >>> 32));
+        hash = 83 * hash + Objects.hashCode(this.visited);
+        hash = 83 * hash + Objects.hashCode(this.itemsStored);
+        hash = 83 * hash + this.type;
+        hash = 83 * hash + Objects.hashCode(this.name);
+        hash = 83 * hash + Objects.hashCode(this.description);
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.energyUsed) ^ (Double.doubleToLongBits(this.energyUsed) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.fluidsUsed) ^ (Double.doubleToLongBits(this.fluidsUsed) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.column) ^ (Double.doubleToLongBits(this.column) >>> 32));
+        hash = 83 * hash + Objects.hashCode(this.mapSymbol);
         return hash;
     }
 
@@ -133,7 +141,10 @@ public class InstanceLocation implements Serializable {
         if (!Objects.equals(this.itemsStored, other.itemsStored)) {
             return false;
         }
-        if (!Objects.equals(this.type, other.type)) {
+        if (this.type != other.type) {
+            return false;
+        }
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         if (!Objects.equals(this.description, other.description)) {
@@ -145,7 +156,23 @@ public class InstanceLocation implements Serializable {
         if (Double.doubleToLongBits(this.fluidsUsed) != Double.doubleToLongBits(other.fluidsUsed)) {
             return false;
         }
+        if (Double.doubleToLongBits(this.row) != Double.doubleToLongBits(other.row)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.column) != Double.doubleToLongBits(other.column)) {
+            return false;
+        }
+        if (!Objects.equals(this.mapSymbol, other.mapSymbol)) {
+            return false;
+        }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "InstanceLocation{" + "visited=" + visited + ", itemsStored=" + itemsStored + ", type=" + type + ", name=" + name + ", description=" + description + ", energyUsed=" + energyUsed + ", fluidsUsed=" + fluidsUsed + ", row=" + row + ", column=" + column + ", mapSymbol=" + mapSymbol + '}';
+    }
+
+    
 
 }

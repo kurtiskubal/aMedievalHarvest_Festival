@@ -6,12 +6,16 @@
 
 package byui.cit260.aMedievalHarvestFestival.control;
 
+import byui.cit260.aMedievalHarvestFestival.model.BeverageItem;
+import byui.cit260.aMedievalHarvestFestival.model.FoodItem;
+
 /**
  *
  * @author Adam Decker
  */
 public class ConsumableControl {
-    public Integer calcFillingFoodItem(Integer foodType, Integer weight){
+    /*
+    public Integer calcFillingFoodItem(FoodItem foodItem){
         if(foodType == null || weight == null)return null;
         else if(foodType < 1)return -1;
         else if(weight < 1)return -2;
@@ -23,7 +27,7 @@ public class ConsumableControl {
             return fillingFactor;
         }
     }
-    public Integer calcQuenchBeverageItem(Integer beverageType, Integer volume){
+    public Integer calcQuenchBeverageItem(BeverageItem beverageItem){
         if(beverageType == null || volume == null)return null;
         else if(beverageType < 1)return -1;
         else if(volume < 1)return -2;
@@ -35,5 +39,6 @@ public class ConsumableControl {
             return quenchFactor;
         }
     }
+*/
 }
 

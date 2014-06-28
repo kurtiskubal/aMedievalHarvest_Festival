@@ -9,7 +9,6 @@ package amedievalharvestfestival;
 
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
-import byui.cit260.aMedievalHarvestFestival.view.ConsumableView;
 import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
 
 
@@ -20,6 +19,7 @@ import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
 public class AMedievalHarvestFestival {
     private static Game currentGame = null;
     private static Player player = null;
+    
     /**
      * @param args the command line arguments
      */
