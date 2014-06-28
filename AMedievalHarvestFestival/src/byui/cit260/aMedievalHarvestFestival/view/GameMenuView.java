@@ -88,11 +88,12 @@ public class GameMenuView extends MenuView{
                 System.out.println("\n**** Estimate Thirst needs to be learned ****");
                 break;
             case 'C':
-                System.out.println("\n**** Conversations needs to be learned ****");
-                break;
-            case 'S':
+                
                 ConversationsView haveConv = new ConversationsView();
                 haveConv.haveConv();
+                break;
+            case 'S':
+                System.out.println("\"\\n**** Saving Game needs to be learned ****\"");
                 break;
             case 'Q':
                 return;
@@ -207,6 +208,17 @@ public class GameMenuView extends MenuView{
                       
                     }
                 }
+                else if (matchingLocation.isMatched()){
+                    if (count == 5) {
+                        System.out.println(" OK " + "|");
+                        count = 0;
+                    }
+                    else {
+                      System.out.print(" OK ");
+                      
+                    }
+                }
+                
                 else {
                     if (count == 5) {
                       System.out.println(" ?? " + "|"); 

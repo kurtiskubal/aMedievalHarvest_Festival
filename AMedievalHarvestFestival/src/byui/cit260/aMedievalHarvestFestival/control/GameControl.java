@@ -607,6 +607,7 @@ public class GameControl {
         MatchingInstance matching1 = new MatchingInstance();
         matching1.setValue(1);
         matching1.setChoosen(false);
+        matching1.setMatched(false);
         matching1.setRow(0);
         matching1.setColumn(0);
         matching1.setMapSymbol(" 1_ ");
@@ -615,6 +616,7 @@ public class GameControl {
         MatchingInstance matching2 = new MatchingInstance();
         matching2.setValue(17);
         matching2.setChoosen(false);
+        matching2.setMatched(false);
         matching2.setRow(0);
         matching2.setColumn(1);
         matching2.setMapSymbol(" 17 ");
@@ -623,6 +625,7 @@ public class GameControl {
         MatchingInstance matching3 = new MatchingInstance();
         matching3.setValue(5);
         matching3.setChoosen(false);
+        matching3.setMatched(false);
         matching3.setRow(0);
         matching3.setColumn(2);
         matching3.setMapSymbol(" 5_ ");
@@ -631,6 +634,7 @@ public class GameControl {
         MatchingInstance matching4 = new MatchingInstance();
         matching4.setValue(6);
         matching4.setChoosen(false);
+        matching4.setMatched(false);
         matching4.setRow(0);
         matching4.setColumn(3);
         matching4.setMapSymbol(" 6_ ");
@@ -639,6 +643,7 @@ public class GameControl {
         MatchingInstance matching5 = new MatchingInstance();
         matching5.setValue(6);
         matching5.setChoosen(false);
+        matching5.setMatched(false);
         matching5.setRow(0);
         matching5.setColumn(4);
         matching5.setMapSymbol(" 6_ ");
@@ -646,6 +651,7 @@ public class GameControl {
         
         MatchingInstance matching6 = new MatchingInstance();
         matching6.setValue(12);
+        matching6.setMatched(false);
         matching6.setChoosen(false);
         matching6.setRow(1);
         matching6.setColumn(0);
@@ -655,6 +661,7 @@ public class GameControl {
         MatchingInstance matching7 = new MatchingInstance();
         matching7.setValue(8);
         matching7.setChoosen(false);
+        matching7.setMatched(false);
         matching7.setRow(1);
         matching7.setColumn(1);
         matching7.setMapSymbol(" 8_ ");
@@ -662,6 +669,7 @@ public class GameControl {
         
         MatchingInstance matching8 = new MatchingInstance();
         matching8.setValue(14);
+        matching8.setMatched(false);
         matching8.setChoosen(false);
         matching8.setRow(1);
         matching8.setColumn(2);
@@ -671,6 +679,7 @@ public class GameControl {
         MatchingInstance matching9 = new MatchingInstance();
         matching9.setValue(9);
         matching9.setChoosen(false);
+        matching9.setMatched(false);
         matching9.setRow(1);
         matching9.setColumn(3);
         matching9.setMapSymbol(" 9_ ");
@@ -679,6 +688,7 @@ public class GameControl {
         MatchingInstance matching10 = new MatchingInstance();
         matching10.setValue(2);
         matching10.setChoosen(false);
+        matching10.setMatched(false);
         matching10.setRow(1);
         matching10.setColumn(4);
         matching10.setMapSymbol(" 2_ ");
@@ -687,6 +697,7 @@ public class GameControl {
         MatchingInstance matching11 = new MatchingInstance();
         matching11.setValue(10);
         matching11.setChoosen(false);
+        matching11.setMatched(false);
         matching11.setRow(2);
         matching11.setColumn(0);
         matching11.setMapSymbol(" 10 ");
@@ -695,6 +706,7 @@ public class GameControl {
         MatchingInstance matching12 = new MatchingInstance();
         matching12.setValue(7);
         matching12.setChoosen(false);
+        matching12.setMatched(false);
         matching12.setRow(2);
         matching12.setColumn(1);
         matching12.setMapSymbol(" 7_ ");
@@ -703,6 +715,7 @@ public class GameControl {
         MatchingInstance matching13 = new MatchingInstance();
         matching13.setValue(12);
         matching13.setChoosen(false);
+        matching13.setMatched(false);
         matching13.setRow(2);
         matching13.setColumn(2);
         matching13.setMapSymbol(" 12 ");
@@ -711,6 +724,7 @@ public class GameControl {
         MatchingInstance matching14 = new MatchingInstance();
         matching14.setValue(1);
         matching14.setChoosen(false);
+        matching14.setMatched(false);
         matching14.setRow(2);
         matching14.setColumn(3);
         matching14.setMapSymbol(" 1_ ");
@@ -719,6 +733,7 @@ public class GameControl {
         MatchingInstance matching15 = new MatchingInstance();
         matching15.setValue(4);
         matching15.setChoosen(false);
+        matching15.setMatched(false);
         matching15.setRow(2);
         matching15.setColumn(4);
         matching15.setMapSymbol(" 4_ ");
@@ -727,6 +742,7 @@ public class GameControl {
         MatchingInstance matching16 = new MatchingInstance();
         matching16.setValue(14);
         matching16.setChoosen(false);
+        matching16.setMatched(false);
         matching16.setRow(3);
         matching16.setColumn(0);
         matching16.setMapSymbol(" 14 ");
@@ -735,6 +751,7 @@ public class GameControl {
         MatchingInstance matching17 = new MatchingInstance();
         matching17.setValue(10);
         matching17.setChoosen(false);
+        matching17.setMatched(false);
         matching17.setRow(3);
         matching17.setColumn(1);
         matching17.setMapSymbol(" 10 ");
@@ -743,6 +760,7 @@ public class GameControl {
         MatchingInstance matching18 = new MatchingInstance();
         matching18.setValue(3);
         matching18.setChoosen(false);
+        matching18.setMatched(false);
         matching18.setRow(3);
         matching18.setColumn(2);
         matching18.setMapSymbol(" 3_ ");
@@ -751,6 +769,7 @@ public class GameControl {
         MatchingInstance matching19 = new MatchingInstance();
         matching19.setValue(11);
         matching19.setChoosen(false);
+        matching19.setMatched(false);
         matching19.setRow(3);
         matching19.setColumn(3);
         matching19.setMapSymbol(" 11 ");
@@ -759,6 +778,7 @@ public class GameControl {
         MatchingInstance matching20 = new MatchingInstance();
         matching20.setValue(16);
         matching20.setChoosen(false);
+        matching20.setMatched(false);
         matching20.setRow(3);
         matching20.setColumn(4);
         matching20.setMapSymbol(" 16 ");
@@ -767,6 +787,7 @@ public class GameControl {
         MatchingInstance matching21 = new MatchingInstance();
         matching21.setValue(15);
         matching21.setChoosen(false);
+        matching21.setMatched(false);
         matching21.setRow(4);
         matching21.setColumn(0);
         matching21.setMapSymbol(" 15 ");
@@ -775,6 +796,7 @@ public class GameControl {
         MatchingInstance matching22 = new MatchingInstance();
         matching22.setValue(5);
         matching22.setChoosen(false);
+        matching22.setMatched(false);
         matching22.setRow(4);
         matching22.setColumn(1);
         matching22.setMapSymbol(" 5_ ");
@@ -783,6 +805,7 @@ public class GameControl {
         MatchingInstance matching23 = new MatchingInstance();
         matching23.setValue(13);
         matching23.setChoosen(false);
+        matching23.setMatched(false);
         matching23.setRow(4);
         matching23.setColumn(2);
         matching23.setMapSymbol(" 13 ");
@@ -791,6 +814,7 @@ public class GameControl {
         MatchingInstance matching24 = new MatchingInstance();
         matching24.setValue(18);
         matching24.setChoosen(false);
+        matching24.setMatched(false);
         matching24.setRow(4);
         matching24.setColumn(3);
         matching24.setMapSymbol(" 18 ");
@@ -799,6 +823,7 @@ public class GameControl {
         MatchingInstance matching25 = new MatchingInstance();
         matching25.setValue(18);
         matching25.setChoosen(false);
+        matching25.setMatched(false);
         matching25.setRow(4);
         matching25.setColumn(4);
         matching25.setMapSymbol(" 18 ");
@@ -807,6 +832,7 @@ public class GameControl {
         MatchingInstance matching26 = new MatchingInstance();
         matching26.setValue(4);
         matching26.setChoosen(false);
+        matching26.setMatched(false);
         matching26.setRow(5);
         matching26.setColumn(0);
         matching26.setMapSymbol(" 4_ ");
@@ -815,6 +841,7 @@ public class GameControl {
         MatchingInstance matching27 = new MatchingInstance();
         matching27.setValue(7);
         matching27.setChoosen(false);
+        matching27.setMatched(false);
         matching27.setRow(5);
         matching27.setColumn(1);
         matching27.setMapSymbol(" 7_ ");
@@ -823,6 +850,7 @@ public class GameControl {
         MatchingInstance matching28 = new MatchingInstance();
         matching28.setValue(19);
         matching28.setChoosen(false);
+        matching28.setMatched(false);
         matching28.setRow(5);
         matching28.setColumn(2);
         matching28.setMapSymbol(" 19 ");
@@ -839,6 +867,7 @@ public class GameControl {
         MatchingInstance matching30 = new MatchingInstance();
         matching30.setValue(2);
         matching30.setChoosen(false);
+        matching30.setMatched(false);
         matching30.setRow(5);
         matching30.setColumn(4);
         matching30.setMapSymbol(" 2_ ");
@@ -847,6 +876,7 @@ public class GameControl {
         MatchingInstance matching31 = new MatchingInstance();
         matching31.setValue(15);
         matching31.setChoosen(false);
+        matching31.setMatched(false);
         matching31.setRow(6);
         matching31.setColumn(0);
         matching31.setMapSymbol(" 15 ");
@@ -855,6 +885,7 @@ public class GameControl {
         MatchingInstance matching32 = new MatchingInstance();
         matching32.setValue(9);
         matching32.setChoosen(false);
+        matching32.setMatched(false);
         matching32.setRow(6);
         matching32.setColumn(1);
         matching32.setMapSymbol(" 9_ ");
@@ -863,6 +894,7 @@ public class GameControl {
         MatchingInstance matching33 = new MatchingInstance();
         matching33.setValue(11);
         matching33.setChoosen(false);
+        matching33.setMatched(false);
         matching33.setRow(6);
         matching33.setColumn(2);
         matching33.setMapSymbol(" 11 ");
@@ -871,6 +903,7 @@ public class GameControl {
         MatchingInstance matching34 = new MatchingInstance();
         matching34.setValue(20);
         matching34.setChoosen(false);
+        matching34.setMatched(false);
         matching34.setRow(6);
         matching34.setColumn(3);
         matching34.setMapSymbol(" 20 ");
@@ -879,6 +912,7 @@ public class GameControl {
         MatchingInstance matching35 = new MatchingInstance();
         matching35.setValue(19);
         matching35.setChoosen(false);
+        matching35.setMatched(false);
         matching35.setRow(6);
         matching35.setColumn(4);
         matching35.setMapSymbol(" 19 ");
@@ -887,6 +921,7 @@ public class GameControl {
         MatchingInstance matching36 = new MatchingInstance();
         matching36.setValue(17);
         matching36.setChoosen(false);
+        matching36.setMatched(false);
         matching36.setRow(7);
         matching36.setColumn(0);
         matching36.setMapSymbol(" 17 ");
@@ -895,6 +930,7 @@ public class GameControl {
         MatchingInstance matching37 = new MatchingInstance();
         matching37.setValue(16);
         matching37.setChoosen(false);
+        matching37.setMatched(false);
         matching37.setRow(7);
         matching37.setColumn(1);
         matching37.setMapSymbol(" 16 ");
@@ -903,6 +939,7 @@ public class GameControl {
         MatchingInstance matching38 = new MatchingInstance();
         matching38.setValue(3);
         matching38.setChoosen(false);
+        matching38.setMatched(false);
         matching38.setRow(7);
         matching38.setColumn(2);
         matching38.setMapSymbol(" 3_ ");
@@ -911,6 +948,7 @@ public class GameControl {
         MatchingInstance matching39 = new MatchingInstance();
         matching39.setValue(13);
         matching39.setChoosen(false);
+        matching39.setMatched(false);
         matching39.setRow(7);
         matching39.setColumn(3);
         matching39.setMapSymbol(" 13 ");
@@ -919,6 +957,7 @@ public class GameControl {
         MatchingInstance matching40 = new MatchingInstance();
         matching40.setValue(20);
         matching40.setChoosen(false);
+        matching40.setMatched(false);
         matching40.setRow(7);
         matching40.setColumn(4);
         matching40.setMapSymbol(" 20 ");
