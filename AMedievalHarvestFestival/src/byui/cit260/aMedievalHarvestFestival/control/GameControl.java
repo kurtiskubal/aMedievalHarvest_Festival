@@ -1135,6 +1135,8 @@ public class GameControl {
         
         if (max.getItemQuanity() == 0) 
             max.setName("\n\nThere are no items.");
+        if (count >= 1 && max.getItemQuanity() > 0)
+            max.setName("There is an equal amount of one or more items.");
         if (count == 21 && max.getItemQuanity() > 0)
             max.setName("There is an equal amount of all items.");
         return max;

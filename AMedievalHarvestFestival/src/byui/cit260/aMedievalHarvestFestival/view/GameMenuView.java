@@ -9,7 +9,6 @@ package byui.cit260.aMedievalHarvestFestival.view;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import static byui.cit260.aMedievalHarvestFestival.control.GameControl.getSortedInventoryList;
-import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
