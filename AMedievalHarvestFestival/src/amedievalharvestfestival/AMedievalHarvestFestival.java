@@ -9,7 +9,6 @@ package amedievalharvestfestival;
 
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
-import byui.cit260.aMedievalHarvestFestival.view.ConsumableView;
 import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
 
 

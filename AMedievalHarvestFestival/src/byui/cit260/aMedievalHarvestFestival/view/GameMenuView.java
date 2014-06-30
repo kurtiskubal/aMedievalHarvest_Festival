@@ -88,11 +88,11 @@ public class GameMenuView extends MenuView{
                 System.out.println("\n**** Estimate Thirst needs to be learned ****");
                 break;
             case 'C':
-                System.out.println("\n**** Conversations needs to be learned ****");
-                break;
-            case 'S':
                 ConversationsView haveConv = new ConversationsView();
                 haveConv.haveConv();
+                break;
+            case 'S':
+                System.out.println("\n**** Save Game needs to be learned ****");
                 break;
             case 'Q':
                 return;
@@ -104,9 +104,10 @@ public class GameMenuView extends MenuView{
 
     private void displayCurrLocation() {
         // call Control function to get the player's current location
-        Location currentLocation = MapControl.getCurrentLocation();
+        InstanceLocation currentLocation = MapControl.getCurrentLocation();
         // Print out the description of the current location
-        //System.out.println(currentLocation.toString());
+        
+        System.out.println(currentLocation.toString());
     }
     
     public int viewInventory() {

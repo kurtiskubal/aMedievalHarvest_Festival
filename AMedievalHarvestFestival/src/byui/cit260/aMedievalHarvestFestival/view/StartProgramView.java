@@ -83,11 +83,6 @@ public class StartProgramView {
         
         return playersName;
     }
-    
-    public static Player createPlayer(String playersName) {
-        System.out.println("\n**** createPlayer function called ****");
-        return null;
-    }
 
     public void displayWelcomeMessage(Player player) {
         System.out.println("\n\n===============================");

@@ -9,9 +9,6 @@ package byui.cit260.aMedievalHarvestFestival.view;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.ConversationControl;
 import byui.cit260.aMedievalHarvestFestival.model.Actors;
-import byui.cit260.aMedievalHarvestFestival.model.Game;
-import byui.cit260.aMedievalHarvestFestival.model.Location;
-import byui.cit260.aMedievalHarvestFestival.model.Player;
 import java.util.Scanner;
 
 /**
@@ -21,18 +18,15 @@ import java.util.Scanner;
 public class ConversationsView {
     
     public void haveConv(){
-        Game thisGame = AMedievalHarvestFestival.getCurrentGame();
-        Player thisPlyr = thisGame.getPlayer();
-        Location currLoc = thisPlyr.getPlayerLocation();
-        Actors[] actorsNear = currLoc.getActors();
+        Actors[] actorsNear = AMedievalHarvestFestival.getPlayer().getPlayerLocation().getActors();
         
         Scanner keyboard = new Scanner(System.in);
         
         System.out.println("Would you like to talk to:");
         //loop for moving through an array
-        for (int i = 0; i > actorsNear.length; i++){
+        for (int i = 0; i < actorsNear.length; i++){
             // Need to print a number and a name for each actor in array.
-            System.out.println("/n" + i + " - " + actorsNear[0].getName());
+            System.out.println("\n" + i + " - " + actorsNear[i].getName());
         }
            
         int selection = keyboard.nextInt();

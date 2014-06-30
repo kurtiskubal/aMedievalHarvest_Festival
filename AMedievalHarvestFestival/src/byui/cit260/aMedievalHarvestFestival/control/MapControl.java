@@ -6,9 +6,11 @@
 
 package byui.cit260.aMedievalHarvestFestival.control;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.model.Actors;
+import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
-import byui.cit260.aMedievalHarvestFestival.model.Map;
+import byui.cit260.aMedievalHarvestFestival.model.Player;
 
 /**
  *
@@ -16,14 +18,18 @@ import byui.cit260.aMedievalHarvestFestival.model.Map;
  */
 public class MapControl {
 
-    public static Location getCurrentLocation() {
-        System.out.println("\n**** getCurrentLocation stub function called ****");
-        return null;
+    public static InstanceLocation getCurrentLocation() {
+        Player thisPlayer = amedievalharvestfestival.AMedievalHarvestFestival.getPlayer();
+        Location location = thisPlayer.getPlayerLocation();
+        InstanceLocation scene = location.getInstance();
+        return scene;
     }
 
-    static void moveActorsToLocation(Map map, Actors[] actors, int row, int column) {
-           Location location = map.getLocations()[row][column];
-           
+    static void moveActorsToLocation(Actors[] actors) {
+           Location[][] location = AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();
+           Actors[] actorsForMap = new Actors[1];
+           actorsForMap[0] = actors[0];
+           location[0][1].setActors(actorsForMap);
        } 
     
     public double calcSqFootageOfRoom(double roomWidth, double roomLength){

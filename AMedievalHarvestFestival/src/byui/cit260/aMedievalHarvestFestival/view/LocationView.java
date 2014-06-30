@@ -6,7 +6,12 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.LocationControl;
+import byui.cit260.aMedievalHarvestFestival.model.Game;
+import byui.cit260.aMedievalHarvestFestival.model.Location;
+import byui.cit260.aMedievalHarvestFestival.model.Map;
+
 
 /**
  *
@@ -43,82 +48,86 @@ public class LocationView extends MenuView{
      }
     @Override
     public void doAction(char value) {
+        Game thisGame = AMedievalHarvestFestival.getCurrentGame();
+        Map gameMap = thisGame.getMap();
+        Location[][] gameLocations = gameMap.getLocations();
+        
         switch (value) {
             case 'R':
                 LocationControl playerMoveMyRoom = new LocationControl();
-                playerMoveMyRoom.movePlayerToLocation();
+                playerMoveMyRoom.movePlayerToLocation(gameLocations[0][1]);
                 break;
             case 'Y':
                 LocationControl playerMoveLadyV = new LocationControl();
-                playerMoveLadyV.movePlayerToLocation();
+                playerMoveLadyV.movePlayerToLocation(gameLocations[0][2]);
                 break;
             case 'G':
                 LocationControl playerMoveDukeF = new LocationControl();
-                playerMoveDukeF.movePlayerToLocation();
+                playerMoveDukeF.movePlayerToLocation(gameLocations[0][3]);
                 break;
             case 'H':
                 LocationControl playerMoveDukeH = new LocationControl();
-                playerMoveDukeH.movePlayerToLocation();
+                playerMoveDukeH.movePlayerToLocation(gameLocations[0][4]);
                 break;
             case 'U':
                 LocationControl playerMoveDukeL = new LocationControl();
-                playerMoveDukeL.movePlayerToLocation();
+                playerMoveDukeL.movePlayerToLocation(gameLocations[1][0]);
                 break;
             case 'C':
                 LocationControl playerMoveLordC = new LocationControl();
-                playerMoveLordC.movePlayerToLocation();
+                playerMoveLordC.movePlayerToLocation(gameLocations[1][1]);
                 break;
             case 'E':
                 LocationControl playerMoveEmpGuest = new LocationControl();
-                playerMoveEmpGuest.movePlayerToLocation();
+                playerMoveEmpGuest.movePlayerToLocation(gameLocations[1][2]);
                 break;
             case 'O':
                 LocationControl playerMoveSerQ = new LocationControl();
-                playerMoveSerQ.movePlayerToLocation();
+                playerMoveSerQ.movePlayerToLocation(gameLocations[1][3]);
                 break;
             case 'P':
                 LocationControl playerMovePrinR = new LocationControl();
-                playerMovePrinR.movePlayerToLocation();
+                playerMovePrinR.movePlayerToLocation(gameLocations[1][4]);
                 break;
             case 'N':
                 LocationControl playerMoveKingR = new LocationControl();
-                playerMoveKingR.movePlayerToLocation();
+                playerMoveKingR.movePlayerToLocation(gameLocations[2][0]);
                 break;
             case 'B':
                 LocationControl playerMoveKingRR = new LocationControl();
-                playerMoveKingRR.movePlayerToLocation();
+                playerMoveKingRR.movePlayerToLocation(gameLocations[2][1]);
                 break;
             case 'T':
                 LocationControl playerMoveGardens = new LocationControl();
-                playerMoveGardens.movePlayerToLocation();
+                playerMoveGardens.movePlayerToLocation(gameLocations[2][2]);
                 break;
             case 'S':
                 LocationControl playerMoveStables = new LocationControl();
-                playerMoveStables.movePlayerToLocation();
+                playerMoveStables.movePlayerToLocation(gameLocations[0][0]);
                 break;
             case 'F':
                 LocationControl playerMoveCourtyard = new LocationControl();
-                playerMoveCourtyard.movePlayerToLocation();
+                playerMoveCourtyard.movePlayerToLocation(gameLocations[2][3]);
                 break;
             case 'V':
                 LocationControl playerMoveGuestRR = new LocationControl();
-                playerMoveGuestRR.movePlayerToLocation();
+                playerMoveGuestRR.movePlayerToLocation(gameLocations[2][4]);
                 break;
             case 'K':
                 LocationControl playerMoveKitchen = new LocationControl();
-                playerMoveKitchen.movePlayerToLocation();
+                playerMoveKitchen.movePlayerToLocation(gameLocations[3][0]);
                 break;
             case 'A':
                 LocationControl playerMoveChamber = new LocationControl();
-                playerMoveChamber.movePlayerToLocation();
+                playerMoveChamber.movePlayerToLocation(gameLocations[3][1]);
                 break;
             case 'D':
                 LocationControl playerMoveDining = new LocationControl();
-                playerMoveDining.movePlayerToLocation();
+                playerMoveDining.movePlayerToLocation(gameLocations[3][2]);
                 break;
             case 'L':
                 LocationControl playerMoveLibrary = new LocationControl();
-                playerMoveLibrary.movePlayerToLocation();
+                playerMoveLibrary.movePlayerToLocation(gameLocations[3][3]);
                 break;
             case 'M':
                 LocationControl lookAtMap = new LocationControl();

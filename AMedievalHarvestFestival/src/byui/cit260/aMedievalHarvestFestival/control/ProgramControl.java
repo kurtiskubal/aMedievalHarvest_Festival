@@ -6,6 +6,7 @@
 
 package byui.cit260.aMedievalHarvestFestival.control;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 
 /**
@@ -18,6 +19,7 @@ public class ProgramControl {
         
         Player player = new Player();
         player.setName(playersName);
+        AMedievalHarvestFestival.setPlayer(player);
       
         
         return player;
