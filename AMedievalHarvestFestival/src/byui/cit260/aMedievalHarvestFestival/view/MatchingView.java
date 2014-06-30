@@ -6,7 +6,9 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
+import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.control.MatchingControl;
+import byui.cit260.aMedievalHarvestFestival.model.MatchingGameLocation;
 import java.util.Scanner;
 
 /**
@@ -23,11 +25,10 @@ public class MatchingView{
 
 
     public void display() {
-
+GameMenuView gameMenuView = new GameMenuView();
         String selection = "  ";
         do {
             System.out.println(MENU);
-            GameMenuView gameMenuView = new GameMenuView();
             gameMenuView.displayMatchingGame();
             String input = this.getInput();
             selection = input.substring(0);
@@ -58,6 +59,7 @@ public class MatchingView{
        
     }
      public void doAction(String value) {
+          MatchingGameLocation[][] matchingLocations = GameControl.getMatchingGameLocations();
         switch (value) {
             case "00":
                 
@@ -181,6 +183,15 @@ public class MatchingView{
                 matchingControl.showSelection(value);
                 break;    
             case "99":
+                for (int i = 0; i < 8; i++) {
+                    for (int j = 0; j < 5; j++) {
+                        if (matchingLocations[i][j].isChoosen() == true) {
+                            matchingLocations[i][j].setChoosen(false);
+                    
+                        }
+                    }
+                
+                }
                 return;
             default:
                 System.out.print("\n*** Invalid selction *** Try Again");

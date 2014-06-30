@@ -15,12 +15,21 @@ import java.util.Objects;
  */
 public class MatchingInstance implements Serializable {
     private Boolean choosen;
+    private Boolean matched;
     private int value;
     private double row;
     private double column;
     private String mapSymbol;
 
     public MatchingInstance() {
+    }
+
+    public Boolean isMatched() {
+        return matched;
+    }
+
+    public void setMatched(Boolean matched) {
+        this.matched = matched;
     }
 
     public Boolean isChoosen() {
@@ -65,12 +74,13 @@ public class MatchingInstance implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 83 * hash + Objects.hashCode(this.choosen);
-        hash = 83 * hash + this.value;
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
-        hash = 83 * hash + (int) (Double.doubleToLongBits(this.column) ^ (Double.doubleToLongBits(this.column) >>> 32));
-        hash = 83 * hash + Objects.hashCode(this.mapSymbol);
+        int hash = 7;
+        hash = 97 * hash + Objects.hashCode(this.choosen);
+        hash = 97 * hash + Objects.hashCode(this.matched);
+        hash = 97 * hash + this.value;
+        hash = 97 * hash + (int) (Double.doubleToLongBits(this.row) ^ (Double.doubleToLongBits(this.row) >>> 32));
+        hash = 97 * hash + (int) (Double.doubleToLongBits(this.column) ^ (Double.doubleToLongBits(this.column) >>> 32));
+        hash = 97 * hash + Objects.hashCode(this.mapSymbol);
         return hash;
     }
 
@@ -84,6 +94,9 @@ public class MatchingInstance implements Serializable {
         }
         final MatchingInstance other = (MatchingInstance) obj;
         if (!Objects.equals(this.choosen, other.choosen)) {
+            return false;
+        }
+        if (!Objects.equals(this.matched, other.matched)) {
             return false;
         }
         if (this.value != other.value) {
@@ -103,8 +116,10 @@ public class MatchingInstance implements Serializable {
 
     @Override
     public String toString() {
-        return "MatchingInstance{" + "choosen=" + choosen + ", value=" + value + ", row=" + row + ", column=" + column + ", mapSymbol=" + mapSymbol + '}';
+        return "MatchingInstance{" + "choosen=" + choosen + ", matched=" + matched + ", value=" + value + ", row=" + row + ", column=" + column + ", mapSymbol=" + mapSymbol + '}';
     }
+
+    
     
     
 }

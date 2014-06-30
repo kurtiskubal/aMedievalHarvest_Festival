@@ -19,6 +19,7 @@ import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
 public class AMedievalHarvestFestival {
     private static Game currentGame = null;
     private static Player player = null;
+    
     /**
      * @param args the command line arguments
      */

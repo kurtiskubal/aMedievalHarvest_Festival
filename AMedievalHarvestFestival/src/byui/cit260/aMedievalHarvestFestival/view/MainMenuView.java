@@ -10,6 +10,7 @@ package byui.cit260.aMedievalHarvestFestival.view;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
+import byui.cit260.aMedievalHarvestFestival.model.Game;
 
 /**
  *
@@ -29,6 +30,7 @@ public class MainMenuView extends MenuView {
     }
 
     private void startNewGame() {
+        
         GameControl.createNewGame(AMedievalHarvestFestival.getPlayer());
     
         GameMenuView gameMenu = new GameMenuView();
@@ -40,6 +42,13 @@ public class MainMenuView extends MenuView {
     public void doAction(char value) {
         switch (value) {
             case 'G':
+                System.out.println("\nYour name is Lord Pharoah. You are a wealthy landowner"
+                        + "\nin the land of Carlsburg. You have been invited by the"
+                        + "\nroyal family, the Williams, to a harvest festival, a"
+                        + "\ncelebration of the wealth of all the dukes, ladies, and lords"
+                        + "\nin the valley. You arrived last night to the Williams' estate."
+                        + "\nYou are now awake in your guest room and there seems to be some"
+                        + "\nsort of commotion out in the Audience Chamber.");
                 startNewGame();
                 break;
             case 'H':

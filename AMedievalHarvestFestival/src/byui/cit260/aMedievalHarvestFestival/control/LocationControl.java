@@ -5,6 +5,8 @@
  */
 
 package byui.cit260.aMedievalHarvestFestival.control;
+import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.model.Location;
 
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
@@ -16,11 +18,33 @@ import byui.cit260.aMedievalHarvestFestival.model.Player;
  * @author Kurt
  */
 public class LocationControl {
-    public void movePlayerToLocation(Location newLocation){
+    public static void movePlayerToLocation(Location location){
+        if (AMedievalHarvestFestival.getCurrentGame().isGameEvent() == true
+                && location != AMedievalHarvestFestival.getCurrentGame().getGameEventLocation()) {
+            System.out.println("There seems to be something important"
+                    + "\ngoing on in the " + AMedievalHarvestFestival.getCurrentGame().getGameEventLocation().getInstance().getName() + "."
+                    + "\nYou should check it out.");
+        }
+        
+        else if (AMedievalHarvestFestival.getCurrentGame().isGameEvent() == true
+                && location == AMedievalHarvestFestival.getCurrentGame().getGameEventLocation()) {
+            AMedievalHarvestFestival.getPlayer().setPlayerLocation(location);
+        System.out.println(AMedievalHarvestFestival.getPlayer().getPlayerLocation().getInstance().getDescription());
+        if (location.isVisited() == false) {
+            location.setVisited(true);
+        }
+        AMedievalHarvestFestival.getCurrentGame().setGameEvent(false);
+        }
+        
+        else {
+            AMedievalHarvestFestival.getPlayer().setPlayerLocation(location);
+        System.out.println(AMedievalHarvestFestival.getPlayer().getPlayerLocation().getInstance().getDescription());
+        if (location.isVisited() == false) {
+            location.setVisited(true);
+        }
+        } 
     }
     public static void displayMap(){
-        System.out.println("\n**** displayMap stub function called ****");
-         int lineLength = 0;
         
         Location[][] locations = GameControl.getMapLocations();
         int noColumns = locations[0].length;

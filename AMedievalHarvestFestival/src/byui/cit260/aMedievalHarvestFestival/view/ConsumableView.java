@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Adam Decker
  */
 public class ConsumableView {
-    
+   /* 
     public void determineConsumableValue() {
         boolean valid = false;
         Scanner keyboard = new Scanner(System.in);
@@ -77,5 +77,6 @@ public class ConsumableView {
 
         }
     }
+    */
 }
 

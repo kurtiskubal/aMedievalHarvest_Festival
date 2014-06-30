@@ -40,8 +40,7 @@ public class InventoryView extends MenuView{
             case 'D':
                 InventoryItem max = new InventoryItem();
                 max = GameControl.greatestAmount();
-                System.out.println(max.getName());
-                max.setName("                                                                                                                                                                           ");
+                System.out.println("Item with Greatest Quantity: " + max.getName());
                  
                 break;
             case 'Q':
