@@ -24,7 +24,7 @@ public class BeverageItem extends InventoryItem {
     }
 
     //class instance variables
-    private Double beverageType;
+    private Double beverageType = 0.0;
     private final Double volume = randomInRange(1,10);
     private final Double quenchFactor = beverageType * volume;
     
