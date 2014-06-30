@@ -25,7 +25,7 @@ public class FoodItem extends InventoryItem {
      
 
     //class instance variables
-    private double foodType;
+    private double foodType = 0;
     private final double weight = randomInRange(1, 10);
     private final Double fillingFactor = weight * foodType;
     
