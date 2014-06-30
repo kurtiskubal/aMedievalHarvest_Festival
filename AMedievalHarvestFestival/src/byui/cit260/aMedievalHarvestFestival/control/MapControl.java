@@ -10,6 +10,7 @@ import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.model.Actors;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
+import byui.cit260.aMedievalHarvestFestival.model.Map;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 
 /**
@@ -25,7 +26,7 @@ public class MapControl {
         return scene;
     }
 
-    static void moveActorsToLocation(Actors[] actors) {
+    static void moveActorsToLocation(Map map, Actors[] actors, int row, int col) {
            Location[][] location = AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();
            Actors[] actorsForMap = new Actors[1];
            actorsForMap[0] = actors[0];

@@ -21,7 +21,6 @@ public class ProgramControl {
         player.setName(playersName);
         AMedievalHarvestFestival.setPlayer(player);
       
-        
         return player;
     }
     public void saveGame(){

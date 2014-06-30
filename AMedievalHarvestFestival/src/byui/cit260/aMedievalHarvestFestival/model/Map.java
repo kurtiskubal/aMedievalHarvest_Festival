@@ -43,7 +43,7 @@ public class Map implements Serializable {
                 location.setRow(row);
                 location.setVisited(false);
                 
-                this.locations[row][column] = location;
+                locations[row][column] = location;
             }
         }
     }

@@ -5,13 +5,10 @@
  */
 
 package byui.cit260.aMedievalHarvestFestival.control;
-import amedievalharvestfestival.AMedievalHarvestFestival;
-import byui.cit260.aMedievalHarvestFestival.model.Location;
 
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
-import byui.cit260.aMedievalHarvestFestival.model.Player;
 
 /**
  *
