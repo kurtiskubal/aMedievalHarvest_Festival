@@ -26,11 +26,9 @@ public class MapControl {
         return scene;
     }
 
-    static void moveActorsToLocation(Map map, Actors[] actors, int row, int col) {
-           Location[][] location = AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();
-           Actors[] actorsForMap = new Actors[1];
-           actorsForMap[0] = actors[0];
-           location[0][1].setActors(actorsForMap);
+    static void moveActorsToLocation(Actors actor, int row, int col) {
+        Map map = AMedievalHarvestFestival.getCurrentGame().getMap();
+           
        } 
     
     public double calcSqFootageOfRoom(double roomWidth, double roomLength){

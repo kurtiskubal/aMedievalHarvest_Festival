@@ -62,7 +62,7 @@ public class GameControl {
         player.setPlayerLocation(map.getLocations()[0][1]);
         game.setGameEventLocation(map.getLocations()[3][1]);
         
-        MapControl.moveActorsToLocation(map, actors, 0, 3);
+        MapControl.moveActorsToLocation(actors[0], 0, 3);
     }
     
     public static void startSavedGame(){
