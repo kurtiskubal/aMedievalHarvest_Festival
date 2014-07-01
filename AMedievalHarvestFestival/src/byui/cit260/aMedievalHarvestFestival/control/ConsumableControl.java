@@ -8,12 +8,27 @@ package byui.cit260.aMedievalHarvestFestival.control;
 
 import byui.cit260.aMedievalHarvestFestival.model.BeverageItem;
 import byui.cit260.aMedievalHarvestFestival.model.FoodItem;
+import byui.cit260.aMedievalHarvestFestival.model.Player;
 
 /**
  *
  * @author Adam Decker
  */
 public class ConsumableControl {
+    public void getPlayerHunger(Player player) {
+        int hungerEstimated;
+        hungerEstimated = (int) player.getHunger();
+        String messageAboutHunger;
+        
+        System.out.println(player.getName() + ", Lord Pharoah's hunger is " + hungerEstimated + "."
+                                            + "");
+    }
+    
+    public void getPlayerThirst(Player player) {
+        int thirstEstimated;
+        thirstEstimated = (int) player.getThirst();
+    
+}
     /*
     public Integer calcFillingFoodItem(FoodItem foodItem){
         if(foodType == null || weight == null)return null;
