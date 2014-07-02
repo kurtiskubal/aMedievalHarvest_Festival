@@ -23,7 +23,6 @@ import byui.cit260.aMedievalHarvestFestival.model.MatchingGameLocation;
 import byui.cit260.aMedievalHarvestFestival.model.MatchingInstance;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 import byui.cit260.aMedievalHarvestFestival.model.WeaponItem;
-import java.util.Objects;
 
 /**
  *
@@ -1145,8 +1144,4 @@ public class GameControl {
         else
             System.out.println( '\n' + maxName + "\nhas the highest quantitiy.");
     }
-    
-    
-    
 }
-
