@@ -43,6 +43,9 @@ public class GameControl {
         AMedievalHarvestFestival.setCurrentGame(game);
         
         GameControl.game.setPlayer(player);
+        player.setHealth(100);
+        player.setHunger(0);
+        player.setThirst(0);
         
         game.setGameEvent(true);
         

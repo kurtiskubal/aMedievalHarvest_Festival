@@ -15,20 +15,51 @@ import byui.cit260.aMedievalHarvestFestival.model.Player;
  * @author Adam Decker
  */
 public class ConsumableControl {
-    public void getPlayerHunger(Player player) {
-        int hungerEstimated;
-        hungerEstimated = (int) player.getHunger();
-        String messageAboutHunger;
-        
-        System.out.println(player.getName() + ", Lord Pharoah's hunger is " + hungerEstimated + "."
-                                            + "");
+    public static void getPlayerHunger(Player player) {
+        double hungerEstimated;
+        hungerEstimated = player.getHunger();
+        String message = null;
+        if (hungerEstimated == 0)
+            message = "You are full.";
+        else if (hungerEstimated >= 30)
+            message = "You are getting hungry, but you'll be fine.";
+        else if (hungerEstimated >= 60)
+            message = "You could go for a snack.";
+        else if (hungerEstimated >= 90)
+            message = "Your stomach is making audible rumblings.";
+        else if (hungerEstimated == 100)
+            message = "Luckily you are in a castle filled with food,"
+                    + "\nbecause you are starving.";
+        System.out.println(player.getName() + ", Lord Pharoah's hunger is " + hungerEstimated + ".\n"
+                                            + message);
     }
     
-    public void getPlayerThirst(Player player) {
+    public static void getPlayerThirst(Player player) {
         int thirstEstimated;
         thirstEstimated = (int) player.getThirst();
+        String message = null;
+        if (thirstEstimated == 0)
+            message = "You are quenched. The liquid in your stomach is sloshing a little bit.";
+        else if (thirstEstimated >= 30)
+            message = "You are getting thirsty, but you'll be fine.";
+        else if (thirstEstimated >= 60)
+            message = "You could go for a drink.";
+        else if (thirstEstimated >= 90)
+            message = "Your tongue is dry.";
+        else if (thirstEstimated == 100)
+            message = "You cannot speak. You need to drink something.";
+        System.out.println(player.getName() + ", Lord Pharoah's thirst is " + thirstEstimated + ".\n"
+                                            + message);
     
 }
+    
+    public static void gainHunger(Player player) {
+        double hunger;
+        hunger = (int) player.getHunger() + 5;
+        if (hunger > 100)
+            hunger = 100;
+        player.setHunger(hunger);
+        }
     /*
     public Integer calcFillingFoodItem(FoodItem foodItem){
         if(foodType == null || weight == null)return null;

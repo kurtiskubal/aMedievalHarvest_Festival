@@ -7,6 +7,7 @@
 package byui.cit260.aMedievalHarvestFestival.view;
 
 import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.control.ConsumableControl;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import static byui.cit260.aMedievalHarvestFestival.control.GameControl.getSortedInventoryList;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
@@ -82,10 +83,10 @@ public class GameMenuView extends MenuView{
                 this.displayRhymes();
                 break;
             case 'H':
-                System.out.println("\n**** Estimate Hunger needs to be learned ****");
+                ConsumableControl.getPlayerHunger(AMedievalHarvestFestival.getPlayer());
                 break;
             case 'T':
-                System.out.println("\n**** Estimate Thirst needs to be learned ****");
+                ConsumableControl.getPlayerThirst(AMedievalHarvestFestival.getPlayer());
                 break;
             case 'C':
                 ConversationsView haveConv = new ConversationsView();
