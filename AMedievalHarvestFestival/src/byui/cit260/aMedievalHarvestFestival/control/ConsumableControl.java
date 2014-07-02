@@ -60,31 +60,42 @@ public class ConsumableControl {
             hunger = 100;
         player.setHunger(hunger);
         }
-    /*
-    public Integer calcFillingFoodItem(FoodItem foodItem){
-        if(foodType == null || weight == null)return null;
-        else if(foodType < 1)return -1;
-        else if(weight < 1)return -2;
-        else if (foodType > 5)return -3;
-        else if(weight > 10)return -4;
+    
+    public Double calcFillingFoodItem(FoodItem foodItem){
+        double weight = foodItem.getWeight();
+        Integer foodType = foodItem.getFoodType();
+        
+        if (foodType < 1)
+            return -1.0;
+        else if (weight < 1)
+            return -2.0;
+        else if (foodType > 5)
+            return -3.0;
+        else if (weight > 10)
+            return -4.0;
         else {
-            Integer fillingFactor;
+            double fillingFactor;
             fillingFactor = foodType * weight;
             return fillingFactor;
         }
     }
-    public Integer calcQuenchBeverageItem(BeverageItem beverageItem){
-        if(beverageType == null || volume == null)return null;
-        else if(beverageType < 1)return -1;
-        else if(volume < 1)return -2;
-        else if (beverageType > 5)return -3;
-        else if(volume > 10)return -4;
+    public Double calcQuenchBeverageItem(BeverageItem beverageItem){
+        double volume = beverageItem.getVolume();
+        Integer beverageType = beverageItem.getBeverageType();
+        
+        if (beverageType < 1)
+            return -1.0;
+        else if (volume < 1)
+            return -2.0;
+        else if (beverageType > 5)
+            return -3.0;
+        else if (volume > 10)
+            return -4.0;
         else {
-            Integer quenchFactor;
+            double quenchFactor;
             quenchFactor = beverageType * volume;
             return quenchFactor;
         }
     }
-*/
 }
 

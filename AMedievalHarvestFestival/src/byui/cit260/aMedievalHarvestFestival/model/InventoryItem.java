@@ -25,8 +25,6 @@ public class InventoryItem implements Serializable {
 
     public InventoryItem() {
     }
-    
-    
 
     public String getName() {
         return name;

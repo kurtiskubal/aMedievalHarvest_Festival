@@ -70,7 +70,7 @@ public class GameMenuView extends MenuView{
                 break;
                 
             case 'V':
-                this.viewInventory();
+                GameMenuView.viewInventory();
                 InventoryView inventoryView = new InventoryView();
                 inventoryView.display();
                 break;
@@ -109,7 +109,7 @@ public class GameMenuView extends MenuView{
         
     }
     
-    public int viewInventory() {
+    public static void viewInventory() {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
         System.out.println("\nList of Inventory Items");
@@ -120,15 +120,15 @@ public class GameMenuView extends MenuView{
         for (InventoryItem inventoryItem : inventory) {
             
             
-            
+            if (inventoryItem.getInventoryType() != -1 ){
                 System.out.println(inventoryItem.getName() + "\t\t\t\t\t" +
                                  inventoryItem.getItemQuanity() + "\t" +
                                  inventoryItem.getInventoryType());
-            
+            }
                                
         }
         
-        return 0;
+        
     }
     
     public void displayMap() {

@@ -25,23 +25,24 @@ public class FoodItem extends InventoryItem {
      
 
     //class instance variables
-    private double foodType = 0;
+    private Integer foodType = 0;
     private final double weight = randomInRange(1, 10);
     private final Double fillingFactor = weight * foodType;
     
 
-    public FoodItem() {
+    public FoodItem(int type) {
+        foodType = type;
     }
     
     public Double getFillingFactor() {
         return fillingFactor;
     }
 
-    public double getFoodType() {
+    public Integer getFoodType() {
         return foodType;
     }
 
-    public void setFoodType(double foodType) {
+    public void setFoodType(Integer foodType) {
         this.foodType = foodType;
     }
 

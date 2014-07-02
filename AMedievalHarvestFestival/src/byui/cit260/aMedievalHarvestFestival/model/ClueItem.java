@@ -20,7 +20,9 @@ public class ClueItem extends InventoryItem{
     private String keyInformation;
     private Integer evidenceRemaining;
 
-    public ClueItem() {
+    public ClueItem(String info, Integer evidRemaining) {
+        keyInformation = info;
+        evidenceRemaining = evidRemaining;
     }
 
     public String getKeyInformation() {

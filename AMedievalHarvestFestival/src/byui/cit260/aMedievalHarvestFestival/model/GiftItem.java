@@ -16,7 +16,8 @@ public class GiftItem extends InventoryItem{
     //class instance variables
     private double joyGiving;
 
-    public GiftItem() {
+    public GiftItem(double joy) {
+        joyGiving = joy;
     }
     
     public double getJoyGiving() {

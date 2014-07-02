@@ -192,6 +192,8 @@ GameMenuView gameMenuView = new GameMenuView();
                     }
                 
                 }
+                GameMenuView gameMenuView = new GameMenuView();
+                gameMenuView.displayMatchingGame();
                 return;
             default:
                 System.out.print("\n*** Invalid selction *** Try Again");

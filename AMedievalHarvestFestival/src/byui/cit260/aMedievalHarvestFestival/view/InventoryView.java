@@ -28,20 +28,19 @@ public class InventoryView extends MenuView{
     
     @Override
         public void doAction(char selection) {
+            GameMenuView.viewInventory();
         switch (selection) {
             case 'U':
                 System.out.println("\n**** decisions still need to be made on how items are used ****");
 
                 break;
             case 'E':
-                this.displayItemDescription();
+                 ItemDescriptionView descriptionView = new ItemDescriptionView();
+                descriptionView.display();
                  
                 break;
             case 'D':
-                InventoryItem max = new InventoryItem();
-                max = GameControl.greatestAmount();
-                System.out.println("Item with Greatest Quantity: " + max.getName());
-                 
+                GameControl.greatestAmount(GameControl.getSortedInventoryList()); 
                 break;
             case 'Q':
                 return;
@@ -49,12 +48,6 @@ public class InventoryView extends MenuView{
                 System.out.print("\n*** Invalid selction *** Try Again");
                 break;
         }
-    }
-
-    public void displayItemDescription() {
-        // call Control function to get the item's description
-        System.out.println("\n**** displayItemDescription stub function called ****");
-        // Print out the description of the current location
     }
 }
 

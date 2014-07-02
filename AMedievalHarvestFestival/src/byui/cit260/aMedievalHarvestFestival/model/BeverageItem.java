@@ -24,22 +24,23 @@ public class BeverageItem extends InventoryItem {
     }
 
     //class instance variables
-    private Double beverageType = 0.0;
+    private Integer beverageType = 0;
     private final Double volume = randomInRange(1,10);
     private final Double quenchFactor = beverageType * volume;
     
-    public BeverageItem() {
+    public BeverageItem(int type) {
+        beverageType = type;
     }
     
     public Double getQuenchFactor() {
         return quenchFactor;
     }
 
-    public Double getBeverageType() {
+    public Integer getBeverageType() {
         return beverageType;
     }
 
-    public void setBeverageType(Double beverageType) {
+    public void setBeverageType(Integer beverageType) {
         this.beverageType = beverageType;
     }
 
