@@ -6,12 +6,8 @@
 
 package byui.cit260.aMedievalHarvestFestival.view;
 
-import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.control.LocationControl;
-import byui.cit260.aMedievalHarvestFestival.model.Game;
-import byui.cit260.aMedievalHarvestFestival.model.Location;
-import byui.cit260.aMedievalHarvestFestival.model.Map;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
 
 /**
@@ -52,64 +48,64 @@ public class LocationView extends MenuView{
         Location[][] locations = GameControl.getMapLocations();
         switch (value) {
             case 'R':
-                LocationControl.movePlayerToLocation(locations[0][1]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[0][1]));
                 break;
             case 'Y':
-                LocationControl.movePlayerToLocation(locations[0][2]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[0][2]));
                 break;
             case 'G':
-                LocationControl.movePlayerToLocation(locations[0][3]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[0][3]));
                 break;
             case 'H':
-                LocationControl.movePlayerToLocation(locations[0][4]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[0][4]));
                 break;
             case 'U':
-                LocationControl.movePlayerToLocation(locations[1][0]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[1][0]));
                 break;
             case 'C':
-                LocationControl.movePlayerToLocation(locations[1][1]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[1][1]));
                 break;
             case 'E':
-                LocationControl.movePlayerToLocation(locations[1][2]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[1][2]));
                 break;
             case 'O':
-                LocationControl.movePlayerToLocation(locations[1][3]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[1][3]));
                 break;
             case 'P':
-                LocationControl.movePlayerToLocation(locations[1][4]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[1][4]));
                 break;
             case 'N':
-                LocationControl.movePlayerToLocation(locations[2][0]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[2][0]));
                 break;
             case 'B':
-                LocationControl.movePlayerToLocation(locations[2][1]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[2][1]));
                 break;
             case 'T':
-                LocationControl.movePlayerToLocation(locations[2][2]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[2][2]));
                 break;
             case 'S':
-                LocationControl.movePlayerToLocation(locations[0][0]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[0][0]));
                 break;
             case 'F':
-                LocationControl.movePlayerToLocation(locations[2][3]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[2][3]));
                 break;
             case 'V':
-                LocationControl.movePlayerToLocation(locations[2][4]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[2][4]));
                 break;
             case 'K':
-                LocationControl.movePlayerToLocation(locations[3][0]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[3][0]));
                 break;
             case 'A':
-                LocationControl.movePlayerToLocation(locations[3][1]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[3][1]));
                 break;
             case 'D':
-                LocationControl.movePlayerToLocation(locations[3][2]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[3][2]));
                 break;
             case 'L':
-                LocationControl.movePlayerToLocation(locations[3][3]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[3][3]));
                 break;
             case 'J':
-                LocationControl.movePlayerToLocation(locations[3][4]);
+                System.out.println(LocationControl.movePlayerToLocation(locations[3][4]));
                 break;    
            case 'Q':
                 return;

@@ -192,7 +192,7 @@ public class GameControl {
         
         InventoryItem sword = new WeaponItem();
         sword.setName("Sword                ");
-        sword.setInventoryType(3);
+        sword.setInventoryType(4);
         sword.setDescription("A long, edged weapon.");
         sword.setItemQuanity(0);
         inventory[Constants.SWORD] = sword;
@@ -1113,12 +1113,28 @@ public class GameControl {
         return AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();
         
     }
+    
+    public static String getPlayerCurrentLocationName() {
+        
+        return AMedievalHarvestFestival.getPlayer().getPlayerLocation().getInstance().getName();
+    }
+    
+    public static String getPlayerCurrentLocationDescription() {
+        
+        return AMedievalHarvestFestival.getPlayer().getPlayerLocation().getInstance().getDescription();
+    }
+    
+    public static Location getGameEventLocation() {
+        
+        return AMedievalHarvestFestival.getCurrentGame().getGameEventLocation();
+    }
 
-    public static void greatestAmount(InventoryItem[] inventory) {
+    public static String greatestAmount(InventoryItem[] inventory) {
         int max = 0;
         String maxName = null;
         int zeroCount = 0;
         int equalCount = 0;
+        String message;
         for (InventoryItem inventoryItem : inventory) {
             
             if (inventoryItem.getItemQuanity() > max) {
@@ -1136,12 +1152,14 @@ public class GameControl {
         }
         
         if (max == 0) 
-            System.out.println("\nThere are no items.");
+            message = "\nThere are no items.";
         else if (equalCount >= 1 && max > 0 && equalCount != 21)
-            System.out.println("\nThere is an equal amount of one or more items.");
+            message = "\nThere is an equal amount of one or more items.";
         else if (zeroCount == 21 && max > 0)
-            System.out.println("\nThere is an equal amount of all items.");
+            message = "\nThere is an equal amount of all items.";
         else
-            System.out.println( '\n' + maxName + "\nhas the highest quantitiy.");
+            message = '\n' + maxName + "\nhas the highest quantitiy.";
+        
+        return message;
     }
 }

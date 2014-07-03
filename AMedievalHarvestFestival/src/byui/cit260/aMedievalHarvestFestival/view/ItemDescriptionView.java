@@ -18,10 +18,11 @@ public class ItemDescriptionView {
 InventoryItem[] inventory = GameControl.getSortedInventoryList();
     
     public void display() {
-        int i = 0;
+        int i;
         int empty = 0;
         String selection = "  ";
         do {
+            i = 0;
             System.out.println("\n"
             + "\n----------------------------------------------"
             + "\n|Select an Item to View it's Description     |");

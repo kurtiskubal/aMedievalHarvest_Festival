@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author Kurt
  */
-public class StartProgramView {
+public class StartProgramView{
  
    public void startProgram() {
     this.displayBanner();

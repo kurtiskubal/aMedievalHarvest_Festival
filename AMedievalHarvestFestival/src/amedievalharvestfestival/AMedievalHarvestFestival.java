@@ -10,6 +10,8 @@ package amedievalharvestfestival;
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
+import static java.lang.System.out;
+import java.util.Arrays;
 
 
 /**
@@ -24,10 +26,17 @@ public class AMedievalHarvestFestival {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+    try {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
-        
+    }
+    catch (Throwable ex) {
+        System.out.println("Unexpected error: " + ex.getMessage());
+        System.out.println(Arrays.toString(ex.getStackTrace()));
+    }
+    finally {
+        out.close();
+    }
     }
 
     public static Game getCurrentGame() {

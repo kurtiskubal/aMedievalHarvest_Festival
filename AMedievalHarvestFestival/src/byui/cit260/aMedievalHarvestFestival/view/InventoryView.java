@@ -7,7 +7,6 @@
 package byui.cit260.aMedievalHarvestFestival.view;
 
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
-import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 
 /**
 *
@@ -40,7 +39,7 @@ public class InventoryView extends MenuView{
                  
                 break;
             case 'D':
-                GameControl.greatestAmount(GameControl.getSortedInventoryList()); 
+                System.out.println(GameControl.greatestAmount(GameControl.getSortedInventoryList())); 
                 break;
             case 'Q':
                 return;
@@ -50,4 +49,3 @@ public class InventoryView extends MenuView{
         }
     }
 }
-

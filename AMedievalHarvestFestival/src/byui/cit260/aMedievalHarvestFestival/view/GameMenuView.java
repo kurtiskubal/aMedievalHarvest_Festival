@@ -34,6 +34,7 @@ public class GameMenuView extends MenuView{
             + "\nR - Read a Nursery Rhyme"
             + "\nH - Estimate Hunger"
             + "\nT - Estimate Thirst"
+            + "\nB - Calculate Filling Factor"    
             + "\nC - Start a conversation"
             + "\nS - Save Game"
             + "\nQ - Exit to Main Menu"
@@ -88,6 +89,10 @@ public class GameMenuView extends MenuView{
             case 'T':
                 ConsumableControl.getPlayerThirst(AMedievalHarvestFestival.getPlayer());
                 break;
+            case 'B':
+                TestFillingFactorView testFilling = new TestFillingFactorView();
+                testFilling.display();
+                break;
             case 'C':
                 ConversationsView haveConv = new ConversationsView();
                 haveConv.haveConv();
@@ -109,6 +114,36 @@ public class GameMenuView extends MenuView{
         
     }
     
+    public static void viewFoodItems() {
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        
+         System.out.println("\nList of Food Items");
+         int i = 65;
+         for (InventoryItem inventoryItem : inventory)
+         {
+             if (inventoryItem.getInventoryType() == 2) {
+                 System.out.println(Character.toString((char) i) + " - "
+                 + inventoryItem.getName());
+                 i++;
+             }
+         }
+    }
+    
+    public static void viewBeverageItems() {
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        
+         System.out.println("\nList of Beverage Items");
+         int i = 65;
+         for (InventoryItem inventoryItem : inventory)
+         {
+             if (inventoryItem.getInventoryType() == 3) {
+                 System.out.println(Character.toString((char) i) + " - "
+                 + inventoryItem.getName());
+                 i++;
+             }
+         }
+    }
+    
     public static void viewInventory() {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
@@ -120,7 +155,7 @@ public class GameMenuView extends MenuView{
         for (InventoryItem inventoryItem : inventory) {
             
             
-            if (inventoryItem.getInventoryType() != -1 ){
+            if (inventoryItem.getInventoryType() != -1 ) {
                 System.out.println(inventoryItem.getName() + "\t\t\t\t\t" +
                                  inventoryItem.getItemQuanity() + "\t" +
                                  inventoryItem.getInventoryType());

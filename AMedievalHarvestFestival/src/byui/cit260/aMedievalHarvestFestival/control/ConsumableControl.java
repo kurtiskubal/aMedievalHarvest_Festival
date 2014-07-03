@@ -6,6 +6,7 @@
 
 package byui.cit260.aMedievalHarvestFestival.control;
 
+import byui.cit260.aMedievalHarvestFestival.exceptions.ViewLayerException;
 import byui.cit260.aMedievalHarvestFestival.model.BeverageItem;
 import byui.cit260.aMedievalHarvestFestival.model.FoodItem;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
@@ -61,41 +62,24 @@ public class ConsumableControl {
         player.setHunger(hunger);
         }
     
-    public Double calcFillingFoodItem(FoodItem foodItem){
-        double weight = foodItem.getWeight();
-        Integer foodType = foodItem.getFoodType();
+    public static Double calcFillingFoodItem(Integer foodType, double weight) throws ViewLayerException{
         
-        if (foodType < 1)
-            return -1.0;
-        else if (weight < 1)
-            return -2.0;
-        else if (foodType > 5)
-            return -3.0;
-        else if (weight > 10)
-            return -4.0;
-        else {
-            double fillingFactor;
-            fillingFactor = foodType * weight;
-            return fillingFactor;
-        }
+        if (weight < 1 || weight > 10)
+            throw new ViewLayerException("Weight is a double and can only be between 1 and 10.");
+        
+        double fillingFactor;
+        fillingFactor = foodType * weight;
+        return fillingFactor;
+        
     }
-    public Double calcQuenchBeverageItem(BeverageItem beverageItem){
-        double volume = beverageItem.getVolume();
-        Integer beverageType = beverageItem.getBeverageType();
+    public static Double calcQuenchBeverageItem(Integer beverageType, double volume) throws ViewLayerException {
+        if (volume < 1 || volume > 10)
+            throw new ViewLayerException("Volume is a double and can only be between 1 and 10.");
+            
+        double quenchFactor;
+        quenchFactor = beverageType * volume;
+        return quenchFactor;
         
-        if (beverageType < 1)
-            return -1.0;
-        else if (volume < 1)
-            return -2.0;
-        else if (beverageType > 5)
-            return -3.0;
-        else if (volume > 10)
-            return -4.0;
-        else {
-            double quenchFactor;
-            quenchFactor = beverageType * volume;
-            return quenchFactor;
-        }
     }
 }
 
