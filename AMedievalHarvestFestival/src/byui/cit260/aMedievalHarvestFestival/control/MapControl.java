@@ -7,6 +7,7 @@
 package byui.cit260.aMedievalHarvestFestival.control;
 
 import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.exceptions.ViewLayerException;
 import byui.cit260.aMedievalHarvestFestival.model.Actors;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
@@ -57,13 +58,23 @@ public class MapControl {
         return poolVolume;
     }
     
-    public double calcSqFootageOfYard(double yardWidth, double yardLength){
-
+    public double calcSqFootageOfYard(double yardWidth, double yardLength) 
+                                    throws ViewLayerException{
+//        try {
+//            double width = Double.parseDouble(yardWidth);
+//            double length = Double.parseDouble(yardLength);
+//        } catch(NumberFormatException ex) {
+//            throw new ViewLayerException("");
+//        }
         if (yardWidth < 0 || yardLength < 0){
-            return -1;
+            throw new ViewLayerException("Yard width or length is less than 0:"
+                    + "\n Length must be between: 0 - 200"
+                    + "\n Width must be between:  0 - 100");
         }
         if (yardLength > 200 || yardWidth > 100) { 
-            return -2;
+            throw new ViewLayerException("Yard width or length is more than MAX:"
+                    + "\n Length must be between: 0 - 200"
+                    + "\n Width must be between:  0 - 100");
         }
         double ydSquareFootage = yardWidth * yardLength;
 

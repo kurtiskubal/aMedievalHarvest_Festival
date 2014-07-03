@@ -6,6 +6,7 @@
 
 package byui.cit260.aMedievalHarvestFestival.control;
 
+import byui.cit260.aMedievalHarvestFestival.exceptions.ViewLayerException;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -148,12 +149,13 @@ public class MapControlTest {
         assertEquals(expResult, result, 0.0);
         
     }
-        
+    
         /**
      * Test of calcSqFootageOfYard method, of class MapControl.
      */
     @Test
     public void testCalcSqFootageOfYard() {
+        try {
         System.out.println("calcSqFootageOfYard test 1");
         double yardWidth = 75.0;
         double yardLength = 194.0;
@@ -203,7 +205,10 @@ public class MapControlTest {
         expResult = 20000.0;
         result = instanceThree.calcSqFootageOfYard(yardWidth, yardLength);
         assertEquals(expResult, result, 0.0);
+        }catch(ViewLayerException ex){
+            System.out.println("There has been an error:");
+            System.out.println(ex.getMessage());
+            ex.printStackTrace();
+        } 
     }
-    
-    
 }
