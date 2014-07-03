@@ -28,7 +28,6 @@ public class FoodFillView extends MenuView{
     public void doAction(char value) {
         Scanner keyboard = new Scanner(System.in);
         String weight;
-        double convtWeight;
         double factor;
         int type;
        
@@ -37,9 +36,9 @@ public class FoodFillView extends MenuView{
                 System.out.println("Enter the weight of the Apple:");
                 weight = keyboard.nextLine();
                 weight = weight.trim();
-                convtWeight = Double.parseDouble(weight);
+                
         try {
-            factor = ConsumableControl.calcFillingFoodItem(1, convtWeight);
+            factor = ConsumableControl.calcFillingFoodItem(1, weight);
             System.out.println("The filling factor of an Apple of " + weight + " weight is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());
@@ -49,9 +48,8 @@ public class FoodFillView extends MenuView{
                 System.out.println("Enter the weight of the Beans:");
                 weight = keyboard.nextLine();
                 weight = weight.trim();
-                convtWeight = Double.parseDouble(weight);
          try {
-            factor = ConsumableControl.calcFillingFoodItem(4, convtWeight);
+            factor = ConsumableControl.calcFillingFoodItem(4, weight);
             System.out.println("The filling factor of Beans of " + weight + " weight is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());
@@ -61,9 +59,9 @@ public class FoodFillView extends MenuView{
                 System.out.println("Enter the weight of the Bread:");
                 weight = keyboard.nextLine();
                 weight = weight.trim();
-                convtWeight = Double.parseDouble(weight);
+                
             try {
-            factor = ConsumableControl.calcFillingFoodItem(2, convtWeight);
+            factor = ConsumableControl.calcFillingFoodItem(2, weight);
             System.out.println("The filling factor of Bread of " + weight + " weight is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());
@@ -73,9 +71,9 @@ public class FoodFillView extends MenuView{
                 System.out.println("Enter the weight of the Corn:");
                 weight = keyboard.nextLine();
                 weight = weight.trim();
-                convtWeight = Double.parseDouble(weight);
+                
             try {
-            factor = ConsumableControl.calcFillingFoodItem(3, convtWeight);
+            factor = ConsumableControl.calcFillingFoodItem(3, weight);
             System.out.println("The filling factor of Corn of " + weight + " weight is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());
@@ -85,9 +83,8 @@ public class FoodFillView extends MenuView{
                 System.out.println("Enter the weight of the Peas:");
                 weight = keyboard.nextLine();
                 weight = weight.trim();
-                convtWeight = Double.parseDouble(weight);
             try {
-            factor = ConsumableControl.calcFillingFoodItem(5, convtWeight);
+            factor = ConsumableControl.calcFillingFoodItem(5, weight);
             System.out.println("The filling factor of Peas of " + weight + " weight is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());

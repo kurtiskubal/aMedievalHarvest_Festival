@@ -27,7 +27,6 @@ public class BeverageFillView extends MenuView{
     @Override
     public void doAction(char value) {Scanner keyboard = new Scanner(System.in);
         String volume;
-        double convtVolume;
         double factor;
         int type;
        
@@ -36,9 +35,9 @@ public class BeverageFillView extends MenuView{
                 System.out.println("Enter the volume of the Ale:");
                 volume = keyboard.nextLine();
                 volume = volume.trim();
-                convtVolume = Double.parseDouble(volume);
+                
         try {
-            factor = ConsumableControl.calcQuenchBeverageItem(1, convtVolume);
+            factor = ConsumableControl.calcQuenchBeverageItem(1, volume);
             System.out.println("The quench factor of Ale of " + volume + " volume is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());
@@ -48,9 +47,9 @@ public class BeverageFillView extends MenuView{
                 System.out.println("Enter the volume of the Cider:");
                 volume = keyboard.nextLine();
                 volume = volume.trim();
-                convtVolume = Double.parseDouble(volume);
+                
         try {
-            factor = ConsumableControl.calcQuenchBeverageItem(3, convtVolume);
+            factor = ConsumableControl.calcQuenchBeverageItem(3, volume);
             System.out.println("The quench factor of Cider of " + volume + " volume is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());
@@ -60,9 +59,9 @@ public class BeverageFillView extends MenuView{
                 System.out.println("Enter the volume of the Mead:");
                 volume = keyboard.nextLine();
                 volume = volume.trim();
-                convtVolume = Double.parseDouble(volume);
+                
         try {
-            factor = ConsumableControl.calcQuenchBeverageItem(2, convtVolume);
+            factor = ConsumableControl.calcQuenchBeverageItem(2, volume);
             System.out.println("The quench factor of Mead of " + volume + " volume is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());
@@ -72,9 +71,9 @@ public class BeverageFillView extends MenuView{
                 System.out.println("Enter the volume of the Water:");
                 volume = keyboard.nextLine();
                 volume = volume.trim();
-                convtVolume = Double.parseDouble(volume);
+                
         try {
-            factor = ConsumableControl.calcQuenchBeverageItem(5, convtVolume);
+            factor = ConsumableControl.calcQuenchBeverageItem(5, volume);
             System.out.println("The quench factor of Water of " + volume + " volume is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());
@@ -84,9 +83,8 @@ public class BeverageFillView extends MenuView{
                 System.out.println("Enter the volume of the Wine:");
                 volume = keyboard.nextLine();
                 volume = volume.trim();
-                convtVolume = Double.parseDouble(volume);
         try {
-            factor = ConsumableControl.calcQuenchBeverageItem(4, convtVolume);
+            factor = ConsumableControl.calcQuenchBeverageItem(4, volume);
             System.out.println("The quench factor of Wine of " + volume + " volume is " + factor + ".");
         } catch (ViewLayerException ex) {
             System.out.println(ex.getMessage());

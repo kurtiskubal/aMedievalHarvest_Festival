@@ -7,8 +7,6 @@
 package byui.cit260.aMedievalHarvestFestival.control;
 
 import byui.cit260.aMedievalHarvestFestival.exceptions.ViewLayerException;
-import byui.cit260.aMedievalHarvestFestival.model.BeverageItem;
-import byui.cit260.aMedievalHarvestFestival.model.FoodItem;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 
 /**
@@ -62,7 +60,9 @@ public class ConsumableControl {
         player.setHunger(hunger);
         }
     
-    public static Double calcFillingFoodItem(Integer foodType, double weight) throws ViewLayerException{
+    public static Double calcFillingFoodItem(Integer foodType, String weightS) throws ViewLayerException{
+        try {
+        double weight = Double.parseDouble(weightS);
         
         if (weight < 1 || weight > 10)
             throw new ViewLayerException("Weight is a double and can only be between 1 and 10.");
@@ -70,16 +70,27 @@ public class ConsumableControl {
         double fillingFactor;
         fillingFactor = foodType * weight;
         return fillingFactor;
+        }
+        catch (NumberFormatException ex) {
+            throw new ViewLayerException("Weight must be a double"
+            + "\nbetween 1 and 10");
+        }
         
     }
-    public static Double calcQuenchBeverageItem(Integer beverageType, double volume) throws ViewLayerException {
+    public static Double calcQuenchBeverageItem(Integer beverageType, String volumeS) throws ViewLayerException {
+        try {
+        double volume = Double.parseDouble(volumeS);
         if (volume < 1 || volume > 10)
             throw new ViewLayerException("Volume is a double and can only be between 1 and 10.");
             
         double quenchFactor;
         quenchFactor = beverageType * volume;
         return quenchFactor;
-        
+        }
+        catch (NumberFormatException ex) {
+            throw new ViewLayerException("Volume must be a double"
+            + "\nbetween 1 and 10.");
+        }
     }
 }
 

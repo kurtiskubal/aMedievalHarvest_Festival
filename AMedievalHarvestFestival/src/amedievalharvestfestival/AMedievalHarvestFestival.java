@@ -31,8 +31,9 @@ public class AMedievalHarvestFestival {
         startProgramView.startProgram();
     }
     catch (Throwable ex) {
-        System.out.println("Unexpected error: " + ex.getMessage());
-        System.out.println(Arrays.toString(ex.getStackTrace()));
+        System.out.println("An unexpected error occured. Trying re-running the program." 
+                + "\nError: " + ex.getMessage());
+        ex.printStackTrace();
     }
     finally {
         out.close();
