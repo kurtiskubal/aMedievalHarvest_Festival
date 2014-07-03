@@ -67,8 +67,13 @@ GameMenuView gameMenuView = new GameMenuView();
         String selectionMessage = matchingControl.showSelection(valueArr);
         if (selectionMessage.length() > 1){
            System.out.println(selectionMessage);
-         } } catch (MatchingControlException ex) {
+        } 
+         } catch(MatchingControlException ex) {
              System.out.println(ex.getMessage());
+//         } catch(Throwable ex) {
+//             System.out.println(ex.getMessage());
+         } finally {
+            
          }
      }
 }

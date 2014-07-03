@@ -43,6 +43,7 @@ public class LocationView extends MenuView{
             + "\nQ - Quit the Move to a New Location menu"
             + "\n----------------------------------------------");
      }
+     
     @Override
     public void doAction(char value) {
         Location[][] locations = GameControl.getMapLocations();

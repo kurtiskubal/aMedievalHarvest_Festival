@@ -11,7 +11,6 @@ import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
 import static java.lang.System.out;
-import java.util.Arrays;
 
 
 /**

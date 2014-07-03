@@ -10,6 +10,7 @@ import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.ConsumableControl;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import static byui.cit260.aMedievalHarvestFestival.control.GameControl.getSortedInventoryList;
+import byui.cit260.aMedievalHarvestFestival.model.Actors;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
@@ -81,7 +82,8 @@ public class GameMenuView extends MenuView{
                 matchingGameView.display();
                 break;
             case 'R':
-                this.displayRhymes();
+                NurseryRhymes bookOfRhymes = new NurseryRhymes();
+                bookOfRhymes.display();
                 break;
             case 'H':
                 ConsumableControl.getPlayerHunger(AMedievalHarvestFestival.getPlayer());
@@ -94,8 +96,9 @@ public class GameMenuView extends MenuView{
                 testFilling.display();
                 break;
             case 'C':
-                ConversationsView haveConv = new ConversationsView();
-                haveConv.haveConv();
+                String pass = this.haveConv();
+                ConversationsView convView = new ConversationsView(pass);
+                convView.display();
                 break;
             case 'S':
                 System.out.println("\n**** Save Game needs to be learned ****");
@@ -268,9 +271,21 @@ public class GameMenuView extends MenuView{
         System.out.println("---------------------------");
     }
 
-    private void displayRhymes() {
-        NurseryRhymes bookOfRhymes = new NurseryRhymes();
-        bookOfRhymes.display();
+    private String haveConv() {
+        Actors[] actorsNear = AMedievalHarvestFestival.getPlayer().getPlayerLocation().getActors();
+        String menu = "Would you like to talk to:";
+        
+        try {
+        //loop for moving through an array
+        for (int i = 0; i < actorsNear.length; i++){
+            // Need to print a number and a name for each actor in array.
+            menu += "\n" + i + " - " + actorsNear[i].getName();
+        }
+        } catch(Throwable ex){
+            
+        } finally {
+            return menu;
+        }
     }
    
     

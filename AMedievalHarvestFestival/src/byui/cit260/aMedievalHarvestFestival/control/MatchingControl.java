@@ -83,7 +83,7 @@ public class MatchingControl {
         column = Integer.parseInt(value[1]);
         
         if (row < 0 || (row > 7 && row != 9) ||
-            column < 0 || (column > 7 && column != 9)) {
+            column < 0 || (column > 4 && column != 9)) {
             throw new MatchingControlException("Invalid row or Column");
         }
         

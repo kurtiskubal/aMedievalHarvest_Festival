@@ -9,9 +9,9 @@ package byui.cit260.aMedievalHarvestFestival.control;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.exceptions.ViewLayerException;
 import byui.cit260.aMedievalHarvestFestival.model.Actors;
+import byui.cit260.aMedievalHarvestFestival.model.Constants;
 import byui.cit260.aMedievalHarvestFestival.model.InstanceLocation;
 import byui.cit260.aMedievalHarvestFestival.model.Location;
-import byui.cit260.aMedievalHarvestFestival.model.Map;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 
 /**
@@ -27,9 +27,52 @@ public class MapControl {
         return scene;
     }
 
-    static void moveActorsToLocation(Actors actor, int row, int col) {
-        Map map = AMedievalHarvestFestival.getCurrentGame().getMap();
-           
+    static void moveActorsToLocation(Actors[] actors) {
+        Location[][] map = AMedievalHarvestFestival.getCurrentGame().getMap().getLocations();
+        Actors[] onMap = map[0][0].getActors();
+        onMap[0]=actors[Constants.PRINCESS_WILLIAM];
+        onMap = map[0][1].getActors();
+//        onMap[0]=actors[Constants.PRINCESS_WILLIAM];
+        onMap = map[0][2].getActors();
+//        onMap[0]=actors[Constants.PRINCESS_WILLIAM];
+        onMap = map[0][3].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[0][4].getActors();
+        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[1][0].getActors();
+        onMap[0]=actors[Constants.LUIS];
+        onMap = map[1][1].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[1][2].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[1][3].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[1][4].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[2][0].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[2][1].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[2][2].getActors();
+        onMap[0]=actors[Constants.QUEEN_WILLIAM];
+        onMap[1]=actors[Constants.VIOLET];
+        onMap = map[2][3].getActors();
+        onMap[0]=actors[Constants.CANAWAY];
+        onMap[1]=actors[Constants.FREDERICK];
+        onMap[2]=actors[Constants.SERVANT_LILLY];
+        onMap = map[2][4].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[3][0].getActors();
+        onMap[0]=actors[Constants.SERVANT_DAVID];
+        onMap = map[3][1].getActors();
+        onMap[0]=actors[Constants.KING_WILLIAM];
+        onMap[1]=actors[Constants.SERVANT_CHARLES];
+        onMap = map[3][2].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[3][3].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
+        onMap = map[3][4].getActors();
+//        onMap[0]=actors[Constants.HAROLD];
        } 
     
     public double calcSqFootageOfRoom(double roomWidth, double roomLength){
