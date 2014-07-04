@@ -35,7 +35,8 @@ public class GameMenuView extends MenuView{
             + "\nR - Read a Nursery Rhyme"
             + "\nH - Estimate Hunger"
             + "\nT - Estimate Thirst"
-            + "\nB - Calculate Filling Factor"    
+            + "\nB - Calculate Filling Factor" 
+            + "\nJ - Estimate Dimensions"
             + "\nC - Start a conversation"
             + "\nS - Save Game"
             + "\nQ - Exit to Main Menu"
@@ -70,7 +71,9 @@ public class GameMenuView extends MenuView{
                 this.displayMap();
                 
                 break;
-                
+                case 'J':
+                MapDimensionsView locationDim = new MapDimensionsView();
+                locationDim.display();
             case 'V':
                 GameMenuView.viewInventory();
                 InventoryView inventoryView = new InventoryView();

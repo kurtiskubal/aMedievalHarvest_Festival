@@ -75,40 +75,63 @@ public class MapControl {
 //        onMap[0]=actors[Constants.HAROLD];
        } 
     
-    public double calcSqFootageOfRoom(double roomWidth, double roomLength){
-
+    public static double calcSqFootageOfRoom(String roomWidthS, String roomLengthS) throws ViewLayerException{
+        try {
+            double roomWidth = Double.parseDouble(roomWidthS);
+            double roomLength = Double.parseDouble(roomLengthS);
+            
         if (roomWidth < 0 || roomLength < 0){
-            return -1;
+            throw new ViewLayerException("Room width or length is less than 0:"
+                    + "\n Length must be between: 0 - 50"
+                    + "\n Width must be between:  0 - 100");
         }
         if (roomLength > 50 || roomWidth > 100) { 
-            return -2;
+            throw new ViewLayerException("Room width or length is more than the set maximum:"
+                    + "\n Length must be between: 0 - 50"
+                    + "\n Width must be between:  0 - 100");
         }
         double squareFootage = roomWidth * roomLength;
 
         return squareFootage;
+        }
+        catch (NumberFormatException ex) {
+            throw new ViewLayerException("Width and length must be a double.");
+        }
     }
     
-    public double calcVolumeOfPool(double poolWidth, double poolLength, double poolDepth){
-
+    public static double calcVolumeOfPool(String poolWidthS, String poolLengthS, String poolD) throws ViewLayerException{
+        try {
+            double poolWidth = Double.parseDouble(poolWidthS);
+            double poolLength = Double.parseDouble(poolLengthS);
+            double poolDepth = Double.parseDouble(poolD);
+            
         if (poolWidth < 0 || poolLength < 0 || poolDepth < 0){
-            return -1;
+            throw new ViewLayerException("Pool width, length, or depth is less than 0:"
+                    + "\n Length must be between: 0 - 80"
+                    + "\n Width must be between:  0 - 40"
+                    + "\n Depth must be between: 0 - 20");
         }
         if (poolLength > 80 || poolWidth > 40 || poolDepth > 20) { 
-            return -2;
+            throw new ViewLayerException("Pool width, length, or depth is more than the set maximum:"
+                    + "\n Length must be between: 0 - 80"
+                    + "\n Width must be between:  0 - 40"
+                    + "\n Depth must be between: 0 - 20");
         }
         double poolVolume = poolWidth * poolLength * poolDepth;
 
         return poolVolume;
+        }
+        catch (NumberFormatException ex) {
+            throw new ViewLayerException("Width, length, and depth must be a double.");
+        }
     }
     
-    public double calcSqFootageOfYard(double yardWidth, double yardLength) 
+    public static double calcSqFootageOfYard(String yardWidthS, String yardLengthS) 
                                     throws ViewLayerException{
-//        try {
-//            double width = Double.parseDouble(yardWidth);
-//            double length = Double.parseDouble(yardLength);
-//        } catch(NumberFormatException ex) {
-//            throw new ViewLayerException("");
-//        }
+        try {
+            double yardWidth = Double.parseDouble(yardWidthS);
+            double yardLength = Double.parseDouble(yardLengthS);
+        
         if (yardWidth < 0 || yardLength < 0){
             throw new ViewLayerException("Yard width or length is less than 0:"
                     + "\n Length must be between: 0 - 200"
@@ -122,6 +145,10 @@ public class MapControl {
         double ydSquareFootage = yardWidth * yardLength;
 
         return ydSquareFootage;
+        }
+        catch (NumberFormatException ex) {
+            throw new ViewLayerException("Width, length, and depth must be a double.");
+        }
     }
     
 }
