@@ -38,9 +38,15 @@ public class ConversationsView extends MenuView {
             System.out.println("Invalid character entered."
                     + "Must be a number or \"Q\"");
         } finally {
+            try {
         String actorSays = control.startConversation(actorsNear[pass]);
 //        Display String.
         System.out.println(actorSays);
+            } catch(NullPointerException ex) {
+                System.out.println("Invalid character entered."
+                    + "Must be a number or \"Q\"");
+                return;
+            }
         }
     }
 }
