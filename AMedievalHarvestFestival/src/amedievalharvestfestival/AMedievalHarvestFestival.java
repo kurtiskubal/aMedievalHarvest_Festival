@@ -7,6 +7,7 @@
 package amedievalharvestfestival;
 
 
+import byui.cit260.aMedievalHarvestFestival.frames.StartProgramFrame;
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
@@ -26,8 +27,17 @@ public class AMedievalHarvestFestival {
      */
     public static void main(String[] args) {
     try {
-        StartProgramView startProgramView = new StartProgramView();
-        startProgramView.startProgram();
+//        StartProgramView startProgramView = new StartProgramView();
+//        startProgramView.startProgram();
+        
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run(){
+                StartProgramFrame startProgFrame = new StartProgramFrame();
+                startProgFrame.setVisible(true);
+            }
+    });
+        return;
+        
     }
     catch (Throwable ex) {
         System.out.println("An unexpected error occured. Trying re-running the program." 
