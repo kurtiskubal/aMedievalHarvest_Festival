@@ -253,6 +253,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpMenuItems;
     private javax.swing.JPanel jpTitle;
-    private javax.swing.JTextArea jtWelcome;
+    public javax.swing.JTextArea jtWelcome;
     // End of variables declaration//GEN-END:variables
 }

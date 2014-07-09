@@ -6,6 +6,9 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
+import byui.cit260.aMedievalHarvestFestival.model.Player;
+
 /**
  *
  * @author zev
@@ -252,12 +255,16 @@ public class StartProgramFrame extends javax.swing.JFrame {
        if (playersName.length() < 1) {
             System.out.println("Invalid Name:  Player's name must be longer than one character");
             return;
-        }
+       }
 //        create the player
 //        create the player object and save it to the ProgramControl class
-        
+        Player player = ProgramControl.createPlayer(playersName);
 //        create the main frame
-        
+        this.setVisible(false);
+        MainFrame mainFrame = new MainFrame();
+        mainFrame.jtWelcome.setText("Welcome to the game " + player.getName() + "! Have a good time! It is "
+                + "recommended that first time players visit the \"How to Play\" menu.");
+        mainFrame.setVisible(true);
 //        set the welcome message on the MainFrame
 //        display the main frame
         
