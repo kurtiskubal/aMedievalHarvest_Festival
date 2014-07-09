@@ -8,6 +8,7 @@ package byui.cit260.aMedievalHarvestFestival.frames;
 
 import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -253,14 +254,13 @@ public class StartProgramFrame extends javax.swing.JFrame {
        playersName = playersName.trim();
 //        check for if greater than 1 character 
        if (playersName.length() < 1) {
-            System.out.println("Invalid Name:  Player's name must be longer than one character");
+           JOptionPane.showMessageDialog(this, "Player's name must be longer than one character", "Invalid Player Name", JOptionPane.ERROR_MESSAGE);
             return;
        }
 //        create the player
 //        create the player object and save it to the ProgramControl class
         Player player = ProgramControl.createPlayer(playersName);
 //        create the main frame
-        this.setVisible(false);
         MainFrame mainFrame = new MainFrame();
         mainFrame.jtWelcome.setText("Welcome to the game " + player.getName() + "! Have a good time! It is "
                 + "recommended that first time players visit the \"How to Play\" menu.");
@@ -269,6 +269,7 @@ public class StartProgramFrame extends javax.swing.JFrame {
 //        display the main frame
         
 //        Dispose of this frame
+        this.dispose();
     
     }//GEN-LAST:event_jbStartGameActionPerformed
 
@@ -279,37 +280,6 @@ public class StartProgramFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StartProgramFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StartProgramFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StartProgramFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StartProgramFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new StartProgramFrame().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel2;

@@ -22,6 +22,8 @@ import static java.lang.System.out;
 public class AMedievalHarvestFestival {
     private static Game currentGame = null;
     private static Player player = null;
+    private static MainFrame MainMeniGUI = null;
+
     
     /**
      * @param args the command line arguments
@@ -35,6 +37,7 @@ public class AMedievalHarvestFestival {
             public void run(){
                 StartProgramFrame startProgFrame = new StartProgramFrame();
                 startProgFrame.setVisible(true);
+                
             }
     });
         return;
@@ -66,6 +69,13 @@ public class AMedievalHarvestFestival {
         AMedievalHarvestFestival.player = player;
     }
     
+    public static MainFrame getMainMeniGUI() {
+        return MainMeniGUI;
+    }
+
+    public static void setMainMeniGUI(MainFrame MainMeniGUI) {
+        AMedievalHarvestFestival.MainMeniGUI = MainMeniGUI;
+    }
     
     
 }

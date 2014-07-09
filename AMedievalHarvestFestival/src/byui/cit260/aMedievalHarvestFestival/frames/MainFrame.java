@@ -6,6 +6,8 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import com.sun.media.jfxmedia.events.NewFrameEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -115,7 +117,7 @@ public class MainFrame extends javax.swing.JFrame {
         jbHowToPlay1.setText("Start Existing");
         jbHowToPlay1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbHowToPlay1ActionPerformed(evt);
+                jbStartExistingGame(evt);
             }
         });
 
@@ -209,63 +211,34 @@ public class MainFrame extends javax.swing.JFrame {
 
     private void jbStartGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStartGameActionPerformed
         // TODO add your handling code here:
+        GameControl.createNewGame(AMedievalHarvestFestival.getPlayer());
+        GameMenuFrame gameMenuFrame = new GameMenuFrame();
+        gameMenuFrame.setVisible(true);
         this.setVisible(false);
-        new GameMenuFrame().setVisible(true);
     }//GEN-LAST:event_jbStartGameActionPerformed
 
     private void jbExitMainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitMainActionPerformed
         this.dispose();
-        new StartProgramFrame().setVisible(true);
     }//GEN-LAST:event_jbExitMainActionPerformed
 
     private void jbHowToPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHowToPlayActionPerformed
         // TODO add your handling code here:
+        HelpMenuFrame helpMenuFrame = new HelpMenuFrame();
+        helpMenuFrame.setVisible(true);
         this.setVisible(false);
-        new HelpMenuFrame().setVisible(true);
     }//GEN-LAST:event_jbHowToPlayActionPerformed
 
     private void jbSaveGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveGameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSaveGameActionPerformed
 
-    private void jbHowToPlay1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbHowToPlay1ActionPerformed
+    private void jbStartExistingGame(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStartExistingGame
         // TODO add your handling code here:
-    }//GEN-LAST:event_jbHowToPlay1ActionPerformed
+    }//GEN-LAST:event_jbStartExistingGame
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
