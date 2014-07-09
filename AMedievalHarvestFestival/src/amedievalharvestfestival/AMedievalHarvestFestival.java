@@ -37,12 +37,6 @@ public class AMedievalHarvestFestival {
                 startProgFrame.setVisible(true);
             }
     });
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run(){
-                MainFrame mainFrame = new MainFrame();
-                mainFrame.setVisible(true);
-            }
-    });
         return;
         
     }
