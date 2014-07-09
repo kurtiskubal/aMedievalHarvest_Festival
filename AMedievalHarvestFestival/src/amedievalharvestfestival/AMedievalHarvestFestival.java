@@ -7,6 +7,7 @@
 package amedievalharvestfestival;
 
 
+import byui.cit260.aMedievalHarvestFestival.frames.MainFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.StartProgramFrame;
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
@@ -34,6 +35,12 @@ public class AMedievalHarvestFestival {
             public void run(){
                 StartProgramFrame startProgFrame = new StartProgramFrame();
                 startProgFrame.setVisible(true);
+            }
+    });
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run(){
+                MainFrame mainFrame = new MainFrame();
+                mainFrame.setVisible(true);
             }
     });
         return;
