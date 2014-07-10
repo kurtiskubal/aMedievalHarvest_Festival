@@ -6,6 +6,8 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+
 /**
  *
  * @author Kurt
@@ -31,6 +33,20 @@ public class HelpMenuFrame extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jlTitle = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jlHowToPlay = new javax.swing.JLabel();
+        jlHowDoI = new javax.swing.JLabel();
+        jbBeatTheGame = new javax.swing.JButton();
+        jbChangeLocation = new javax.swing.JButton();
+        jbTalkToNPC = new javax.swing.JButton();
+        jbLookAtInventory = new javax.swing.JButton();
+        jbGetUseItem = new javax.swing.JButton();
+        jbCheckLocation = new javax.swing.JButton();
+        jbSaveGame = new javax.swing.JButton();
+        jbExitHelpMenu = new javax.swing.JButton();
+        jbFeedMyself = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtDisplayText = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 255, 153));
@@ -50,7 +66,7 @@ public class HelpMenuFrame extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(127, 127, 127)
-                .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(134, 134, 134))
         );
         jPanel2Layout.setVerticalGroup(
@@ -61,17 +77,176 @@ public class HelpMenuFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jPanel3.setBackground(new java.awt.Color(153, 255, 255));
+
+        jlHowToPlay.setText("How to Play:");
+
+        jlHowDoI.setText("How do I...");
+
+        jbBeatTheGame.setText("Beat the game?");
+        jbBeatTheGame.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbBeatTheGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBeatTheGameActionPerformed(evt);
+            }
+        });
+
+        jbChangeLocation.setText("Change location?");
+        jbChangeLocation.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbChangeLocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbChangeLocationActionPerformed(evt);
+            }
+        });
+
+        jbTalkToNPC.setText("Talk to NPC's?");
+        jbTalkToNPC.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbTalkToNPC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbTalkToNPCActionPerformed(evt);
+            }
+        });
+
+        jbLookAtInventory.setText("Look at inventory?");
+        jbLookAtInventory.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbLookAtInventory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLookAtInventoryActionPerformed(evt);
+            }
+        });
+
+        jbGetUseItem.setText("Get and use items?");
+        jbGetUseItem.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbGetUseItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGetUseItemActionPerformed(evt);
+            }
+        });
+
+        jbCheckLocation.setText("Chech current location?");
+        jbCheckLocation.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbCheckLocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCheckLocationActionPerformed(evt);
+            }
+        });
+
+        jbSaveGame.setText("Save my progress?");
+        jbSaveGame.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbSaveGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSaveGameActionPerformed(evt);
+            }
+        });
+
+        jbExitHelpMenu.setText("Exit Help Menu");
+        jbExitHelpMenu.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbExitHelpMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitHelpMenuActionPerformed(evt);
+            }
+        });
+
+        jbFeedMyself.setText("Feed myself?");
+        jbFeedMyself.setMargin(new java.awt.Insets(2, 5, 2, 5));
+        jbFeedMyself.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbFeedMyselfActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jbBeatTheGame)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbChangeLocation))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbLookAtInventory)
+                            .addComponent(jbCheckLocation))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbGetUseItem, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jbFeedMyself, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jlHowToPlay)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jbExitHelpMenu)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addComponent(jlHowDoI)
+                                .addGap(11, 11, 11)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jbTalkToNPC)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbSaveGame)))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlHowToPlay)
+                .addGap(2, 2, 2)
+                .addComponent(jlHowDoI)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbBeatTheGame)
+                    .addComponent(jbChangeLocation))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbTalkToNPC)
+                    .addComponent(jbSaveGame))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbGetUseItem)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jbLookAtInventory)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbCheckLocation)
+                            .addComponent(jbFeedMyself))))
+                .addGap(18, 18, 18)
+                .addComponent(jbExitHelpMenu)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jtDisplayText.setColumns(20);
+        jtDisplayText.setLineWrap(true);
+        jtDisplayText.setRows(5);
+        jtDisplayText.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jtDisplayText);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 236, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, 0)
+                        .addComponent(jScrollPane1)))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -88,6 +263,80 @@ public class HelpMenuFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbBeatTheGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBeatTheGameActionPerformed
+        jtDisplayText.setText("In order to beat the game, you must find evidence"
+                                  +" which can be found in and outside of the castle" 
+                                  +" by examining items and objects that could have"
+                                  +" played a role in the disappearance of the princess."
+                                  +" This process is refered to in the game as gathering"
+                                  +" evidence. Evidence can also be gathered from talking"
+                                  +" to other characters that know important information.");
+    }//GEN-LAST:event_jbBeatTheGameActionPerformed
+
+    private void jbChangeLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbChangeLocationActionPerformed
+        jtDisplayText.setText("In the Game Menu, you will have the option,"
+                                  +" by pressing 'M', to move to a new location. "
+                                  +"When this option is selected, you will have the option"
+                                  +" of going directly to a previously visited location or"
+                                  +" you will be able to view a map that show different room"
+                                  +" locations.");
+    }//GEN-LAST:event_jbChangeLocationActionPerformed
+
+    private void jbTalkToNPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTalkToNPCActionPerformed
+        jtDisplayText.setText("To talk to other characters you will have to"
+                                  +" select the option 'P' in the Game Menu. This will"
+                                  +" bring you to the Dialogue Menu, giving you several"
+                                  +" of who to talk to based on who is in the room. From"
+                                  +" this general Dialogue Menu you will have the option"
+                                  +" to return to the Game Menu. Once in the Dialogue Menu,"
+                                  +" you can select a specific person to talk to based on the"
+                                  +" number displayed next to their name in the Dialogue Menu.");
+    }//GEN-LAST:event_jbTalkToNPCActionPerformed
+
+    private void jbSaveGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveGameActionPerformed
+        jtDisplayText.setText("You can either save your progress at the Main"
+                                  +" Menu by selecting 'S' or you can select 'S' in"
+                                  +" the Game Menu.");
+    }//GEN-LAST:event_jbSaveGameActionPerformed
+
+    private void jbLookAtInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLookAtInventoryActionPerformed
+        jtDisplayText.setText("Your inventory, which contains all the items your"
+                                  +" player can carry, is able to be viewed from the Game"
+                                  +" Menu by selecting the 'V' option.");
+    }//GEN-LAST:event_jbLookAtInventoryActionPerformed
+
+    private void jbGetUseItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGetUseItemActionPerformed
+        jtDisplayText.setText("To get items you will first have to find them in"
+                                  +" the various rooms and locations they can be found in."
+                                  +" Once you are in a location, you can use the 'Examine Location'"
+                                  +" option found in the Game Menu to see the items in the location."
+                                  +" You will then be able to examine items and pick them up by using"
+                                  +" the 'EI' command in the Game Menu. This will give you a description"
+                                  +" of the item also with the options to put the item into the inventory,"
+                                  +" if it can be picked up, or to do nothing with the item.");
+    }//GEN-LAST:event_jbGetUseItemActionPerformed
+
+    private void jbCheckLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCheckLocationActionPerformed
+        jtDisplayText.setText("To determine your location in the game"
+                                  +" you can use the 'Examine Location' command"
+                                  +" (E) to find out where you currently are.");
+    }//GEN-LAST:event_jbCheckLocationActionPerformed
+
+    private void jbFeedMyselfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbFeedMyselfActionPerformed
+        jtDisplayText.setText("To use food or beverage items you have to select"
+                                  +" the 'U' Use Item option in the Game Menu. If an item"
+                                  +" is edible, you will have the option from there to consume"
+                                  +" it. To view how hungry your character is you have to select"
+                                  +" the 'H' option in the Game Menu. To view how thirsty your"
+                                  +" character is you have to select the 'T' option in the Game"
+                                  +" menu.");
+    }//GEN-LAST:event_jbFeedMyselfActionPerformed
+
+    private void jbExitHelpMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitHelpMenuActionPerformed
+        AMedievalHarvestFestival.getMainMeniGUI().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbExitHelpMenuActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -95,6 +344,20 @@ public class HelpMenuFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbBeatTheGame;
+    private javax.swing.JButton jbChangeLocation;
+    private javax.swing.JButton jbCheckLocation;
+    private javax.swing.JButton jbExitHelpMenu;
+    private javax.swing.JButton jbFeedMyself;
+    private javax.swing.JButton jbGetUseItem;
+    private javax.swing.JButton jbLookAtInventory;
+    private javax.swing.JButton jbSaveGame;
+    private javax.swing.JButton jbTalkToNPC;
+    private javax.swing.JLabel jlHowDoI;
+    private javax.swing.JLabel jlHowToPlay;
     private javax.swing.JLabel jlTitle;
+    private javax.swing.JTextArea jtDisplayText;
     // End of variables declaration//GEN-END:variables
 }
