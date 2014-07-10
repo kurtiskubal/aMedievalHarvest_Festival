@@ -333,7 +333,7 @@ public class HelpMenuFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbFeedMyselfActionPerformed
 
     private void jbExitHelpMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitHelpMenuActionPerformed
-        AMedievalHarvestFestival.getMainMeniGUI().setVisible(true);
+        AMedievalHarvestFestival.getMainMenu().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jbExitHelpMenuActionPerformed
 
