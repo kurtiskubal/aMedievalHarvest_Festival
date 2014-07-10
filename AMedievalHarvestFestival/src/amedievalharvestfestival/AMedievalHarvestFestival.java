@@ -11,7 +11,6 @@ import byui.cit260.aMedievalHarvestFestival.frames.MainFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.StartProgramFrame;
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
-import byui.cit260.aMedievalHarvestFestival.view.StartProgramView;
 import static java.lang.System.out;
 
 
@@ -22,7 +21,7 @@ import static java.lang.System.out;
 public class AMedievalHarvestFestival {
     private static Game currentGame = null;
     private static Player player = null;
-    private static MainFrame MainMeniGUI = null;
+    private static MainFrame mainMenu = null;
 
     
     /**
@@ -69,12 +68,12 @@ public class AMedievalHarvestFestival {
         AMedievalHarvestFestival.player = player;
     }
     
-    public static MainFrame getMainMeniGUI() {
-        return MainMeniGUI;
+    public static MainFrame getMainMenu() {
+        return mainMenu;
     }
 
-    public static void setMainMeniGUI(MainFrame MainMeniGUI) {
-        AMedievalHarvestFestival.MainMeniGUI = MainMeniGUI;
+    public static void setMainMenu(MainFrame mainMenu) {
+        AMedievalHarvestFestival.mainMenu = mainMenu;
     }
     
     

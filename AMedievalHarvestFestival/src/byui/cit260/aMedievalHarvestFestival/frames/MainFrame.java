@@ -11,6 +11,12 @@ import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import com.sun.media.jfxmedia.events.NewFrameEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTree;
 
 /**
  *
@@ -159,7 +165,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(jbSaveGame)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbExitMain)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         jtWelcome.setEditable(false);
@@ -189,10 +195,10 @@ public class MainFrame extends javax.swing.JFrame {
             .addGroup(jpBodyLayout.createSequentialGroup()
                 .addComponent(jpTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
+                .addGroup(jpBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jpMenuItems, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
+                .addGap(37, 37, 37))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -236,6 +242,113 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbStartExistingGame
 
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JTree getjTree1() {
+        return jTree1;
+    }
+
+    public void setjTree1(JTree jTree1) {
+        this.jTree1 = jTree1;
+    }
+
+    public JButton getJbExitMain() {
+        return jbExitMain;
+    }
+
+    public void setJbExitMain(JButton jbExitMain) {
+        this.jbExitMain = jbExitMain;
+    }
+
+    public JButton getJbHowToPlay() {
+        return jbHowToPlay;
+    }
+
+    public void setJbHowToPlay(JButton jbHowToPlay) {
+        this.jbHowToPlay = jbHowToPlay;
+    }
+
+    public JButton getJbHowToPlay1() {
+        return jbHowToPlay1;
+    }
+
+    public void setJbHowToPlay1(JButton jbHowToPlay1) {
+        this.jbHowToPlay1 = jbHowToPlay1;
+    }
+
+    public JButton getJbSaveGame() {
+        return jbSaveGame;
+    }
+
+    public void setJbSaveGame(JButton jbSaveGame) {
+        this.jbSaveGame = jbSaveGame;
+    }
+
+    public JButton getJbStartGame() {
+        return jbStartGame;
+    }
+
+    public void setJbStartGame(JButton jbStartGame) {
+        this.jbStartGame = jbStartGame;
+    }
+
+    public JLabel getJlTitle() {
+        return jlTitle;
+    }
+
+    public void setJlTitle(JLabel jlTitle) {
+        this.jlTitle = jlTitle;
+    }
+
+    public JPanel getJpBody() {
+        return jpBody;
+    }
+
+    public void setJpBody(JPanel jpBody) {
+        this.jpBody = jpBody;
+    }
+
+    public JPanel getJpMenuItems() {
+        return jpMenuItems;
+    }
+
+    public void setJpMenuItems(JPanel jpMenuItems) {
+        this.jpMenuItems = jpMenuItems;
+    }
+
+    public JPanel getJpTitle() {
+        return jpTitle;
+    }
+
+    public void setJpTitle(JPanel jpTitle) {
+        this.jpTitle = jpTitle;
+    }
+
+    public JTextArea getJtWelcome() {
+        return jtWelcome;
+    }
+
+    public void setJtWelcome(JTextArea jtWelcome) {
+        this.jtWelcome = jtWelcome;
+    }
+
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -253,6 +366,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jpBody;
     private javax.swing.JPanel jpMenuItems;
     private javax.swing.JPanel jpTitle;
-    public javax.swing.JTextArea jtWelcome;
+    private javax.swing.JTextArea jtWelcome;
     // End of variables declaration//GEN-END:variables
 }

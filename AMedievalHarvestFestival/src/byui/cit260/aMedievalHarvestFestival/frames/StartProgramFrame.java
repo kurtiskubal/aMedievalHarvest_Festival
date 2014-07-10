@@ -6,6 +6,7 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.ProgramControl;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
 import javax.swing.JOptionPane;
@@ -262,8 +263,9 @@ public class StartProgramFrame extends javax.swing.JFrame {
         Player player = ProgramControl.createPlayer(playersName);
 //        create the main frame
         MainFrame mainFrame = new MainFrame();
-        mainFrame.jtWelcome.setText("Welcome to the game " + player.getName() + "! Have a good time! It is "
-                + "recommended that first time players visit the \"How to Play\" menu.");
+        AMedievalHarvestFestival.setMainMenu(mainFrame);
+        mainFrame.getJtWelcome().setText("Welcome to the game "  
+               + playersName + "! Have a good time! It is recommended that first time players visit the \"How to Play\" menu.");
         mainFrame.setVisible(true);
 //        set the welcome message on the MainFrame
 //        display the main frame
