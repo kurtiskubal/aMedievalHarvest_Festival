@@ -28,26 +28,243 @@ public class GameMenuFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jpGameMenuBody = new javax.swing.JPanel();
+        jbMoveToLoation = new javax.swing.JButton();
+        jbExamineLocation = new javax.swing.JButton();
+        jbLookAtMap = new javax.swing.JButton();
+        jbViewInventory = new javax.swing.JButton();
+        jbMemoryGame = new javax.swing.JButton();
+        jbReadNurseryRhyme = new javax.swing.JButton();
+        jbEstimateHunger = new javax.swing.JButton();
+        jbEstimateThirst = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jbEstimateDimensions = new javax.swing.JButton();
+        jbStartConversation = new javax.swing.JButton();
+        jbSaveGame = new javax.swing.JButton();
+        jbExit = new javax.swing.JButton();
+        jpGameMenuHeading = new javax.swing.JPanel();
+        jlGameMenuHeading = new javax.swing.JLabel();
+        jpMessage = new javax.swing.JPanel();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jpGameMenuBody.setBackground(new java.awt.Color(153, 255, 153));
+
+        jbMoveToLoation.setText("Move to a Location");
+
+        jbExamineLocation.setText("Examine Location");
+
+        jbLookAtMap.setText("Look at Map");
+
+        jbViewInventory.setText("View Inventory");
+
+        jbMemoryGame.setText("Memory Game");
+
+        jbReadNurseryRhyme.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
+        jbReadNurseryRhyme.setText("Read a Nursery Rhyme");
+
+        jbEstimateHunger.setText("Estimate Hunger");
+
+        jbEstimateThirst.setText("Estimate Thirst");
+
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jButton1.setText("Calculate Filling Factor");
+        jButton1.setPreferredSize(new java.awt.Dimension(131, 21));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jbEstimateDimensions.setText("Estimate Dimensions");
+
+        jbStartConversation.setText("Start a Conversation");
+
+        jbSaveGame.setText("Save your Game");
+
+        jbExit.setText("Exit");
+
+        jpGameMenuHeading.setBackground(new java.awt.Color(153, 255, 255));
+
+        jlGameMenuHeading.setFont(new java.awt.Font("Vivaldi", 2, 21)); // NOI18N
+        jlGameMenuHeading.setForeground(new java.awt.Color(0, 0, 204));
+        jlGameMenuHeading.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlGameMenuHeading.setText("Game Menu");
+
+        javax.swing.GroupLayout jpGameMenuHeadingLayout = new javax.swing.GroupLayout(jpGameMenuHeading);
+        jpGameMenuHeading.setLayout(jpGameMenuHeadingLayout);
+        jpGameMenuHeadingLayout.setHorizontalGroup(
+            jpGameMenuHeadingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpGameMenuHeadingLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlGameMenuHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(16, 16, 16))
+        );
+        jpGameMenuHeadingLayout.setVerticalGroup(
+            jpGameMenuHeadingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpGameMenuHeadingLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlGameMenuHeading, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jpGameMenuBodyLayout = new javax.swing.GroupLayout(jpGameMenuBody);
+        jpGameMenuBody.setLayout(jpGameMenuBodyLayout);
+        jpGameMenuBodyLayout.setHorizontalGroup(
+            jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                        .addComponent(jbViewInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbEstimateDimensions, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                        .addComponent(jbLookAtMap, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                        .addComponent(jbExamineLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbEstimateThirst, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                        .addComponent(jbMoveToLoation, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbEstimateHunger, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpGameMenuBodyLayout.createSequentialGroup()
+                        .addComponent(jbMemoryGame, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbStartConversation, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                        .addComponent(jbReadNurseryRhyme)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbSaveGame, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+            .addComponent(jpGameMenuHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpGameMenuBodyLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbExit, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(109, 109, 109))
+        );
+        jpGameMenuBodyLayout.setVerticalGroup(
+            jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                .addComponent(jpGameMenuHeading, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22)
+                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbMoveToLoation)
+                    .addComponent(jbEstimateHunger))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbExamineLocation)
+                    .addComponent(jbEstimateThirst))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbLookAtMap)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbEstimateDimensions)
+                    .addComponent(jbViewInventory))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbStartConversation)
+                    .addComponent(jbMemoryGame))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbReadNurseryRhyme, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbSaveGame))
+                .addGap(18, 18, 18)
+                .addComponent(jbExit)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jpMessageLayout = new javax.swing.GroupLayout(jpMessage);
+        jpMessage.setLayout(jpMessageLayout);
+        jpMessageLayout.setHorizontalGroup(
+            jpMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jpMessageLayout.setVerticalGroup(
+            jpMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 155, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jpMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jpGameMenuBody, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jpGameMenuBody, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jpMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JButton jbEstimateDimensions;
+    private javax.swing.JButton jbEstimateHunger;
+    private javax.swing.JButton jbEstimateThirst;
+    private javax.swing.JButton jbExamineLocation;
+    private javax.swing.JButton jbExit;
+    private javax.swing.JButton jbLookAtMap;
+    private javax.swing.JButton jbMemoryGame;
+    private javax.swing.JButton jbMoveToLoation;
+    private javax.swing.JButton jbReadNurseryRhyme;
+    private javax.swing.JButton jbSaveGame;
+    private javax.swing.JButton jbStartConversation;
+    private javax.swing.JButton jbViewInventory;
+    private javax.swing.JLabel jlGameMenuHeading;
+    private javax.swing.JPanel jpGameMenuBody;
+    private javax.swing.JPanel jpGameMenuHeading;
+    private javax.swing.JPanel jpMessage;
     // End of variables declaration//GEN-END:variables
 }
