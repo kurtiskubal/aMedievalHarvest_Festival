@@ -26,7 +26,6 @@ public class GameMenuFrame extends javax.swing.JFrame {
      */
     public GameMenuFrame() {
         initComponents();
-        AMedievalHarvestFestival.setGameMenu(this);
     }
 
     /**
