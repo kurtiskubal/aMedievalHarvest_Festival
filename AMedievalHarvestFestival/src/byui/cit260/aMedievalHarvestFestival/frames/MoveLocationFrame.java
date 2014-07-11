@@ -6,17 +6,24 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.control.GameControl;
+import byui.cit260.aMedievalHarvestFestival.control.LocationControl;
+import byui.cit260.aMedievalHarvestFestival.model.Location;
+
 /**
  *
  * @author Kurt
  */
 public class MoveLocationFrame extends javax.swing.JFrame {
+    Location[][] locations = GameControl.getMapLocations();
 
     /**
      * Creates new form MoveLocationFrame
      */
     public MoveLocationFrame() {
         initComponents();
+        
     }
 
     /**
@@ -82,14 +89,39 @@ public class MoveLocationFrame extends javax.swing.JFrame {
         );
 
         jbMyRoom.setText("My Room");
+        jbMyRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMyRoomActionPerformed(evt);
+            }
+        });
 
         jbLadyVioRoom.setText("Lady Violet's Room");
+        jbLadyVioRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLadyVioRoomActionPerformed(evt);
+            }
+        });
 
         jbDukeFredRoom.setText("Duke Frederick's Room");
+        jbDukeFredRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbDukeFredRoomActionPerformed(evt);
+            }
+        });
 
         jbDukeHaroRoom.setText("Duke Harold's Room");
+        jbDukeHaroRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbDukeHaroRoomActionPerformed(evt);
+            }
+        });
 
         jbDukeLuisRoom.setText("Duke Luis' Room");
+        jbDukeLuisRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbDukeLuisRoomActionPerformed(evt);
+            }
+        });
 
         jbLordCanaRoom.setText("Lord Canaway's Room");
         jbLordCanaRoom.addActionListener(new java.awt.event.ActionListener() {
@@ -106,6 +138,11 @@ public class MoveLocationFrame extends javax.swing.JFrame {
         });
 
         jbServantsQ.setText("Servants' Quarters");
+        jbServantsQ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbServantsQActionPerformed(evt);
+            }
+        });
 
         jbPrinRoom.setText("Princess' Room");
         jbPrinRoom.addActionListener(new java.awt.event.ActionListener() {
@@ -115,6 +152,11 @@ public class MoveLocationFrame extends javax.swing.JFrame {
         });
 
         jbKingRoom.setText("King's Room");
+        jbKingRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbKingRoomActionPerformed(evt);
+            }
+        });
 
         jbKingRestroom.setText("King's Private Restroom");
         jbKingRestroom.addActionListener(new java.awt.event.ActionListener() {
@@ -124,6 +166,11 @@ public class MoveLocationFrame extends javax.swing.JFrame {
         });
 
         jbGardens.setText("Gardens");
+        jbGardens.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGardensActionPerformed(evt);
+            }
+        });
 
         jbStables.setText("Stables");
         jbStables.addActionListener(new java.awt.event.ActionListener() {
@@ -133,14 +180,39 @@ public class MoveLocationFrame extends javax.swing.JFrame {
         });
 
         jbCourtyard.setText("Courtyard");
+        jbCourtyard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCourtyardActionPerformed(evt);
+            }
+        });
 
         jbGuestRR.setText("Guest's Restroom");
+        jbGuestRR.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGuestRRActionPerformed(evt);
+            }
+        });
 
         jbKitchen.setText("Kitchen");
+        jbKitchen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbKitchenActionPerformed(evt);
+            }
+        });
 
         jbAudCham.setText("Audience Chamber");
+        jbAudCham.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAudChamActionPerformed(evt);
+            }
+        });
 
         jbDineHall.setText("Dining Hall");
+        jbDineHall.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbDineHallActionPerformed(evt);
+            }
+        });
 
         jbLibrary.setText("Library");
         jbLibrary.addActionListener(new java.awt.event.ActionListener() {
@@ -196,8 +268,8 @@ public class MoveLocationFrame extends javax.swing.JFrame {
                             .addComponent(jbStables, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jbPool, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jpLocationBodyLayout.createSequentialGroup()
-                        .addGap(123, 123, 123)
-                        .addComponent(jbExit)))
+                        .addGap(113, 113, 113)
+                        .addComponent(jbExit, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jpLocationBodyLayout.setVerticalGroup(
@@ -246,7 +318,7 @@ public class MoveLocationFrame extends javax.swing.JFrame {
                     .addComponent(jbPool))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jbExit)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -265,70 +337,155 @@ public class MoveLocationFrame extends javax.swing.JFrame {
 
     private void jbLordCanaRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLordCanaRoomActionPerformed
         // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[1][1]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+        
     }//GEN-LAST:event_jbLordCanaRoomActionPerformed
 
     private void jbEmptyRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEmptyRoomActionPerformed
         // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[1][2]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbEmptyRoomActionPerformed
 
     private void jbPrinRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPrinRoomActionPerformed
         // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[1][4]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbPrinRoomActionPerformed
 
     private void jbKingRestroomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbKingRestroomActionPerformed
         // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[2][1]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbKingRestroomActionPerformed
 
     private void jbStablesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStablesActionPerformed
         // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[0][0]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbStablesActionPerformed
 
     private void jbLibraryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLibraryActionPerformed
         // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[3][3]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbLibraryActionPerformed
 
     private void jbPoolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPoolActionPerformed
         // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[3][4]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbPoolActionPerformed
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
         // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbExitActionPerformed
+
+    private void jbMyRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMyRoomActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[0][1]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbMyRoomActionPerformed
+
+    private void jbLadyVioRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLadyVioRoomActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[0][2]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbLadyVioRoomActionPerformed
+
+    private void jbDukeFredRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDukeFredRoomActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[0][3]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbDukeFredRoomActionPerformed
+
+    private void jbDukeHaroRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDukeHaroRoomActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[0][4]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbDukeHaroRoomActionPerformed
+
+    private void jbDukeLuisRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDukeLuisRoomActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[1][0]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbDukeLuisRoomActionPerformed
+
+    private void jbServantsQActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbServantsQActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[1][3]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbServantsQActionPerformed
+
+    private void jbKingRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbKingRoomActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[2][0]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbKingRoomActionPerformed
+
+    private void jbGardensActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGardensActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[2][2]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbGardensActionPerformed
+
+    private void jbCourtyardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCourtyardActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[2][3]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbCourtyardActionPerformed
+
+    private void jbGuestRRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGuestRRActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[2][4]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbGuestRRActionPerformed
+
+    private void jbKitchenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbKitchenActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[3][0]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbKitchenActionPerformed
+
+    private void jbAudChamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAudChamActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[3][1]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbAudChamActionPerformed
+
+    private void jbDineHallActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbDineHallActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().getJtMessage().setText(LocationControl.movePlayerToLocation(locations[3][2]));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbDineHallActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MoveLocationFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MoveLocationFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MoveLocationFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MoveLocationFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MoveLocationFrame().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jbAudCham;

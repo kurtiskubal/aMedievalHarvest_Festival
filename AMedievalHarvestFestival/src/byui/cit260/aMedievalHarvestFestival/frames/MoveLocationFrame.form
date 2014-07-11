@@ -75,8 +75,8 @@
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="123" max="-2" attributes="0"/>
-                          <Component id="jbExit" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
+                          <Component id="jbExit" min="-2" pref="84" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
@@ -139,7 +139,7 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jbExit" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -191,26 +191,41 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="My Room"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbMyRoomActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbLadyVioRoom">
           <Properties>
             <Property name="text" type="java.lang.String" value="Lady Violet&apos;s Room"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLadyVioRoomActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbDukeFredRoom">
           <Properties>
             <Property name="text" type="java.lang.String" value="Duke Frederick&apos;s Room"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbDukeFredRoomActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbDukeHaroRoom">
           <Properties>
             <Property name="text" type="java.lang.String" value="Duke Harold&apos;s Room"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbDukeHaroRoomActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbDukeLuisRoom">
           <Properties>
             <Property name="text" type="java.lang.String" value="Duke Luis&apos; Room"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbDukeLuisRoomActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbLordCanaRoom">
           <Properties>
@@ -232,6 +247,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Servants&apos; Quarters"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbServantsQActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbPrinRoom">
           <Properties>
@@ -245,6 +263,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="King&apos;s Room"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbKingRoomActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbKingRestroom">
           <Properties>
@@ -258,6 +279,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Gardens"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbGardensActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbStables">
           <Properties>
@@ -271,26 +295,41 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Courtyard"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbCourtyardActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbGuestRR">
           <Properties>
             <Property name="text" type="java.lang.String" value="Guest&apos;s Restroom"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbGuestRRActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbKitchen">
           <Properties>
             <Property name="text" type="java.lang.String" value="Kitchen"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbKitchenActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbAudCham">
           <Properties>
             <Property name="text" type="java.lang.String" value="Audience Chamber"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbAudChamActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbDineHall">
           <Properties>
             <Property name="text" type="java.lang.String" value="Dining Hall"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbDineHallActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbLibrary">
           <Properties>

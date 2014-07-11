@@ -85,6 +85,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
         jpGameMenuBody.setBackground(new java.awt.Color(153, 255, 153));
 
+        jbMoveToLoation.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbMoveToLoation.setText("Move to a Location");
         jbMoveToLoation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,6 +93,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbExamineLocation.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbExamineLocation.setText("Examine Location");
         jbExamineLocation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,6 +101,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbLookAtMap.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbLookAtMap.setText("Look at Map");
         jbLookAtMap.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +109,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbViewInventory.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbViewInventory.setText("View Inventory");
         jbViewInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -113,6 +117,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbMemoryGame.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbMemoryGame.setText("Memory Game");
         jbMemoryGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -128,6 +133,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbEstimateHunger.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbEstimateHunger.setText("Estimate Hunger");
         jbEstimateHunger.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -135,6 +141,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbEstimateThirst.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbEstimateThirst.setText("Estimate Thirst");
         jbEstimateThirst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,6 +158,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbEstimateDimensions.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbEstimateDimensions.setText("Estimate Dimensions");
         jbEstimateDimensions.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -158,6 +166,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbStartConversation.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbStartConversation.setText("Start a Conversation");
         jbStartConversation.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -165,6 +174,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             }
         });
 
+        jbSaveGame.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbSaveGame.setText("Save your Game");
         jbSaveGame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
