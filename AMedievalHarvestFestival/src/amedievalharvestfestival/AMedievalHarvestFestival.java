@@ -7,6 +7,7 @@
 package amedievalharvestfestival;
 
 
+import byui.cit260.aMedievalHarvestFestival.frames.GameMenuFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.MainFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.StartProgramFrame;
 import byui.cit260.aMedievalHarvestFestival.model.Game;
@@ -22,6 +23,7 @@ public class AMedievalHarvestFestival {
     private static Game currentGame = null;
     private static Player player = null;
     private static MainFrame mainMenu = null;
+    private static GameMenuFrame gameMenu = null;
 
     
     /**
@@ -75,6 +77,15 @@ public class AMedievalHarvestFestival {
     public static void setMainMenu(MainFrame mainMenu) {
         AMedievalHarvestFestival.mainMenu = mainMenu;
     }
+
+    public static GameMenuFrame getGameMenu() {
+        return gameMenu;
+    }
+
+    public static void setGameMenu(GameMenuFrame gameMenu) {
+        AMedievalHarvestFestival.gameMenu = gameMenu;
+    }
+    
     
     
 }

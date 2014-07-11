@@ -6,6 +6,7 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -83,21 +84,61 @@ public class GameMenuFrame extends javax.swing.JFrame {
         jpGameMenuBody.setBackground(new java.awt.Color(153, 255, 153));
 
         jbMoveToLoation.setText("Move to a Location");
+        jbMoveToLoation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMoveToLoationActionPerformed(evt);
+            }
+        });
 
         jbExamineLocation.setText("Examine Location");
+        jbExamineLocation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExamineLocationActionPerformed(evt);
+            }
+        });
 
         jbLookAtMap.setText("Look at Map");
+        jbLookAtMap.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbLookAtMapActionPerformed(evt);
+            }
+        });
 
         jbViewInventory.setText("View Inventory");
+        jbViewInventory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbViewInventoryActionPerformed(evt);
+            }
+        });
 
         jbMemoryGame.setText("Memory Game");
+        jbMemoryGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMemoryGameActionPerformed(evt);
+            }
+        });
 
         jbReadNurseryRhyme.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
         jbReadNurseryRhyme.setText("Read a Nursery Rhyme");
+        jbReadNurseryRhyme.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbReadNurseryRhymeActionPerformed(evt);
+            }
+        });
 
         jbEstimateHunger.setText("Estimate Hunger");
+        jbEstimateHunger.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEstimateHungerActionPerformed(evt);
+            }
+        });
 
         jbEstimateThirst.setText("Estimate Thirst");
+        jbEstimateThirst.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEstimateThirstActionPerformed(evt);
+            }
+        });
 
         jbEstimateFilling.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         jbEstimateFilling.setText("Calculate Filling Factor");
@@ -109,10 +150,25 @@ public class GameMenuFrame extends javax.swing.JFrame {
         });
 
         jbEstimateDimensions.setText("Estimate Dimensions");
+        jbEstimateDimensions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbEstimateDimensionsActionPerformed(evt);
+            }
+        });
 
         jbStartConversation.setText("Start a Conversation");
+        jbStartConversation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbStartConversationActionPerformed(evt);
+            }
+        });
 
         jbSaveGame.setText("Save your Game");
+        jbSaveGame.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSaveGameActionPerformed(evt);
+            }
+        });
 
         jbExit.setText("Exit");
         jbExit.addActionListener(new java.awt.event.ActionListener() {
@@ -246,8 +302,54 @@ public class GameMenuFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbEstimateFillingActionPerformed
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
-        // TODO add your handling code here:
+        AMedievalHarvestFestival.getMainMenu().setVisible(true);
+        AMedievalHarvestFestival.setGameMenu(this);
+        this.dispose();
     }//GEN-LAST:event_jbExitActionPerformed
+
+    private void jbMoveToLoationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMoveToLoationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbMoveToLoationActionPerformed
+
+    private void jbExamineLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExamineLocationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbExamineLocationActionPerformed
+
+    private void jbLookAtMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLookAtMapActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbLookAtMapActionPerformed
+
+    private void jbViewInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbViewInventoryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbViewInventoryActionPerformed
+
+    private void jbMemoryGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMemoryGameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbMemoryGameActionPerformed
+
+    private void jbReadNurseryRhymeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbReadNurseryRhymeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbReadNurseryRhymeActionPerformed
+
+    private void jbEstimateHungerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateHungerActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbEstimateHungerActionPerformed
+
+    private void jbEstimateThirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateThirstActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbEstimateThirstActionPerformed
+
+    private void jbEstimateDimensionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateDimensionsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbEstimateDimensionsActionPerformed
+
+    private void jbStartConversationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStartConversationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbStartConversationActionPerformed
+
+    private void jbSaveGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveGameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbSaveGameActionPerformed
 
     public JPanel getjPanel1() {
         return jPanel1;

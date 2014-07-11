@@ -171,26 +171,41 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Move to a Location"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbMoveToLoationActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbExamineLocation">
           <Properties>
             <Property name="text" type="java.lang.String" value="Examine Location"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbExamineLocationActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbLookAtMap">
           <Properties>
             <Property name="text" type="java.lang.String" value="Look at Map"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLookAtMapActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbViewInventory">
           <Properties>
             <Property name="text" type="java.lang.String" value="View Inventory"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbViewInventoryActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbMemoryGame">
           <Properties>
             <Property name="text" type="java.lang.String" value="Memory Game"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbMemoryGameActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbReadNurseryRhyme">
           <Properties>
@@ -199,16 +214,25 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Read a Nursery Rhyme"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbReadNurseryRhymeActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbEstimateHunger">
           <Properties>
             <Property name="text" type="java.lang.String" value="Estimate Hunger"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbEstimateHungerActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbEstimateThirst">
           <Properties>
             <Property name="text" type="java.lang.String" value="Estimate Thirst"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbEstimateThirstActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbEstimateFilling">
           <Properties>
@@ -228,16 +252,25 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Estimate Dimensions"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbEstimateDimensionsActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbStartConversation">
           <Properties>
             <Property name="text" type="java.lang.String" value="Start a Conversation"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbStartConversationActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbSaveGame">
           <Properties>
             <Property name="text" type="java.lang.String" value="Save your Game"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbSaveGameActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbExit">
           <Properties>
