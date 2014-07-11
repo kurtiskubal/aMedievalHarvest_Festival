@@ -6,6 +6,8 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+
 /**
  *
  * @author Kurt
@@ -17,6 +19,12 @@ public class NurseryRhymesFrame extends javax.swing.JFrame {
      */
     public NurseryRhymesFrame() {
         initComponents();
+        buttonGroup1.add(jrbDumpty);
+        buttonGroup1.add(jrbHush);
+        buttonGroup1.add(jrbJack);
+        buttonGroup1.add(jrbMuffet);
+        buttonGroup1.add(jrbMuffin);
+        buttonGroup1.add(jrbTwinkle);
     }
 
     /**
@@ -28,57 +36,344 @@ public class NurseryRhymesFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jlTitle = new javax.swing.JLabel();
+        jlPicture = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jrbTwinkle = new javax.swing.JRadioButton();
+        jrbJack = new javax.swing.JRadioButton();
+        jrbMuffin = new javax.swing.JRadioButton();
+        jrbDumpty = new javax.swing.JRadioButton();
+        jrbHush = new javax.swing.JRadioButton();
+        jrbMuffet = new javax.swing.JRadioButton();
+        jbExit = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+        jPanel1.setBorder(new javax.swing.border.MatteBorder(null));
+
+        jPanel2.setBackground(new java.awt.Color(153, 255, 255));
+
+        jlTitle.setFont(new java.awt.Font("Vivaldi", 0, 24)); // NOI18N
+        jlTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTitle.setText("Nursery Rhymes");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(127, 127, 127)
+                .addComponent(jlTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(134, 134, 134))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jlTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jlPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/byui/cit260/aMedievalHarvestFestival/images/Mother Goose Image.jpg"))); // NOI18N
+
+        jPanel3.setBackground(new java.awt.Color(153, 255, 255));
+
+        jLabel1.setText("Please select the Ryme you wish to read.");
+
+        jrbTwinkle.setText("Twinkle Twinkle Little Star");
+        jrbTwinkle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbTwinkleActionPerformed(evt);
+            }
+        });
+
+        jrbJack.setText("Jack be Nimble");
+        jrbJack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbJackActionPerformed(evt);
+            }
+        });
+
+        jrbMuffin.setText("Do you Know the Muffin Man");
+        jrbMuffin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbMuffinActionPerformed(evt);
+            }
+        });
+
+        jrbDumpty.setText("Humpty Dumpty");
+        jrbDumpty.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbDumptyActionPerformed(evt);
+            }
+        });
+
+        jrbHush.setText("Hush Little Baby");
+        jrbHush.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbHushActionPerformed(evt);
+            }
+        });
+
+        jrbMuffet.setText("Little Miss Muffet");
+        jrbMuffet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jrbMuffetActionPerformed(evt);
+            }
+        });
+
+        jbExit.setText("Exit");
+        jbExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jrbMuffet)
+                    .addComponent(jrbHush)
+                    .addComponent(jrbDumpty)
+                    .addComponent(jrbJack)
+                    .addComponent(jLabel1)
+                    .addComponent(jrbTwinkle)
+                    .addComponent(jrbMuffin)
+                    .addComponent(jbExit))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbTwinkle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbJack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbMuffin)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbDumpty)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbHush)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jrbMuffet)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jbExit)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1))
+                    .addComponent(jlPicture, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jlPicture, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbExitActionPerformed
+
+    private void jrbTwinkleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbTwinkleActionPerformed
+        jTextArea1.setText("\n----------------------------------------------" 
+            + "\n| Twinkle Twinkle Little Star |"
+            + "\n"
+            + "\nTwinkle, twinkle, little star," 
+            + "\nHow I wonder what you are." 
+            + "\nUp above the world so high," 
+            + "\nLike a diamond in the sky." 
+            + "\n" 
+            + "\nWhen the blazing sun is gone," 
+            + "\nWhen the nothing shins upon," 
+            + "\nThen you show your little light," 
+            + "\nTwinkle, twinkle, all the night." 
+            + "\n" 
+            + "\nThen the traveller in the dark," 
+            + "\nThanks you for your tiny spark," 
+            + "\nHe could not see which way to go," 
+            + "\nIf you did not twinkle so." 
+            + "\n" 
+            + "\nIn the dark blue sky you keep," 
+            + "\nAnd often through my curtains peep," 
+            + "\nFor you never shut your eye," 
+            + "\nTill the sun is in the sky." 
+            + "\n"
+            + "\nAs your bright and tiny spark," 
+            + "\nLights the traveller in the dark." 
+            + "\nThough I know not what you are," 
+            + "\nTwinkle, twinkle, little star." 
+            + "\n"
+            + "\nTwinkle, twinkle, little star," 
+            + "\nHow I wonder what you are" 
+            + "\nUp above the world so high" 
+            + "\nLike a diamond in the sky." 
+            + "\n" 
+            + "\nTwinkle, twinkle, little star," 
+            + "\nHow I wonder what you are" 
+            + "\nHow I wonder what you are" 
+            + "\n"
+            + "\n----------------------------------------------");
+    }//GEN-LAST:event_jrbTwinkleActionPerformed
+
+    private void jrbJackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbJackActionPerformed
+        jTextArea1.setText("\n----------------------------------------------" 
+            + "\n| Jack be Nimble |"
+            + "\n"
+            + "\nJack be nimble," 
+            + "\nJack, be quick," 
+            + "\nJack, jump over" 
+            + "\nThe candlestick."
+            + "\n"
+            + "\nJack jumped high," 
+            + "\nJack jumped low," 
+            + "\nJack jumped over"
+            + "\nand burned his toe."
+            + "\n----------------------------------------------");
+    }//GEN-LAST:event_jrbJackActionPerformed
+
+    private void jrbMuffinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMuffinActionPerformed
+        jTextArea1.setText("\n----------------------------------------------" 
+            + "\n| Do You Know The Muffin Man |"
+            + "\n"
+            + "\nDo you know the Muffin Man," 
+            + "\nThe Muffin Man,"
+            + "\nThe Muffin Man?"
+            + "\nDo you know the Muffin Man" 
+            + "\nWho lives in Drury Lane?"
+            + "\n"
+            + "\nYes, I know the Muffin Man," 
+            + "\nThe Muffin Man,"
+            + "\nThe Muffin Man."
+            + "\nYes, I know the Muffin Man"
+            + "\nWho lives in Drury Lane."
+            + "\n----------------------------------------------");
+    }//GEN-LAST:event_jrbMuffinActionPerformed
+
+    private void jrbDumptyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbDumptyActionPerformed
+        jTextArea1.setText("\n----------------------------------------------" 
+            + "\n| Humpty Dumpty |"
+            + "\n"
+            + "\nHumpty Dumpty sat on a wall," 
+            + "\nHumpty Dumpty had a great fall."
+            + "\nAll the king's horses and all the king's men"
+            + "\nCouldn't put Humpty together again."
+            + "\n----------------------------------------------");
+    }//GEN-LAST:event_jrbDumptyActionPerformed
+
+    private void jrbHushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbHushActionPerformed
+        jTextArea1.setText("\n----------------------------------------------" 
+            + "\n| Hush Little Baby |"
+            + "\n"
+            + "\nHush, little baby, don't say a word," 
+            + "\nMama's going to buy you a mocking bird."
+            + "\nAnd if that mockingbird won't sing,"
+            + "\nMama's going to buy you a diamond ring." 
+            + "\nAnd if that diamond rinf turns to brass,"
+            + "\nMama's going to buy you a looking glass."
+            + "\nAnd if that looking glass gets broke," 
+            + "\nMama's going to buy you a billy goat."
+            + "\nAnd if that billy goat won't pull,"
+            + "\nMama's going to buy you a cart and bull."
+            + "\nAnd if that cart and bull turn over,"
+            + "\nMama's going to buy you a dog named Rover." 
+            + "\nAnd if that dog named Rover won;t bark,"
+            + "\nMama's going to buy you a horse and cart."
+            + "\nAnd if that horse and cart fall down," 
+            + "\nYou'll still be the sweetest little baby in town."
+            + "\n----------------------------------------------");
+    }//GEN-LAST:event_jrbHushActionPerformed
+
+    private void jrbMuffetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jrbMuffetActionPerformed
+        jTextArea1.setText("\n----------------------------------------------" 
+            + "\n| Little Miss Muffet |"
+            + "\n"
+            + "\nLittle Miss Muffet" 
+            + "\nSat on a tuffet,"
+            + "\nEating her curds and whey;"
+            + "\nAlong came a spider,"
+            + "\nWho sat down beside her"
+            + "\nAnd frightened Miss Muffet away."
+            + "\n----------------------------------------------");
+    }//GEN-LAST:event_jrbMuffetActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NurseryRhymesFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NurseryRhymesFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NurseryRhymesFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NurseryRhymesFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new NurseryRhymesFrame().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton jbExit;
+    private javax.swing.JLabel jlPicture;
+    private javax.swing.JLabel jlTitle;
+    private javax.swing.JRadioButton jrbDumpty;
+    private javax.swing.JRadioButton jrbHush;
+    private javax.swing.JRadioButton jrbJack;
+    private javax.swing.JRadioButton jrbMuffet;
+    private javax.swing.JRadioButton jrbMuffin;
+    private javax.swing.JRadioButton jrbTwinkle;
     // End of variables declaration//GEN-END:variables
 }

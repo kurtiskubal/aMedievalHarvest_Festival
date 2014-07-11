@@ -110,7 +110,7 @@ public class NurseryRhymes extends MenuView{
             + "\n"
             + "\nJack be nimble," 
             + "\nJack, be quick," 
-            + "\nJack, jummp over" 
+            + "\nJack, jump over" 
             + "\nThe candlestick."
             + "\n"
             + "\nJack jumped high," 
@@ -123,7 +123,7 @@ public class NurseryRhymes extends MenuView{
     private void muffinMan() {
         System.out.println("\n" 
             + "\n----------------------------------------------" 
-            + "\n| Do You KNow The Muffin Man |"
+            + "\n| Do You Know The Muffin Man |"
             + "\n"
             + "\nDo you know the Muffin Man," 
             + "\nThe Muffin Man,"

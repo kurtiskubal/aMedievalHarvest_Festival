@@ -24,6 +24,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
      */
     public GameMenuFrame() {
         initComponents();
+        AMedievalHarvestFestival.setGameMenu(this);
     }
 
     /**
@@ -303,7 +304,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
         AMedievalHarvestFestival.getMainMenu().setVisible(true);
-        AMedievalHarvestFestival.setGameMenu(this);
+        
         this.dispose();
     }//GEN-LAST:event_jbExitActionPerformed
 
@@ -328,7 +329,9 @@ public class GameMenuFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jbMemoryGameActionPerformed
 
     private void jbReadNurseryRhymeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbReadNurseryRhymeActionPerformed
-        // TODO add your handling code here:
+        NurseryRhymesFrame nurseryRymesFrame = new NurseryRhymesFrame();
+        nurseryRymesFrame.setVisible(true);
+        AMedievalHarvestFestival.getGameMenu().setVisible(false);
     }//GEN-LAST:event_jbReadNurseryRhymeActionPerformed
 
     private void jbEstimateHungerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateHungerActionPerformed
