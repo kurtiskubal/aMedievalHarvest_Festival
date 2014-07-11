@@ -7,6 +7,8 @@
 package byui.cit260.aMedievalHarvestFestival.frames;
 
 import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.control.ConsumableControl;
+import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -309,42 +311,64 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
     private void jbMoveToLoationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMoveToLoationActionPerformed
         // TODO add your handling code here:
+        MoveLocationFrame moveMenu = new MoveLocationFrame();
+        moveMenu.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbMoveToLoationActionPerformed
 
     private void jbExamineLocationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExamineLocationActionPerformed
         // TODO add your handling code here:
+        this.jtMessage.setText(GameControl.getPlayerCurrentLocationDescription());
     }//GEN-LAST:event_jbExamineLocationActionPerformed
 
     private void jbLookAtMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLookAtMapActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jbLookAtMapActionPerformed
 
     private void jbViewInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbViewInventoryActionPerformed
         // TODO add your handling code here:
+        InventoryFrame inventoryMenu = new InventoryFrame();
+        inventoryMenu.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbViewInventoryActionPerformed
 
     private void jbMemoryGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMemoryGameActionPerformed
         // TODO add your handling code here:
+        MatchingGameFrame matchingMenu = new MatchingGameFrame();
+        matchingMenu.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbMemoryGameActionPerformed
 
     private void jbReadNurseryRhymeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbReadNurseryRhymeActionPerformed
         // TODO add your handling code here:
+        NurseryRhymesFrame rhymeMenu = new NurseryRhymesFrame();
+        rhymeMenu.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbReadNurseryRhymeActionPerformed
 
     private void jbEstimateHungerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateHungerActionPerformed
         // TODO add your handling code here:
+        this.jtMessage.setText(ConsumableControl.getPlayerHunger(AMedievalHarvestFestival.getPlayer()));
     }//GEN-LAST:event_jbEstimateHungerActionPerformed
 
     private void jbEstimateThirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateThirstActionPerformed
         // TODO add your handling code here:
+        this.jtMessage.setText(ConsumableControl.getPlayerThirst(AMedievalHarvestFestival.getPlayer()));
     }//GEN-LAST:event_jbEstimateThirstActionPerformed
 
     private void jbEstimateDimensionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateDimensionsActionPerformed
         // TODO add your handling code here:
+        MapDimensionsFrame dimensionsMenu = new MapDimensionsFrame();
+        dimensionsMenu.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbEstimateDimensionsActionPerformed
 
     private void jbStartConversationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbStartConversationActionPerformed
         // TODO add your handling code here:
+        ConversationsFrame conversationsMenu = new ConversationsFrame();
+        conversationsMenu.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbStartConversationActionPerformed
 
     private void jbSaveGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveGameActionPerformed

@@ -23,13 +23,300 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Component id="jpLocationBody" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Component id="jpLocationBody" min="-2" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jpLocationBody">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="99" green="ff" red="99" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jpLocationHeading" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jbMyRoom" max="32767" attributes="0"/>
+                              <Component id="jbLadyVioRoom" max="32767" attributes="0"/>
+                              <Component id="jbDukeFredRoom" max="32767" attributes="0"/>
+                              <Component id="jbDukeHaroRoom" max="32767" attributes="0"/>
+                              <Component id="jbDukeLuisRoom" max="32767" attributes="0"/>
+                              <Component id="jbLordCanaRoom" max="32767" attributes="0"/>
+                              <Component id="jbEmptyRoom" max="32767" attributes="0"/>
+                              <Component id="jbServantsQ" max="32767" attributes="0"/>
+                              <Component id="jbPrinRoom" max="32767" attributes="0"/>
+                              <Component id="jbKingRoom" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="jbCourtyard" max="32767" attributes="0"/>
+                              <Component id="jbGuestRR" max="32767" attributes="0"/>
+                              <Component id="jbKitchen" max="32767" attributes="0"/>
+                              <Component id="jbAudCham" max="32767" attributes="0"/>
+                              <Component id="jbDineHall" max="32767" attributes="0"/>
+                              <Component id="jbLibrary" max="32767" attributes="0"/>
+                              <Component id="jbKingRestroom" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jbGardens" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jbStables" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jbPool" alignment="1" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
+                          <Component id="jbExit" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jpLocationHeading" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbMyRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbKingRestroom" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbLadyVioRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbGardens" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbDukeFredRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbStables" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbDukeHaroRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbCourtyard" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbDukeLuisRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbGuestRR" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbLordCanaRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbKitchen" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbEmptyRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbAudCham" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbServantsQ" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbDineHall" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbPrinRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbLibrary" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jbKingRoom" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jbPool" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jbExit" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="11" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="jpLocationHeading">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="99" type="rgb"/>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jlMoveLocationTitle" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jlMoveLocationTitle" pref="37" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="jlMoveLocationTitle">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Vivaldi" size="21" style="2"/>
+                </Property>
+                <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="cc" green="0" red="0" type="rgb"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Move to a Location Menu"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JButton" name="jbMyRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="My Room"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbLadyVioRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Lady Violet&apos;s Room"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbDukeFredRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Duke Frederick&apos;s Room"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbDukeHaroRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Duke Harold&apos;s Room"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbDukeLuisRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Duke Luis&apos; Room"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbLordCanaRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Lord Canaway&apos;s Room"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLordCanaRoomActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbEmptyRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Empty Room"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbEmptyRoomActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbServantsQ">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Servants&apos; Quarters"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbPrinRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Princess&apos; Room"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbPrinRoomActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbKingRoom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="King&apos;s Room"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbKingRestroom">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="King&apos;s Private Restroom"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbKingRestroomActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbGardens">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Gardens"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbStables">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Stables"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbStablesActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbCourtyard">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Courtyard"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbGuestRR">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Guest&apos;s Restroom"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbKitchen">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Kitchen"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbAudCham">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Audience Chamber"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbDineHall">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Dining Hall"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbLibrary">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Library"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbLibraryActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbPool">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Pool"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbPoolActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbExit">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Cancel"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbExitActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
 </Form>

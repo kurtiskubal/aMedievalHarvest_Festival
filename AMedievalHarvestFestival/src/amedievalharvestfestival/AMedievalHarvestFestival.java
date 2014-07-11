@@ -8,7 +8,11 @@ package amedievalharvestfestival;
 
 
 import byui.cit260.aMedievalHarvestFestival.frames.GameMenuFrame;
+import byui.cit260.aMedievalHarvestFestival.frames.InventoryFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.MainFrame;
+import byui.cit260.aMedievalHarvestFestival.frames.MapDimensionsFrame;
+import byui.cit260.aMedievalHarvestFestival.frames.MatchingGameFrame;
+import byui.cit260.aMedievalHarvestFestival.frames.MoveLocationFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.StartProgramFrame;
 import byui.cit260.aMedievalHarvestFestival.model.Game;
 import byui.cit260.aMedievalHarvestFestival.model.Player;
@@ -24,6 +28,10 @@ public class AMedievalHarvestFestival {
     private static Player player = null;
     private static MainFrame mainMenu = null;
     private static GameMenuFrame gameMenu = null;
+    private static InventoryFrame inventoryMenu = null;
+    private static MatchingGameFrame matchingGameMenu = null;
+    private static MapDimensionsFrame mapDimensionsFrame = null;
+    private static MoveLocationFrame moveLocationMenu = null;
 
     
     /**
@@ -85,6 +93,39 @@ public class AMedievalHarvestFestival {
     public static void setGameMenu(GameMenuFrame gameMenu) {
         AMedievalHarvestFestival.gameMenu = gameMenu;
     }
+
+    public static InventoryFrame getInventoryMenu() {
+        return inventoryMenu;
+    }
+
+    public static void setInventoryMenu(InventoryFrame inventoryMenu) {
+        AMedievalHarvestFestival.inventoryMenu = inventoryMenu;
+    }
+
+    public static MatchingGameFrame getMatchingGameMenu() {
+        return matchingGameMenu;
+    }
+
+    public static void setMatchingGameMenu(MatchingGameFrame matchingGameMenu) {
+        AMedievalHarvestFestival.matchingGameMenu = matchingGameMenu;
+    }
+
+    public static MapDimensionsFrame getMapDimensionsFrame() {
+        return mapDimensionsFrame;
+    }
+
+    public static void setMapDimensionsFrame(MapDimensionsFrame mapDimensionsFrame) {
+        AMedievalHarvestFestival.mapDimensionsFrame = mapDimensionsFrame;
+    }
+
+    public static MoveLocationFrame getMoveLocationMenu() {
+        return moveLocationMenu;
+    }
+
+    public static void setMoveLocationMenu(MoveLocationFrame moveLocationMenu) {
+        AMedievalHarvestFestival.moveLocationMenu = moveLocationMenu;
+    }
+    
     
     
     

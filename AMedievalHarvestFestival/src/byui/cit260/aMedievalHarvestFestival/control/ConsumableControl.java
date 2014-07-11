@@ -14,10 +14,11 @@ import byui.cit260.aMedievalHarvestFestival.model.Player;
  * @author Adam Decker
  */
 public class ConsumableControl {
-    public static void getPlayerHunger(Player player) {
+    public static String getPlayerHunger(Player player) {
         double hungerEstimated;
         hungerEstimated = player.getHunger();
         String message = null;
+        String finalMessage = null;
         if (hungerEstimated == 0)
             message = "You are full.";
         else if (hungerEstimated >= 30)
@@ -29,14 +30,16 @@ public class ConsumableControl {
         else if (hungerEstimated == 100)
             message = "Luckily you are in a castle filled with food,"
                     + "\nbecause you are starving.";
-        System.out.println(player.getName() + ", Lord Pharoah's hunger is " + hungerEstimated + ".\n"
+        finalMessage = (player.getName() + ", Lord Pharoah's hunger is " + hungerEstimated + ".\n"
                                             + message);
+        return finalMessage;
     }
     
-    public static void getPlayerThirst(Player player) {
+    public static String getPlayerThirst(Player player) {
         int thirstEstimated;
         thirstEstimated = (int) player.getThirst();
         String message = null;
+        String finalMessage = null;
         if (thirstEstimated == 0)
             message = "You are quenched. The liquid in your stomach is sloshing a little bit.";
         else if (thirstEstimated >= 30)
@@ -47,9 +50,9 @@ public class ConsumableControl {
             message = "Your tongue is dry.";
         else if (thirstEstimated == 100)
             message = "You cannot speak. You need to drink something.";
-        System.out.println(player.getName() + ", Lord Pharoah's thirst is " + thirstEstimated + ".\n"
+        finalMessage = (player.getName() + ", Lord Pharoah's thirst is " + thirstEstimated + ".\n"
                                             + message);
-    
+    return finalMessage;
 }
     
     public static void gainHunger(Player player) {
