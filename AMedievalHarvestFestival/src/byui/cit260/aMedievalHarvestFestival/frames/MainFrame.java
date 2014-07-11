@@ -219,6 +219,13 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         GameControl.createNewGame(AMedievalHarvestFestival.getPlayer());
         GameMenuFrame gameMenuFrame = new GameMenuFrame();
+        gameMenuFrame.getJtMessage().setText("Your name is Lord Pharoah. You are a wealthy landowner"
+                + "in the land of Carlsburg. You have been invited by the"
+                + "royal family, the Williams, to a harvest festival, a"
+                + "celebration of the wealth of all the dukes, ladies, and lords"
+                + "in the valley. You arrived last night to the Williams' estate."
+                + "You are now awake in your guest room and there seems to be some"
+                + "sort of commotion out in the Audience Chamber.");
         gameMenuFrame.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbStartGameActionPerformed

@@ -6,6 +6,12 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author Kurt
@@ -39,14 +45,15 @@ public class GameMenuFrame extends javax.swing.JFrame {
         jbReadNurseryRhyme = new javax.swing.JButton();
         jbEstimateHunger = new javax.swing.JButton();
         jbEstimateThirst = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jbEstimateFilling = new javax.swing.JButton();
         jbEstimateDimensions = new javax.swing.JButton();
         jbStartConversation = new javax.swing.JButton();
         jbSaveGame = new javax.swing.JButton();
         jbExit = new javax.swing.JButton();
         jpGameMenuHeading = new javax.swing.JPanel();
         jlGameMenuHeading = new javax.swing.JLabel();
-        jpMessage = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtMessage = new javax.swing.JTextArea();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -92,12 +99,12 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
         jbEstimateThirst.setText("Estimate Thirst");
 
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
-        jButton1.setText("Calculate Filling Factor");
-        jButton1.setPreferredSize(new java.awt.Dimension(131, 21));
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbEstimateFilling.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jbEstimateFilling.setText("Calculate Filling Factor");
+        jbEstimateFilling.setPreferredSize(new java.awt.Dimension(131, 21));
+        jbEstimateFilling.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbEstimateFillingActionPerformed(evt);
             }
         });
 
@@ -108,6 +115,11 @@ public class GameMenuFrame extends javax.swing.JFrame {
         jbSaveGame.setText("Save your Game");
 
         jbExit.setText("Exit");
+        jbExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitActionPerformed(evt);
+            }
+        });
 
         jpGameMenuHeading.setBackground(new java.awt.Color(153, 255, 255));
 
@@ -133,18 +145,13 @@ public class GameMenuFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jpMessage.setBackground(new java.awt.Color(204, 204, 255));
-
-        javax.swing.GroupLayout jpMessageLayout = new javax.swing.GroupLayout(jpMessage);
-        jpMessage.setLayout(jpMessageLayout);
-        jpMessageLayout.setHorizontalGroup(
-            jpMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jpMessageLayout.setVerticalGroup(
-            jpMessageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 155, Short.MAX_VALUE)
-        );
+        jtMessage.setBackground(new java.awt.Color(204, 204, 255));
+        jtMessage.setColumns(20);
+        jtMessage.setFont(new java.awt.Font("MingLiU_HKSCS-ExtB", 0, 13)); // NOI18N
+        jtMessage.setLineWrap(true);
+        jtMessage.setRows(5);
+        jtMessage.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jtMessage);
 
         javax.swing.GroupLayout jpGameMenuBodyLayout = new javax.swing.GroupLayout(jpGameMenuBody);
         jpGameMenuBody.setLayout(jpGameMenuBodyLayout);
@@ -158,7 +165,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
             .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jpMessage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
                     .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
                         .addComponent(jbViewInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -166,7 +173,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
                     .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
                         .addComponent(jbLookAtMap, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jbEstimateFilling, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
                         .addComponent(jbExamineLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -200,7 +207,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbLookAtMap)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbEstimateFilling, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbEstimateDimensions)
@@ -216,17 +223,15 @@ public class GameMenuFrame extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jbExit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jpMessage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jpGameMenuBody, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jpGameMenuBody, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,19 +241,188 @@ public class GameMenuFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbEstimateFillingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateFillingActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbEstimateFillingActionPerformed
 
+    private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbExitActionPerformed
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JPanel getjPanel2() {
+        return jPanel2;
+    }
+
+    public void setjPanel2(JPanel jPanel2) {
+        this.jPanel2 = jPanel2;
+    }
+
+    public JButton getJbEstimateDimensions() {
+        return jbEstimateDimensions;
+    }
+
+    public void setJbEstimateDimensions(JButton jbEstimateDimensions) {
+        this.jbEstimateDimensions = jbEstimateDimensions;
+    }
+
+    public JButton getJbEstimateFilling() {
+        return jbEstimateFilling;
+    }
+
+    public void setJbEstimateFilling(JButton jbEstimateFilling) {
+        this.jbEstimateFilling = jbEstimateFilling;
+    }
+
+    public JButton getJbEstimateHunger() {
+        return jbEstimateHunger;
+    }
+
+    public void setJbEstimateHunger(JButton jbEstimateHunger) {
+        this.jbEstimateHunger = jbEstimateHunger;
+    }
+
+    public JButton getJbEstimateThirst() {
+        return jbEstimateThirst;
+    }
+
+    public void setJbEstimateThirst(JButton jbEstimateThirst) {
+        this.jbEstimateThirst = jbEstimateThirst;
+    }
+
+    public JButton getJbExamineLocation() {
+        return jbExamineLocation;
+    }
+
+    public void setJbExamineLocation(JButton jbExamineLocation) {
+        this.jbExamineLocation = jbExamineLocation;
+    }
+
+    public JButton getJbExit() {
+        return jbExit;
+    }
+
+    public void setJbExit(JButton jbExit) {
+        this.jbExit = jbExit;
+    }
+
+    public JButton getJbLookAtMap() {
+        return jbLookAtMap;
+    }
+
+    public void setJbLookAtMap(JButton jbLookAtMap) {
+        this.jbLookAtMap = jbLookAtMap;
+    }
+
+    public JButton getJbMemoryGame() {
+        return jbMemoryGame;
+    }
+
+    public void setJbMemoryGame(JButton jbMemoryGame) {
+        this.jbMemoryGame = jbMemoryGame;
+    }
+
+    public JButton getJbMoveToLoation() {
+        return jbMoveToLoation;
+    }
+
+    public void setJbMoveToLoation(JButton jbMoveToLoation) {
+        this.jbMoveToLoation = jbMoveToLoation;
+    }
+
+    public JButton getJbReadNurseryRhyme() {
+        return jbReadNurseryRhyme;
+    }
+
+    public void setJbReadNurseryRhyme(JButton jbReadNurseryRhyme) {
+        this.jbReadNurseryRhyme = jbReadNurseryRhyme;
+    }
+
+    public JButton getJbSaveGame() {
+        return jbSaveGame;
+    }
+
+    public void setJbSaveGame(JButton jbSaveGame) {
+        this.jbSaveGame = jbSaveGame;
+    }
+
+    public JButton getJbStartConversation() {
+        return jbStartConversation;
+    }
+
+    public void setJbStartConversation(JButton jbStartConversation) {
+        this.jbStartConversation = jbStartConversation;
+    }
+
+    public JButton getJbViewInventory() {
+        return jbViewInventory;
+    }
+
+    public void setJbViewInventory(JButton jbViewInventory) {
+        this.jbViewInventory = jbViewInventory;
+    }
+
+    public JLabel getJlGameMenuHeading() {
+        return jlGameMenuHeading;
+    }
+
+    public void setJlGameMenuHeading(JLabel jlGameMenuHeading) {
+        this.jlGameMenuHeading = jlGameMenuHeading;
+    }
+
+    public JPanel getJpGameMenuBody() {
+        return jpGameMenuBody;
+    }
+
+    public void setJpGameMenuBody(JPanel jpGameMenuBody) {
+        this.jpGameMenuBody = jpGameMenuBody;
+    }
+
+    public JPanel getJpGameMenuHeading() {
+        return jpGameMenuHeading;
+    }
+
+    public void setJpGameMenuHeading(JPanel jpGameMenuHeading) {
+        this.jpGameMenuHeading = jpGameMenuHeading;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JTextArea getJtMessage() {
+        return jtMessage;
+    }
+
+    public void setJtMessage(JTextArea jtMessage) {
+        this.jtMessage = jtMessage;
+    }
+
+    
+
+    
+    
     /**
      * @param args the command line arguments
      */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbEstimateDimensions;
+    private javax.swing.JButton jbEstimateFilling;
     private javax.swing.JButton jbEstimateHunger;
     private javax.swing.JButton jbEstimateThirst;
     private javax.swing.JButton jbExamineLocation;
@@ -263,6 +437,6 @@ public class GameMenuFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jlGameMenuHeading;
     private javax.swing.JPanel jpGameMenuBody;
     private javax.swing.JPanel jpGameMenuHeading;
-    private javax.swing.JPanel jpMessage;
+    private javax.swing.JTextArea jtMessage;
     // End of variables declaration//GEN-END:variables
 }
