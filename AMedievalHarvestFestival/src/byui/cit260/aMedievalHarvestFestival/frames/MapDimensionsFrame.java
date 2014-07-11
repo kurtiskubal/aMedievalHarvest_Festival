@@ -6,12 +6,23 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.control.MapControl;
+import byui.cit260.aMedievalHarvestFestival.exceptions.ViewLayerException;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Kurt
  */
 public class MapDimensionsFrame extends javax.swing.JFrame {
-
+    
+    private double calcResult;
     /**
      * Creates new form MapDimensionsFrame
      */
@@ -28,21 +39,203 @@ public class MapDimensionsFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jpDimBody = new javax.swing.JPanel();
+        jpDimenHeading = new javax.swing.JPanel();
+        jlDimenTitle = new javax.swing.JLabel();
+        jbSqFtRoom = new javax.swing.JButton();
+        jbPoolVolume = new javax.swing.JButton();
+        jbSqFtYard = new javax.swing.JButton();
+        jtWidth = new javax.swing.JTextField();
+        jlWidth = new javax.swing.JLabel();
+        jtLength = new javax.swing.JTextField();
+        jtDepth = new javax.swing.JTextField();
+        jlLength = new javax.swing.JLabel();
+        jlDepth = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtDimMessage = new javax.swing.JTextArea();
+        jbExitDim = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jpDimBody.setBackground(new java.awt.Color(153, 255, 153));
+
+        jpDimenHeading.setBackground(new java.awt.Color(153, 255, 255));
+
+        jlDimenTitle.setFont(new java.awt.Font("Vivaldi", 2, 21)); // NOI18N
+        jlDimenTitle.setForeground(new java.awt.Color(0, 0, 204));
+        jlDimenTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlDimenTitle.setText("Dimensions of Room, Pool, and Yard");
+
+        javax.swing.GroupLayout jpDimenHeadingLayout = new javax.swing.GroupLayout(jpDimenHeading);
+        jpDimenHeading.setLayout(jpDimenHeadingLayout);
+        jpDimenHeadingLayout.setHorizontalGroup(
+            jpDimenHeadingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpDimenHeadingLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlDimenTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jpDimenHeadingLayout.setVerticalGroup(
+            jpDimenHeadingLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpDimenHeadingLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlDimenTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jbSqFtRoom.setText("Calculate Square Footage of Room");
+        jbSqFtRoom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSqFtRoomActionPerformed(evt);
+            }
+        });
+
+        jbPoolVolume.setText("Calculate Volume of Pool");
+        jbPoolVolume.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbPoolVolumeActionPerformed(evt);
+            }
+        });
+
+        jbSqFtYard.setText("Calculate Square Footage of Yard");
+        jbSqFtYard.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSqFtYardActionPerformed(evt);
+            }
+        });
+
+        jlWidth.setText("Width");
+
+        jlLength.setText("Length");
+
+        jlDepth.setText("Depth (Volume Only)");
+
+        jtDimMessage.setBackground(new java.awt.Color(204, 204, 255));
+        jtDimMessage.setColumns(20);
+        jtDimMessage.setFont(new java.awt.Font("MingLiU_HKSCS-ExtB", 0, 14)); // NOI18N
+        jtDimMessage.setLineWrap(true);
+        jtDimMessage.setRows(5);
+        jtDimMessage.setText("\n\n\t\t\t  Results");
+        jtDimMessage.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jtDimMessage);
+
+        jbExitDim.setText("Exit");
+        jbExitDim.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitDimActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpDimBodyLayout = new javax.swing.GroupLayout(jpDimBody);
+        jpDimBody.setLayout(jpDimBodyLayout);
+        jpDimBodyLayout.setHorizontalGroup(
+            jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jpDimenHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jpDimBodyLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(jpDimBodyLayout.createSequentialGroup()
+                        .addGroup(jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jbSqFtRoom, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbPoolVolume, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbSqFtYard, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlWidth, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jlLength, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jlDepth, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jtDepth, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                            .addComponent(jtLength)
+                            .addComponent(jtWidth))))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpDimBodyLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbExitDim)
+                .addGap(187, 187, 187))
+        );
+        jpDimBodyLayout.setVerticalGroup(
+            jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpDimBodyLayout.createSequentialGroup()
+                .addComponent(jpDimenHeading, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbSqFtRoom)
+                    .addComponent(jtWidth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlWidth))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbPoolVolume)
+                    .addComponent(jtLength, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlLength))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jpDimBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbSqFtYard)
+                    .addComponent(jtDepth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlDepth))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(jbExitDim)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jpDimBody, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jpDimBody, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbPoolVolumeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPoolVolumeActionPerformed
+        // TODO add your handling code here:
+        try {
+            calcResult = MapControl.calcVolumeOfPool(jtWidth.getText(), jtLength.getText(), jtDepth.getText());
+            jtDimMessage.setText("A pool of " + jtWidth.getText() + " width, "
+            + jtLength.getText() + " length and " + jtDepth.getText() + " depth would have"
+            + " a volume of " + calcResult + '.');
+        } catch (ViewLayerException ex) {
+            jtDimMessage.setText(ex.getMessage());
+        }
+        
+    }//GEN-LAST:event_jbPoolVolumeActionPerformed
+
+    private void jbSqFtRoomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSqFtRoomActionPerformed
+        // TODO add your handling code here:
+        try {
+            calcResult = MapControl.calcSqFootageOfRoom(jtWidth.getText(), jtLength.getText());
+            jtDimMessage.setText("A room of " + jtWidth.getText() + " width and "
+            + jtLength.getText() + " length would have a volume of " + calcResult + '.');
+        } catch (ViewLayerException ex) {
+            jtDimMessage.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbSqFtRoomActionPerformed
+
+    private void jbSqFtYardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSqFtYardActionPerformed
+        // TODO add your handling code here:
+        try {
+            calcResult = MapControl.calcSqFootageOfYard(jtWidth.getText(), jtLength.getText());
+            jtDimMessage.setText("A yard of " + jtWidth.getText() + " width and "
+            + jtLength.getText() + " length would have a volume of " + calcResult + '.');
+        } catch (ViewLayerException ex) {
+            jtDimMessage.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbSqFtYardActionPerformed
+
+    private void jbExitDimActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitDimActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbExitDimActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,6 +272,143 @@ public class MapDimensionsFrame extends javax.swing.JFrame {
         });
     }
 
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JButton getJbExitDim() {
+        return jbExitDim;
+    }
+
+    public void setJbExitDim(JButton jbExitDim) {
+        this.jbExitDim = jbExitDim;
+    }
+
+    public JButton getJbPoolVolume() {
+        return jbPoolVolume;
+    }
+
+    public void setJbPoolVolume(JButton jbPoolVolume) {
+        this.jbPoolVolume = jbPoolVolume;
+    }
+
+    public JButton getJbSqFtRoom() {
+        return jbSqFtRoom;
+    }
+
+    public void setJbSqFtRoom(JButton jbSqFtRoom) {
+        this.jbSqFtRoom = jbSqFtRoom;
+    }
+
+    public JButton getJbSqFtYard() {
+        return jbSqFtYard;
+    }
+
+    public void setJbSqFtYard(JButton jbSqFtYard) {
+        this.jbSqFtYard = jbSqFtYard;
+    }
+
+    public JLabel getJlDepth() {
+        return jlDepth;
+    }
+
+    public void setJlDepth(JLabel jlDepth) {
+        this.jlDepth = jlDepth;
+    }
+
+    public JLabel getJlDimenTitle() {
+        return jlDimenTitle;
+    }
+
+    public void setJlDimenTitle(JLabel jlDimenTitle) {
+        this.jlDimenTitle = jlDimenTitle;
+    }
+
+    public JLabel getJlHeight() {
+        return jlLength;
+    }
+
+    public void setJlHeight(JLabel jlHeight) {
+        this.jlLength = jlHeight;
+    }
+
+    public JLabel getJlWidth() {
+        return jlWidth;
+    }
+
+    public void setJlWidth(JLabel jlWidth) {
+        this.jlWidth = jlWidth;
+    }
+
+    public JPanel getJpDimBody() {
+        return jpDimBody;
+    }
+
+    public void setJpDimBody(JPanel jpDimBody) {
+        this.jpDimBody = jpDimBody;
+    }
+
+    public JPanel getJpDimenHeading() {
+        return jpDimenHeading;
+    }
+
+    public void setJpDimenHeading(JPanel jpDimenHeading) {
+        this.jpDimenHeading = jpDimenHeading;
+    }
+
+    public JTextField getJtDepth() {
+        return jtDepth;
+    }
+
+    public void setJtDepth(JTextField jtDepth) {
+        this.jtDepth = jtDepth;
+    }
+
+    public JTextArea getJtDimMessage() {
+        return jtDimMessage;
+    }
+
+    public void setJtDimMessage(JTextArea jtDimMessage) {
+        this.jtDimMessage = jtDimMessage;
+    }
+
+    public JTextField getJtHeight() {
+        return jtLength;
+    }
+
+    public void setJtHeight(JTextField jtHeight) {
+        this.jtLength = jtHeight;
+    }
+
+    public JTextField getJtWidth() {
+        return jtWidth;
+    }
+
+    public void setJtWidth(JTextField jtWidth) {
+        this.jtWidth = jtWidth;
+    }
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbExitDim;
+    private javax.swing.JButton jbPoolVolume;
+    private javax.swing.JButton jbSqFtRoom;
+    private javax.swing.JButton jbSqFtYard;
+    private javax.swing.JLabel jlDepth;
+    private javax.swing.JLabel jlDimenTitle;
+    private javax.swing.JLabel jlLength;
+    private javax.swing.JLabel jlWidth;
+    private javax.swing.JPanel jpDimBody;
+    private javax.swing.JPanel jpDimenHeading;
+    private javax.swing.JTextField jtDepth;
+    private javax.swing.JTextArea jtDimMessage;
+    private javax.swing.JTextField jtLength;
+    private javax.swing.JTextField jtWidth;
     // End of variables declaration//GEN-END:variables
 }
