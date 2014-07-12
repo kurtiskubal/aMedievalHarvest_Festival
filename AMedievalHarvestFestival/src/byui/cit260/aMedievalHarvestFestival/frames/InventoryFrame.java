@@ -6,6 +6,16 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.control.GameControl;
+import static byui.cit260.aMedievalHarvestFestival.control.GameControl.greatestAmount;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import static javax.swing.JOptionPane.showMessageDialog;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author Kurt
@@ -28,21 +38,152 @@ public class InventoryFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jpInventoryBody = new javax.swing.JPanel();
+        jpInventoryHeader = new javax.swing.JPanel();
+        jlInventoryTitle = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtInventoryItemList = new javax.swing.JTextArea();
+        jbUseITem = new javax.swing.JButton();
+        jbExamineItem = new javax.swing.JButton();
+        jbGreatestQuantity = new javax.swing.JButton();
+        jbExitInventory = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jpInventoryBody.setBackground(new java.awt.Color(153, 255, 153));
+
+        jpInventoryHeader.setBackground(new java.awt.Color(153, 255, 255));
+
+        jlInventoryTitle.setFont(new java.awt.Font("Vivaldi", 2, 21)); // NOI18N
+        jlInventoryTitle.setForeground(new java.awt.Color(0, 0, 204));
+        jlInventoryTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlInventoryTitle.setText("Inventory Menu");
+
+        javax.swing.GroupLayout jpInventoryHeaderLayout = new javax.swing.GroupLayout(jpInventoryHeader);
+        jpInventoryHeader.setLayout(jpInventoryHeaderLayout);
+        jpInventoryHeaderLayout.setHorizontalGroup(
+            jpInventoryHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpInventoryHeaderLayout.createSequentialGroup()
+                .addComponent(jlInventoryTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jpInventoryHeaderLayout.setVerticalGroup(
+            jpInventoryHeaderLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpInventoryHeaderLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlInventoryTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jtInventoryItemList.setEditable(false);
+        jtInventoryItemList.setBackground(new java.awt.Color(204, 204, 255));
+        jtInventoryItemList.setColumns(20);
+        jtInventoryItemList.setLineWrap(true);
+        jtInventoryItemList.setRows(5);
+        jtInventoryItemList.setText("Inventory Items\n");
+        jtInventoryItemList.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jtInventoryItemList);
+
+        jbUseITem.setText("Use Item");
+        jbUseITem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbUseITemActionPerformed(evt);
+            }
+        });
+
+        jbExamineItem.setText("Examine Item");
+        jbExamineItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExamineItemActionPerformed(evt);
+            }
+        });
+
+        jbGreatestQuantity.setText("Greatest Quanitiy");
+        jbGreatestQuantity.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbGreatestQuantityActionPerformed(evt);
+            }
+        });
+
+        jbExitInventory.setText("Exit");
+        jbExitInventory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitInventoryActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jpInventoryBodyLayout = new javax.swing.GroupLayout(jpInventoryBody);
+        jpInventoryBody.setLayout(jpInventoryBodyLayout);
+        jpInventoryBodyLayout.setHorizontalGroup(
+            jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jpInventoryHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jpInventoryBodyLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jpInventoryBodyLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jbUseITem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbExamineItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jbGreatestQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)))
+                    .addGroup(jpInventoryBodyLayout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addComponent(jbExitInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(71, 71, 71))
+        );
+        jpInventoryBodyLayout.setVerticalGroup(
+            jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jpInventoryBodyLayout.createSequentialGroup()
+                .addComponent(jpInventoryHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1)
+                    .addGroup(jpInventoryBodyLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(jbUseITem, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbExamineItem, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbGreatestQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbExitInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 39, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jpInventoryBody, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jpInventoryBody, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbUseITemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbUseITemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbUseITemActionPerformed
+
+    private void jbExamineItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExamineItemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbExamineItemActionPerformed
+
+    private void jbGreatestQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGreatestQuantityActionPerformed
+        // TODO add your handling code here:
+        showMessageDialog(null, greatestAmount(GameControl.getSortedInventoryList()));
+    }//GEN-LAST:event_jbGreatestQuantityActionPerformed
+
+    private void jbExitInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitInventoryActionPerformed
+        // TODO add your handling code here:
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbExitInventoryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,6 +220,89 @@ public class InventoryFrame extends javax.swing.JFrame {
         });
     }
 
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JButton getJbExamineItem() {
+        return jbExamineItem;
+    }
+
+    public void setJbExamineItem(JButton jbExamineItem) {
+        this.jbExamineItem = jbExamineItem;
+    }
+
+    public JButton getJbExitInventory() {
+        return jbExitInventory;
+    }
+
+    public void setJbExitInventory(JButton jbExitInventory) {
+        this.jbExitInventory = jbExitInventory;
+    }
+
+    public JButton getJbGreatestQuantity() {
+        return jbGreatestQuantity;
+    }
+
+    public void setJbGreatestQuantity(JButton jbGreatestQuantity) {
+        this.jbGreatestQuantity = jbGreatestQuantity;
+    }
+
+    public JButton getJbUseITem() {
+        return jbUseITem;
+    }
+
+    public void setJbUseITem(JButton jbUseITem) {
+        this.jbUseITem = jbUseITem;
+    }
+
+    public JLabel getJlInventoryTitle() {
+        return jlInventoryTitle;
+    }
+
+    public void setJlInventoryTitle(JLabel jlInventoryTitle) {
+        this.jlInventoryTitle = jlInventoryTitle;
+    }
+
+    public JPanel getJpInventoryBody() {
+        return jpInventoryBody;
+    }
+
+    public void setJpInventoryBody(JPanel jpInventoryBody) {
+        this.jpInventoryBody = jpInventoryBody;
+    }
+
+    public JPanel getJpInventoryHeader() {
+        return jpInventoryHeader;
+    }
+
+    public void setJpInventoryHeader(JPanel jpInventoryHeader) {
+        this.jpInventoryHeader = jpInventoryHeader;
+    }
+
+    public JTextArea getJtInventoryItemList() {
+        return jtInventoryItemList;
+    }
+
+    public void setJtInventoryItemList(JTextArea jtInventoryItemList) {
+        this.jtInventoryItemList = jtInventoryItemList;
+    }
+
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton jbExamineItem;
+    private javax.swing.JButton jbExitInventory;
+    private javax.swing.JButton jbGreatestQuantity;
+    private javax.swing.JButton jbUseITem;
+    private javax.swing.JLabel jlInventoryTitle;
+    private javax.swing.JPanel jpInventoryBody;
+    private javax.swing.JPanel jpInventoryHeader;
+    private javax.swing.JTextArea jtInventoryItemList;
     // End of variables declaration//GEN-END:variables
 }

@@ -110,6 +110,7 @@ public class MapDimensionsFrame extends javax.swing.JFrame {
 
         jlDepth.setText("Depth (Volume Only)");
 
+        jtDimMessage.setEditable(false);
         jtDimMessage.setBackground(new java.awt.Color(204, 204, 255));
         jtDimMessage.setColumns(20);
         jtDimMessage.setFont(new java.awt.Font("MingLiU_HKSCS-ExtB", 0, 14)); // NOI18N

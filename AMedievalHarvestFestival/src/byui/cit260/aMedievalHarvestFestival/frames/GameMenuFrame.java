@@ -9,6 +9,7 @@ package byui.cit260.aMedievalHarvestFestival.frames;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.ConsumableControl;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
+import byui.cit260.aMedievalHarvestFestival.view.GameMenuView;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -213,6 +214,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jtMessage.setEditable(false);
         jtMessage.setBackground(new java.awt.Color(204, 204, 255));
         jtMessage.setColumns(20);
         jtMessage.setFont(new java.awt.Font("MingLiU_HKSCS-ExtB", 0, 13)); // NOI18N
@@ -339,6 +341,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
     private void jbViewInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbViewInventoryActionPerformed
         // TODO add your handling code here:
         InventoryFrame inventoryMenu = new InventoryFrame();
+        inventoryMenu.getJtInventoryItemList().setText(GameMenuView.viewExistingItems());
         inventoryMenu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbViewInventoryActionPerformed

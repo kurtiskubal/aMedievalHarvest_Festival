@@ -150,6 +150,24 @@ public class GameMenuView extends MenuView{
          }
     }
     
+    public static String viewExistingItems() {
+        String existingItems = "Inventory Items"
+                + "\nName\tQuanity";
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        int count = 0;
+        for (InventoryItem inventoryItem : inventory) {
+            
+            
+            if (inventoryItem.getItemQuanity() > 0 ) {
+                existingItems += '\n' + inventoryItem.getName() + inventoryItem.getItemQuanity();
+                count++;
+            }
+                           
+        }
+        if (count == 0)
+            existingItems += '\n' + "There are no items";
+        return existingItems;
+    }
     public static void viewInventory() {
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
