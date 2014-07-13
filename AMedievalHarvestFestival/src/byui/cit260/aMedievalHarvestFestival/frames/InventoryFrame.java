@@ -9,7 +9,11 @@ package byui.cit260.aMedievalHarvestFestival.frames;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import static byui.cit260.aMedievalHarvestFestival.control.GameControl.greatestAmount;
+import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
+import byui.cit260.aMedievalHarvestFestival.view.GameMenuView;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import static javax.swing.JOptionPane.showMessageDialog;
 import javax.swing.JPanel;
@@ -44,9 +48,11 @@ public class InventoryFrame extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtInventoryItemList = new javax.swing.JTextArea();
         jbUseITem = new javax.swing.JButton();
-        jbExamineItem = new javax.swing.JButton();
         jbGreatestQuantity = new javax.swing.JButton();
         jbExitInventory = new javax.swing.JButton();
+        jlExamine = new javax.swing.JLabel();
+        jcItems = new javax.swing.JComboBox();
+        jbExamine = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -91,13 +97,6 @@ public class InventoryFrame extends javax.swing.JFrame {
             }
         });
 
-        jbExamineItem.setText("Examine Item");
-        jbExamineItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbExamineItemActionPerformed(evt);
-            }
-        });
-
         jbGreatestQuantity.setText("Greatest Quanitiy");
         jbGreatestQuantity.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,25 +111,44 @@ public class InventoryFrame extends javax.swing.JFrame {
             }
         });
 
+        jlExamine.setText("Examine Item");
+
+        jcItems.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcItemsActionPerformed(evt);
+            }
+        });
+
+        jbExamine.setText("Examine");
+        jbExamine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExamineActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpInventoryBodyLayout = new javax.swing.GroupLayout(jpInventoryBody);
         jpInventoryBody.setLayout(jpInventoryBodyLayout);
         jpInventoryBodyLayout.setHorizontalGroup(
             jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jpInventoryHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jpInventoryBodyLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jpInventoryBodyLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jbUseITem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbExamineItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jbGreatestQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)))
-                    .addGroup(jpInventoryBodyLayout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jbExitInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(71, 71, 71))
+                        .addGroup(jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jbUseITem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbGreatestQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                                .addComponent(jcItems, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jlExamine)
+                            .addComponent(jbExamine, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(20, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpInventoryBodyLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jbExitInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(50, 50, 50))))
         );
         jpInventoryBodyLayout.setVerticalGroup(
             jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,25 +156,30 @@ public class InventoryFrame extends javax.swing.JFrame {
                 .addComponent(jpInventoryHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jpInventoryBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(jpInventoryBodyLayout.createSequentialGroup()
-                        .addGap(13, 13, 13)
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(jpInventoryBodyLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                         .addComponent(jbUseITem, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jbExamineItem, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jlExamine)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jcItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbExamine)
+                        .addGap(12, 12, 12)
                         .addComponent(jbGreatestQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jbExitInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 39, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(19, 19, 19))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jpInventoryBody, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jpInventoryBody, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,10 +193,6 @@ public class InventoryFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jbUseITemActionPerformed
 
-    private void jbExamineItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExamineItemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jbExamineItemActionPerformed
-
     private void jbGreatestQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGreatestQuantityActionPerformed
         // TODO add your handling code here:
         showMessageDialog(null, greatestAmount(GameControl.getSortedInventoryList()));
@@ -184,6 +203,19 @@ public class InventoryFrame extends javax.swing.JFrame {
         AMedievalHarvestFestival.getGameMenu().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jbExitInventoryActionPerformed
+
+    private void jcItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcItemsActionPerformed
+        // TODO add your handling code here:
+    
+    
+        
+    }//GEN-LAST:event_jcItemsActionPerformed
+
+    private void jbExamineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExamineActionPerformed
+        // TODO add your handling code here:
+        InventoryItem item = (InventoryItem)jcItems.getSelectedItem();
+        showMessageDialog(null, item.getName() + "--" + item.getDescription());
+    }//GEN-LAST:event_jbExamineActionPerformed
 
     /**
      * @param args the command line arguments
@@ -226,14 +258,6 @@ public class InventoryFrame extends javax.swing.JFrame {
 
     public void setjScrollPane1(JScrollPane jScrollPane1) {
         this.jScrollPane1 = jScrollPane1;
-    }
-
-    public JButton getJbExamineItem() {
-        return jbExamineItem;
-    }
-
-    public void setJbExamineItem(JButton jbExamineItem) {
-        this.jbExamineItem = jbExamineItem;
     }
 
     public JButton getJbExitInventory() {
@@ -292,14 +316,39 @@ public class InventoryFrame extends javax.swing.JFrame {
         this.jtInventoryItemList = jtInventoryItemList;
     }
 
+    public JComboBox getJcItems() {
+        return jcItems;
+    }
+
+    public void setJcItems(JComboBox jcItems) {
+        this.jcItems = jcItems;
+    }
+
+    public JLabel getJlExamine() {
+        return jlExamine;
+    }
+
+    public void setJlExamine(JLabel jlExamine) {
+        this.jlExamine = jlExamine;
+    }
+
+    
+    
+    
+    
+
+    
+
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton jbExamineItem;
+    private javax.swing.JButton jbExamine;
     private javax.swing.JButton jbExitInventory;
     private javax.swing.JButton jbGreatestQuantity;
     private javax.swing.JButton jbUseITem;
+    private javax.swing.JComboBox jcItems;
+    private javax.swing.JLabel jlExamine;
     private javax.swing.JLabel jlInventoryTitle;
     private javax.swing.JPanel jpInventoryBody;
     private javax.swing.JPanel jpInventoryHeader;

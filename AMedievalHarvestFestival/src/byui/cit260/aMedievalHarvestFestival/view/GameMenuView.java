@@ -149,7 +149,49 @@ public class GameMenuView extends MenuView{
              }
          }
     }
-    
+    public static String[] getExistingItemsString() {
+        String[] existingItems = null;
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        int count = 0;
+        for (InventoryItem inventoryItem : inventory) {
+            
+            
+            if (inventoryItem.getItemQuanity() > 0 ) {
+                existingItems[count] = inventoryItem.getName();
+                count++;
+            }
+                           
+        }
+        if (count == 0)
+            existingItems[0] = ("There are no items");
+        if (count != 20)
+            existingItems[count + 1] = null;
+        return existingItems;
+    }
+    public static InventoryItem[] getExistingItems() {
+        InventoryItem[] existingItems = new InventoryItem[20];
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        int count = 0;
+        for (InventoryItem inventoryItem : inventory) {
+            
+            
+            if (inventoryItem.getItemQuanity() > 0 ) {
+                existingItems[count] = inventoryItem;
+                count++;
+            }
+                           
+        }
+        if (count == 0)
+        {
+            InventoryItem empty = new InventoryItem();
+            existingItems[0] = empty;
+            existingItems[0].setName("There are no items");
+            
+        }  
+        if (count != 20)
+            existingItems[count + 1] = null;
+        return existingItems;
+    }
     public static String viewExistingItems() {
         String existingItems = "Inventory Items"
                 + "\nName\tQuanity";
@@ -236,51 +278,51 @@ public class GameMenuView extends MenuView{
         System.out.println("-------------------------------");
     }
     
-    public void displayMatchingGame() {
+    public static String displayMatchingGame() {
         int lineLength = 0;
-        
+        String display = null;
         MatchingGameLocation[][] matchingLocations = GameControl.getMatchingGameLocations();
         int noColumns = matchingLocations[0].length;
         int i = 0;
-         System.out.println("   0    1    2    3    4 ");
+         display += ("   0    1    2    3    4 ");
         for (MatchingGameLocation[] row : matchingLocations) {
            int count = 0;
            
-           System.out.println("---------------------------");
-            System.out.print(i);
+           display += ("\n---------------------------");
+            display += ("\n" + i);
             for (int column = 0; column < noColumns; column++) {
-                System.out.print("|");
+                display += ("|");
                 MatchingGameLocation matchingLocation = row[column];
                 count = count + 1;
                 if (matchingLocation.isChoosen()) {
                     MatchingInstance matchingInstance = matchingLocation.getMatchingInstance();
                     if (count == 5) {
-                        System.out.println(matchingInstance.getMapSymbol() + "|");
+                        display += (matchingInstance.getMapSymbol() + "|");
                         count = 0;
                     }
                     else {
-                      System.out.print(matchingInstance.getMapSymbol());
+                      display += (matchingInstance.getMapSymbol());
                       
                     }
                 }
                 else if (matchingLocation.isMatched()){
                     if (count == 5) {
-                        System.out.println(" OK " + "|");
+                        display += (" OK " + "|");
                         count = 0;
                     }
                     else {
-                      System.out.print(" OK ");
+                      display += (" OK ");
                       
                     }
                 }
                 
                 else {
                     if (count == 5) {
-                      System.out.println(" ?? " + "|"); 
+                      display += (" ?? " + "|"); 
                       count = 0;
                     }
                     else {
-                        System.out.print(" ?? ");
+                        display += (" ?? ");
                        
                     }
                 }
@@ -289,7 +331,8 @@ public class GameMenuView extends MenuView{
             i++;
         }
         
-        System.out.println("---------------------------");
+        display += ("\n---------------------------");
+        return display;
     }
 
     private String haveConv() {

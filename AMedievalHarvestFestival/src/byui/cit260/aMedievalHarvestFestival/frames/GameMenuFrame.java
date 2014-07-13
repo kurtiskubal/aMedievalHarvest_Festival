@@ -9,6 +9,9 @@ package byui.cit260.aMedievalHarvestFestival.frames;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.ConsumableControl;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
+import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
+import byui.cit260.aMedievalHarvestFestival.model.MatchingGameLocation;
+import byui.cit260.aMedievalHarvestFestival.model.MatchingInstance;
 import byui.cit260.aMedievalHarvestFestival.view.GameMenuView;
 import javax.swing.JButton;
 import javax.swing.JLabel;
@@ -342,6 +345,10 @@ public class GameMenuFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
         InventoryFrame inventoryMenu = new InventoryFrame();
         inventoryMenu.getJtInventoryItemList().setText(GameMenuView.viewExistingItems());
+        InventoryItem[] items = GameMenuView.getExistingItems();
+        for (InventoryItem item : items) {
+            inventoryMenu.getJcItems().addItem(item);
+        }
         inventoryMenu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbViewInventoryActionPerformed
@@ -349,6 +356,8 @@ public class GameMenuFrame extends javax.swing.JFrame {
     private void jbMemoryGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMemoryGameActionPerformed
         // TODO add your handling code here:
         MatchingGameFrame matchingMenu = new MatchingGameFrame();
+        AMedievalHarvestFestival.setMatchingGameMenu(matchingMenu);
+        matchingMenu.getJtMatchingGame().setText(GameMenuView.displayMatchingGame());
         matchingMenu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbMemoryGameActionPerformed
