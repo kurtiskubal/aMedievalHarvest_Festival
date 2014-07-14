@@ -315,7 +315,9 @@ public class GameMenuFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jbEstimateFillingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbEstimateFillingActionPerformed
-        // TODO add your handling code here:
+        TestFillingFactorFrame testFilling = new TestFillingFactorFrame();
+        testFilling.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jbEstimateFillingActionPerformed
 
     private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed

@@ -6,6 +6,10 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+import byui.cit260.aMedievalHarvestFestival.control.ConsumableControl;
+import byui.cit260.aMedievalHarvestFestival.exceptions.ViewLayerException;
+
 /**
  *
  * @author Kurt
@@ -28,57 +32,358 @@ public class TestFillingFactorFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTextField1 = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jlCalcFillingHeading1 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jbExit = new javax.swing.JButton();
+        jbApple = new javax.swing.JButton();
+        jbBeans = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jbBread = new javax.swing.JButton();
+        jbCorn = new javax.swing.JButton();
+        jbPeas = new javax.swing.JButton();
+        jbAle = new javax.swing.JButton();
+        jbCider = new javax.swing.JButton();
+        jbMead = new javax.swing.JButton();
+        jbWater = new javax.swing.JButton();
+        jbWine = new javax.swing.JButton();
+
+        jTextField1.setText("jTextField1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(153, 255, 153));
+
+        jPanel2.setBackground(new java.awt.Color(153, 255, 255));
+
+        jlCalcFillingHeading1.setFont(new java.awt.Font("Vivaldi", 2, 21)); // NOI18N
+        jlCalcFillingHeading1.setForeground(new java.awt.Color(0, 0, 204));
+        jlCalcFillingHeading1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlCalcFillingHeading1.setText("Calculate the filling value of a food or beverage");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(73, 73, 73)
+                .addComponent(jlCalcFillingHeading1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jlCalcFillingHeading1)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        jTextField2.setToolTipText("");
+
+        jbExit.setText("Exit");
+        jbExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitActionPerformed(evt);
+            }
+        });
+
+        jbApple.setText("Apple");
+        jbApple.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAppleActionPerformed(evt);
+            }
+        });
+
+        jbBeans.setText("Beans");
+        jbBeans.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBeansActionPerformed(evt);
+            }
+        });
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setLineWrap(true);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("First enter the weight or volume of the item you wish to Calculate. Then push the button for that item.");
+        jTextArea1.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jbBread.setText("Bread");
+        jbBread.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBreadActionPerformed(evt);
+            }
+        });
+
+        jbCorn.setText("Corn");
+        jbCorn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCornActionPerformed(evt);
+            }
+        });
+
+        jbPeas.setText("Peas");
+        jbPeas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbPeasActionPerformed(evt);
+            }
+        });
+
+        jbAle.setText("Ale");
+        jbAle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAleActionPerformed(evt);
+            }
+        });
+
+        jbCider.setText("Cider");
+        jbCider.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbCiderActionPerformed(evt);
+            }
+        });
+
+        jbMead.setText("Mead");
+        jbMead.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMeadActionPerformed(evt);
+            }
+        });
+
+        jbWater.setText("Water");
+        jbWater.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbWaterActionPerformed(evt);
+            }
+        });
+
+        jbWine.setText("Wine");
+        jbWine.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbWineActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jbApple)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jbBeans)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jbBread)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbExit))
+                    .addComponent(jbCorn)
+                    .addComponent(jbPeas))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbAle, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbCider, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbMead, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbWater, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jbWine, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 237, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jScrollPane1)
+                        .addContainerGap())
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbApple)
+                            .addComponent(jbAle))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbBeans)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbCider))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbBread)
+                            .addComponent(jbExit)
+                            .addComponent(jbMead))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbCorn)
+                            .addComponent(jbWater))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jbPeas)
+                            .addComponent(jbWine))
+                        .addGap(0, 13, Short.MAX_VALUE))))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jbExitActionPerformed
+
+    private void jbAppleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAppleActionPerformed
+        String weight; 
+        weight = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcFillingFoodItem(1, weight);
+            this.jTextArea1.setText("The filling factor of an Apple of " + weight + " weight is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbAppleActionPerformed
+
+    private void jbBeansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBeansActionPerformed
+        String weight; 
+        weight = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcFillingFoodItem(4, weight);
+            this.jTextArea1.setText("The filling factor of Beans of " + weight + " weight is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbBeansActionPerformed
+
+    private void jbBreadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBreadActionPerformed
+        String weight; 
+        weight = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcFillingFoodItem(2, weight);
+            this.jTextArea1.setText("The filling factor of Bread of " + weight + " weight is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbBreadActionPerformed
+
+    private void jbCornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCornActionPerformed
+        String weight; 
+        weight = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcFillingFoodItem(3, weight);
+            this.jTextArea1.setText("The filling factor of Corn of " + weight + " weight is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbCornActionPerformed
+
+    private void jbPeasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPeasActionPerformed
+        String weight; 
+        weight = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcFillingFoodItem(5, weight);
+            this.jTextArea1.setText("The filling factor of Peas of " + weight + " weight is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbPeasActionPerformed
+
+    private void jbAleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAleActionPerformed
+        String volume; 
+        volume = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcQuenchBeverageItem(1, volume);
+            this.jTextArea1.setText("The quench factor of Ale of " + volume + " volume is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbAleActionPerformed
+
+    private void jbCiderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCiderActionPerformed
+        String volume; 
+        volume = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcQuenchBeverageItem(3, volume);
+            this.jTextArea1.setText("The quench factor of Cider of " + volume + " volume is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbCiderActionPerformed
+
+    private void jbMeadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMeadActionPerformed
+        String volume; 
+        volume = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcQuenchBeverageItem(2, volume);
+            this.jTextArea1.setText("The quench factor of Mead of " + volume + " volume is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbMeadActionPerformed
+
+    private void jbWaterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbWaterActionPerformed
+        String volume; 
+        volume = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcQuenchBeverageItem(5, volume);
+            this.jTextArea1.setText("The quench factor of Water of " + volume + " volume is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbWaterActionPerformed
+
+    private void jbWineActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbWineActionPerformed
+        String volume; 
+        volume = this.jTextField2.getText();
+        try { 
+        double factor = ConsumableControl.calcQuenchBeverageItem(4, volume);
+            this.jTextArea1.setText("The quench factor of Wine of " + volume + " volume is " + factor + ".");
+        } catch(ViewLayerException ex){
+            this.jTextArea1.setText(ex.getMessage());
+        }
+    }//GEN-LAST:event_jbWineActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TestFillingFactorFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TestFillingFactorFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TestFillingFactorFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TestFillingFactorFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new TestFillingFactorFrame().setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JButton jbAle;
+    private javax.swing.JButton jbApple;
+    private javax.swing.JButton jbBeans;
+    private javax.swing.JButton jbBread;
+    private javax.swing.JButton jbCider;
+    private javax.swing.JButton jbCorn;
+    private javax.swing.JButton jbExit;
+    private javax.swing.JButton jbMead;
+    private javax.swing.JButton jbPeas;
+    private javax.swing.JButton jbWater;
+    private javax.swing.JButton jbWine;
+    private javax.swing.JLabel jlCalcFillingHeading;
+    private javax.swing.JLabel jlCalcFillingHeading1;
+    private javax.swing.JPanel jpGameMenuHeading;
     // End of variables declaration//GEN-END:variables
 }
