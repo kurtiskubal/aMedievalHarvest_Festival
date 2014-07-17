@@ -104,7 +104,7 @@ public class GameControl {
         clueItem4.setDescription("A note from the conversation with the Princess"
                 + " that details, that she only"
                 +"\n saw that her kidnapper had a shoe with the sole marked 'SS'.");
-        clueItem4.setItemQuanity(0);
+        clueItem4.setItemQuanity(1);
         inventory[Constants.EVIDENCE_FOUR_ITEM] = clueItem4;
         
         InventoryItem clueItem5 = new ClueItem("Sample", 0);
@@ -125,7 +125,7 @@ public class GameControl {
         bread.setName("Bread              ");
         bread.setInventoryType(2);
         bread.setDescription("Fresh, delicious, homemade bread.");
-        bread.setItemQuanity(0);
+        bread.setItemQuanity(1);
         inventory[Constants.BREAD] = bread;
         
         InventoryItem corn = new FoodItem(3);
@@ -201,24 +201,24 @@ public class GameControl {
         inventory[Constants.SWORD] = sword;
     
         InventoryItem genericGift = new GiftItem(10);
-        genericGift.setName("Gift               ");
+        genericGift.setName("Gift for Canaway          ");
         genericGift.setInventoryType(4);
-        genericGift.setDescription("A plain, old gift.");
-        genericGift.setItemQuanity(0);
+        genericGift.setDescription("A set of decorated leather riding boots");
+        genericGift.setItemQuanity(1);
         inventory[Constants.GENERIC_GIFT] = genericGift;
         
         InventoryItem gift = new GiftItem(30);
-        gift.setName("Nice Gift          ");
+        gift.setName("Gift for Princess         ");
         gift.setInventoryType(4);
-        gift.setDescription("A pretty nice gift.");
-        gift.setItemQuanity(0);
+        gift.setDescription("A leather braclet with charms.");
+        gift.setItemQuanity(1);
         inventory[Constants.GIFT] = gift;
         
         InventoryItem awesomeGift = new GiftItem(50);
-        awesomeGift.setName("Great Gift         ");
+        awesomeGift.setName("Gift for Violet           ");
         awesomeGift.setInventoryType(4);
-        awesomeGift.setDescription("An awesome gift.");
-        awesomeGift.setItemQuanity(0);
+        awesomeGift.setDescription("A leather braclet with charms");
+        awesomeGift.setItemQuanity(1);
         inventory[Constants.AWESOME_GIFT] = awesomeGift;
        
         

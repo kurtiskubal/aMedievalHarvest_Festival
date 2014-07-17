@@ -8,7 +8,7 @@ package byui.cit260.aMedievalHarvestFestival.control;
 
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.model.Actors;
-import byui.cit260.aMedievalHarvestFestival.model.Game;
+import byui.cit260.aMedievalHarvestFestival.model.Constants;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 
 /**
@@ -23,9 +23,9 @@ public class ConversationControl {
         plyrInventory = AMedievalHarvestFestival.getCurrentGame().getInventory();
         boolean gift = false;
         String actorSays = null;
-        if(plyrInventory[8].getItemQuanity() > 0 
-                || plyrInventory[7].getItemQuanity() > 0
-                || plyrInventory[11].getItemQuanity() > 0){
+        if(plyrInventory[Constants.GIFT].getItemQuanity() > 0 
+                || plyrInventory[Constants.GENERIC_GIFT].getItemQuanity() > 0
+                || plyrInventory[Constants.AWESOME_GIFT].getItemQuanity() > 0){
             gift = true;
         }
         double happiness = person.getHappiness();
@@ -34,11 +34,11 @@ public class ConversationControl {
             actorSays = person.getDialogueEvidence();
             switch (person.getName()) {
                 case "Queen Williams":
-                    plyrInventory[13].setItemQuanity(1);
+                    plyrInventory[Constants.EVIDENCE_THREE_ITEM].setItemQuanity(1);
                     person.setEvidence(false);
                     break;
                 case "Princess Williams":
-                    plyrInventory[12].setItemQuanity(1);
+                    plyrInventory[Constants.EVIDENCE_FOUR_ITEM].setItemQuanity(1);
                     person.setEvidence(false);
                     break;
             }
@@ -52,21 +52,21 @@ public class ConversationControl {
             actorSays = person.getDialogueGift();
             switch (person.getName()) {
                 case "Lord Canaway":
-                    plyrInventory[7].setItemQuanity(0);
+                    plyrInventory[Constants.GENERIC_GIFT].setItemQuanity(0);
                     person.setHappiness(10);
                     break;
                 case "Princess Williams":
-                    plyrInventory[8].setItemQuanity(0);
+                    plyrInventory[Constants.GIFT].setItemQuanity(0);
                     person.setHappiness(10);
                     break;
                 case "Lady Violet":
-                    plyrInventory[11].setItemQuanity(0);
+                    plyrInventory[Constants.AWESOME_GIFT].setItemQuanity(0);
                     person.setHappiness(10);
                     break;
             }
         }
         
-        else if(plyrInventory[12].getItemQuanity() > 0 && "Servant Charles".equals(person.getName())){
+        else if(plyrInventory[Constants.EVIDENCE_FOUR_ITEM].getItemQuanity() > 0 && "Servant Charles".equals(person.getName())){
             actorSays = "Thank you for saving our Princess. The King has reviewed your "
                     + "evidence and found you to not be guilty. Know that the traitor Duke will "
                     + "be punished and that you will inherit all his land and property. "
