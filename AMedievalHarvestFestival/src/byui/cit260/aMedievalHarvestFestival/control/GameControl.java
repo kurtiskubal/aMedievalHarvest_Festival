@@ -101,8 +101,9 @@ public class GameControl {
         InventoryItem clueItem4 = new ClueItem("Sample", 1);
         clueItem4.setName("Notes from Princess");
         clueItem4.setInventoryType(1);
-        clueItem4.setDescription("A note from the conversation with the Princess that details, that she only"
-                              +"\n saw that her kidnapper had a shoe with the sole marked 'SS'.");
+        clueItem4.setDescription("A note from the conversation with the Princess"
+                + " that details, that she only"
+                +"\n saw that her kidnapper had a shoe with the sole marked 'SS'.");
         clueItem4.setItemQuanity(0);
         inventory[Constants.EVIDENCE_FOUR_ITEM] = clueItem4;
         
@@ -158,7 +159,8 @@ public class GameControl {
         InventoryItem mead = new BeverageItem(2);
         mead.setName("Mead                   ");
         mead.setInventoryType(3);
-        mead.setDescription("An alcoholic liquid with the taste of honey and water.");
+        mead.setDescription("An alcoholic liquid with the taste of honey and "
+                + "water.");
         mead.setItemQuanity(0);
         inventory[Constants.MEAD] = mead;
         
@@ -186,7 +188,8 @@ public class GameControl {
         InventoryItem dagger = new WeaponItem();
         dagger.setName("Dagger               ");
         dagger.setInventoryType(4);
-        dagger.setDescription("A deadly, sharp, short blade. Looks like it can be hidden easily");
+        dagger.setDescription("A deadly, sharp, short blade. Looks like it can "
+                + "be hidden easily");
         dagger.setItemQuanity(0);
         inventory[Constants.DAGGER] = dagger;
         
@@ -229,88 +232,141 @@ public class GameControl {
         
         Actors ladyViolet = new Actors("Lady Violet");
         ladyViolet.setName("Lady Violet");
-        ladyViolet.setDialogue("dialogue");
+        ladyViolet.setDialogue("The Queen is such a pleasant person to be around. I "
+                + "wish to ease her pain as she mourns her missing duaghter.");
         ladyViolet.setHappiness(0);
         ladyViolet.setHealth(100);
-        ladyViolet.setDialogueGift("Gift dialogue");
-        ladyViolet.setDialogueHappy("Happy dialogue");
+        ladyViolet.setDialogueGift("Thank you so much for this pretty gift. Will"
+                + " you sit with me at dinner tonight?");
+        ladyViolet.setDialogueHappy("Do you remember how we used to play chase here "
+                + "in the gardens three years hence. Why does age have to stop such pleasent activities?");
         actors[Constants.VIOLET] = ladyViolet;
         
         Actors dFred = new Actors("Duke Frederick");
         dFred.setName("Duke Frederick");
-        dFred.setDialogue("dialogue");
+        dFred.setDialogue("Aye, that boy Canaway fights like he tries to prove "
+                + "himself worthy of becomeing a Duke. He has the skill of swords "
+                + "I warrant him. But he should enjoy his youth more. Heaven knows "
+                + "that the troubles of leadership is tiring at best. As you might know I "
+                + "lost my crops this year and this festival will do little to sooth my"
+                + "troubles. Do you perhaps think Canaway the kidnapper? He is fighting a "
+                + "bit like a cornered mouse. Is it possible that he is attempting to "
+                + "force marriage to the throne?");
         dFred.setHappiness(0);
         dFred.setHealth(100);
         actors[Constants.FREDERICK] = dFred;
         
         Actors dHarold = new Actors("Duke Harold");
         dHarold.setName("Duke Harold");
-        dHarold.setDialogue("dialogue");
+        dHarold.setDialogue("dialogue with Duke Harold");
         dHarold.setHappiness(0);
         dHarold.setHealth(100);
         actors[Constants.HAROLD] = dHarold;
         
         Actors dLuis = new Actors("Duke Luis");
         dLuis.setName("Duke Luis");
-        dLuis.setDialogue("dialogue");
+        dLuis.setDialogue("dialogue with Duke Luis");
         dLuis.setHappiness(0);
         dLuis.setHealth(100);
         actors[Constants.LUIS] = dLuis;
         
         Actors lCanaway = new Actors("Lord Canaway");
         lCanaway.setName("Lord Canaway");
-        lCanaway.setDialogue("dialogue");
+        lCanaway.setDialogue("Duke Frederick is always a difficult opponent. Yet I "
+                + "have won nearly half of our matches. His mind seems to be on other matters. "
+                + "Though with the princess gone, we all have reason to show distress.");
         lCanaway.setHappiness(0);
         lCanaway.setHealth(100);
-        lCanaway.setDialogueGift("Gift dialogue");
-        lCanaway.setDialogueHappy("Happy dialogue");
+        lCanaway.setDialogueGift("Well these are truly well made. I cannot "
+                + "believe you remembered that I needed them. We shall go "
+                + "hunting together next week.");
+        lCanaway.setDialogueHappy("Do you think Lady Violet will notice me if I wear these "
+                + "new boots at dinner? Wish me luck then friend.");
         actors[Constants.CANAWAY] = lCanaway;
         
         
         Actors pWilliam = new Actors("Princess Williams");
         pWilliam.setName("Princess William");
-        pWilliam.setDialogue("dialogue");
+        pWilliam.setDialogue(" dialogue with Princess");
         pWilliam.setHappiness(0);
         pWilliam.setHealth(100);
         pWilliam.setEvidence(true);
-        pWilliam.setDialogueEvidence("Evidence dialogue");
-        pWilliam.setDialogueGift("Gift dialogue");
-        pWilliam.setDialogueHappy("Happy dialogue");
+        pWilliam.setDialogueEvidence("(Soft banging is heard from a locked storage room. As you approach " 
+                + "you hear muffled speech coming from within. As you put your head to the door "
+                + "you make out a few hoarse words...)"
+                + "\nWhy is it that no one can hear my cries? I am here! Locked in this closet. Help!"
+                + "\n(You break the lock using a metal object. Once inside "
+                + "you find the Princess Williams behind boxes at the back. You realize why no one had heard her "
+                + "attempts to be found as you untie her from ropes that nearly kept her immobile. A cloth gag "
+                + "came away from her mouth nearly chewed in half by the princess' efforts. She wore riding garments "
+                + "not the bedclothes you thought she would be in. She sobbed gratitude for saving her but no tears fell "
+                + "from her bloodshot eyes. Dry cheeks had lines of salt on them as if she had cried until the "
+                + "tears stopped coming. A voice calls from the door surprising you and the princess; she instinctively "
+                + "pulls a little closer to you.)"
+                + "\nWho's in there?"
+                + "\n(You stand pulling up the princess with you. You see an old thin man in the doorway, you remeber him "
+                + "as the keeper of the stables. The old man upon seeing you and the princess quickly begins talking.)"
+                + "\nMy life and family were threatened, I grieve for having done such a shameful thing. I could tell "
+                + "no one that the man hid the princess here. Now I am grateful because you have released me from that "
+                + "dreadful task. How can I help?"
+                + "\n(You had moved out of the storage room as he spoke and now laid the princess down on soft straw for "
+                + "she could not walk yet being tied up for so long. You tell the old man to get water first and then Lady "
+                + "Violet from the gardens. As youn stand you think...)"
+                + "\nHere is evidence to help convict the assailant and a witness to my saving her. I should go now to the "
+                + "audience chamber to speak to the servant there.");
+        pWilliam.setDialogueGift("Thank you so much for the kind gift. I do pink"
+                + " Lord Pharaoh, doth this mean you wish to court me?");
+        pWilliam.setDialogueHappy("With your's and Lord Canaway's invitation to the harvest "
+                + "festival I know that my father doth think highly of thee and him. I think the "
+                + "King will be most easily convinced to grant his permission to my hand in marriage. "
+                + "Thou art my preference Lord Pharaoh and I will tell my father so, but please ask sooner than later.");
         actors[Constants.PRINCESS_WILLIAM] = pWilliam;
         
         Actors qWilliam = new Actors("Queen Williams");
         qWilliam.setName("Queen Williams");
-        qWilliam.setDialogue("dialogue");
+        qWilliam.setDialogue("The Autumn colors of this garden refelct most closely the feeling in my heart. "
+                + "Lady Violet is the reason my heart is not full of Winter.");
         qWilliam.setHappiness(0);
         qWilliam.setHealth(100);
         qWilliam.setEvidence(true);
-        qWilliam.setDialogueEvidence("Evidence dialogue");
+        qWilliam.setDialogueEvidence("This bit of evidence is not much but it "
+                + "may help if yoiu find more.");
         actors[Constants.QUEEN_WILLIAM] = qWilliam;
         
         Actors kWilliam = new Actors("King Williams");
         kWilliam.setName("King Williams");
-        kWilliam.setDialogue("dialogue");
+        kWilliam.setDialogue("My daughter was found missing from her chambers this morning. "
+                + "I have locked and guarded all the gates since yesterday. This means "
+                + "she and the kidnapper is yet, hopefully, still in the castle. You and "
+                + "the other guests are all suspect. Clear your name, find my dughter, and "
+                + "discover who took her. Enjoy the festivities for you cannot leave the castle. "
+                + "Speak to my servant here in the Audience "
+                + "Chamber when you have found my dughter.");
         kWilliam.setHappiness(0);
         kWilliam.setHealth(100);
         actors[Constants.KING_WILLIAM] = kWilliam;
         
         Actors servantC = new Actors("Servant Charles");
         servantC.setName("Servant Charles");
-        servantC.setDialogue("dialogue");
+        servantC.setDialogue("It seems you have not found the Princess. It matters not if you "
+                + "have evidence. You are still a suspect like all the other guests who have brought "
+                + "in the their \"evidences.\" Go try again and please don't waste my time.");
         servantC.setHappiness(0);
         servantC.setHealth(100);
         actors[Constants.SERVANT_CHARLES] = servantC;
         
         Actors servantD = new Actors("Servant David");
         servantD.setName("Servant David");
-        servantD.setDialogue("dialogue");
+        servantD.setDialogue("dialogue with Servant David");
         servantD.setHappiness(0);
         servantD.setHealth(100);
         actors[Constants.SERVANT_DAVID] = servantD;
         
         Actors servantL = new Actors("Servant Lilly");
         servantL.setName("Servant Lilly");
-        servantL.setDialogue("dialogue");
+        servantL.setDialogue("Oh! I am embarrased Lord Pharaoh. To be caught not working today. "
+                + "It's just that, well Lord Canaway is so handsome.... I mean! I have to go get "
+                + "rolls from the Kitchen please excuse me.");
         servantL.setHappiness(0);
         servantL.setHealth(100);
         actors[Constants.SERVANT_LILLY] = servantL;
@@ -486,7 +542,12 @@ public class GameControl {
         instances[Constants.KING_RESTROOM_INSTANCE] = kingsRRInstance;
 
         InstanceLocation gardenInstance = new InstanceLocation();
-        gardenInstance.setDescription("Description of Room");
+        gardenInstance.setDescription("The gardens are a most pleasent place to spend your time "
+                + "outdoors. The care and design create a breathtaking expose of nature while providing "
+                + "plenty of room for play and sitting. A quiet place to relax or find solace, you walk "
+                + "through the somewhat familiar gardens thinking of the lost princess whom you had played "
+                + "with as children in that same garden. Admiring the display of autumn colors you find "
+                + "the Queen and Lady Violet sitting with a view of the festival in the courtyard in front of them.");
         gardenInstance.setName("Garden");
         gardenInstance.setItemsStored(null);
         gardenInstance.setEnergyUsed(10);
@@ -499,7 +560,18 @@ public class GameControl {
         instances[Constants.GARDEN_INSTANCE] = gardenInstance;
         
         InstanceLocation courtyardInstance = new InstanceLocation();
-        courtyardInstance.setDescription("Description of Room");
+        courtyardInstance.setDescription("The courtyard is laid out with diverse games and stalls full of aromatic "
+                + "foods and goods. As you wonder what to try your hand at first you notice Lord Canaway "
+                + "and Duke Frederick playing thier skills of swordsmanship against one another."
+                + "Watching for a minute you see Canaway's youthful figure dance around the "
+                + "older Duke taking the offensive. Frederick's stolid figure displayed his "
+                + "skill and age as he nay moved but parried and blocked each strike. You sumise "
+                + "that if Canaway cannot land a strike in the first two minutes then Frederick "
+                + "will counter when he tires and so win. As you "
+                + "look away you notice the youthfull Servant Lilly a little ways off and "
+                + "watching the two swordsman. This makes you notice her for an additional "
+                + "moment and you thought you could see on her face more than respect for "
+                + "the skill of sword being displayed.");
         courtyardInstance.setName("Courtyard");
         courtyardInstance.setItemsStored(null);
         courtyardInstance.setEnergyUsed(10);
@@ -525,7 +597,7 @@ public class GameControl {
         instances[Constants.RESTROOM_INSTANCE] = restroomInstance;
         
         InstanceLocation kitchenInstance = new InstanceLocation();
-        kitchenInstance.setDescription("Description of Room");
+        kitchenInstance.setDescription("Description of Kitchen, Smells really good.");
         kitchenInstance.setName("Kitchen");
         kitchenInstance.setItemsStored(null);
         kitchenInstance.setEnergyUsed(10);
@@ -538,7 +610,7 @@ public class GameControl {
         instances[Constants.KITCHEN_INSTANCE] = kitchenInstance;
         
         InstanceLocation chamberInstance = new InstanceLocation();
-        chamberInstance.setDescription("Description of Room");
+        chamberInstance.setDescription("Description of Audience Chamber");
         chamberInstance.setName("Audience Chamber");
         chamberInstance.setItemsStored(null);
         chamberInstance.setEnergyUsed(10);
@@ -551,7 +623,8 @@ public class GameControl {
         instances[Constants.CHAMBER_INSTANCE] = chamberInstance;
         
         InstanceLocation hallInstance = new InstanceLocation();
-        hallInstance.setDescription("Description of Room");
+        hallInstance.setDescription("Description of Dining Hall. There are settings "
+                + "for a feast; likely not to happen now....");
         hallInstance.setName("Dining Hall");
         hallInstance.setItemsStored(null);
         hallInstance.setEnergyUsed(10);
@@ -564,7 +637,8 @@ public class GameControl {
         instances[Constants.HALL_INSTANCE] = hallInstance;
         
         InstanceLocation libraryInstance = new InstanceLocation();
-        libraryInstance.setDescription("Description of Room");
+        libraryInstance.setDescription("Description Library. There are lots of books! "
+                + "Note: desks and sofas too. Well lit with windows and many candles about the room.");
         libraryInstance.setName("Library");
         libraryInstance.setItemsStored(null);
         libraryInstance.setEnergyUsed(10);
