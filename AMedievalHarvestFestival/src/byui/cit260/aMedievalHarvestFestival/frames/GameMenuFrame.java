@@ -61,6 +61,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
         jlGameMenuHeading = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtMessage = new javax.swing.JTextArea();
+        jbMatchingTest = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -226,44 +227,54 @@ public class GameMenuFrame extends javax.swing.JFrame {
         jtMessage.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jtMessage);
 
+        jbMatchingTest.setText("jButton1");
+        jbMatchingTest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbMatchingTestActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpGameMenuBodyLayout = new javax.swing.GroupLayout(jpGameMenuBody);
         jpGameMenuBody.setLayout(jpGameMenuBodyLayout);
         jpGameMenuBodyLayout.setHorizontalGroup(
             jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jpGameMenuHeading, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpGameMenuBodyLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbExit, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(109, 109, 109))
             .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
-                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
-                        .addComponent(jbViewInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbEstimateDimensions, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
-                        .addComponent(jbLookAtMap, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbEstimateFilling, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
-                        .addComponent(jbExamineLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbEstimateThirst, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
-                        .addComponent(jbMoveToLoation, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbEstimateHunger, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpGameMenuBodyLayout.createSequentialGroup()
-                        .addComponent(jbMemoryGame, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jbMatchingTest)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbStartConversation, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jbExit, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(109, 109, 109))
                     .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
-                        .addComponent(jbReadNurseryRhyme)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jbSaveGame, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
+                        .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1)
+                            .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                                .addComponent(jbViewInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbEstimateDimensions, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                                .addComponent(jbLookAtMap, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbEstimateFilling, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                                .addComponent(jbExamineLocation, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbEstimateThirst, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                                .addComponent(jbMoveToLoation, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbEstimateHunger, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpGameMenuBodyLayout.createSequentialGroup()
+                                .addComponent(jbMemoryGame, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbStartConversation, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
+                                .addComponent(jbReadNurseryRhyme)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jbSaveGame, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())))
         );
         jpGameMenuBodyLayout.setVerticalGroup(
             jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -294,7 +305,9 @@ public class GameMenuFrame extends javax.swing.JFrame {
                     .addComponent(jbReadNurseryRhyme, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSaveGame))
                 .addGap(18, 18, 18)
-                .addComponent(jbExit)
+                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbExit)
+                    .addComponent(jbMatchingTest))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                 .addContainerGap())
@@ -397,6 +410,13 @@ public class GameMenuFrame extends javax.swing.JFrame {
     private void jbSaveGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveGameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSaveGameActionPerformed
+
+    private void jbMatchingTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMatchingTestActionPerformed
+        // TODO add your handling code here:
+        MatchingTestFrame matchingTest = new MatchingTestFrame();
+        matchingTest.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jbMatchingTestActionPerformed
 
     public JPanel getjPanel1() {
         return jPanel1;
@@ -577,6 +597,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
     private javax.swing.JButton jbExamineLocation;
     private javax.swing.JButton jbExit;
     private javax.swing.JButton jbLookAtMap;
+    private javax.swing.JButton jbMatchingTest;
     private javax.swing.JButton jbMemoryGame;
     private javax.swing.JButton jbMoveToLoation;
     private javax.swing.JButton jbReadNurseryRhyme;
