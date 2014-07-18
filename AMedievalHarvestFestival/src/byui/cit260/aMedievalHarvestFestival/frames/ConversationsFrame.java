@@ -89,6 +89,7 @@ public class ConversationsFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);

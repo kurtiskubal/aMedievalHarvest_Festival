@@ -104,7 +104,7 @@ public class GameControl {
         clueItem4.setDescription("A note from the conversation with the Princess"
                 + " that details, that she only"
                 +"\n saw that her kidnapper had a shoe with the sole marked 'SS'.");
-        clueItem4.setItemQuanity(1);
+        clueItem4.setItemQuanity(0);
         inventory[Constants.EVIDENCE_FOUR_ITEM] = clueItem4;
         
         InventoryItem clueItem5 = new ClueItem("Sample", 0);
@@ -168,7 +168,7 @@ public class GameControl {
         water.setName("Water                  ");
         water.setInventoryType(3);
         water.setDescription("H20, or as it is now called, clear beer.");
-        water.setItemQuanity(0);
+        water.setItemQuanity(2);
         inventory[Constants.WATER] = water;
         
         InventoryItem cider = new BeverageItem(3);
@@ -286,7 +286,7 @@ public class GameControl {
         
         
         Actors pWilliam = new Actors("Princess Williams");
-        pWilliam.setName("Princess William");
+        pWilliam.setName("Princess Williams");
         pWilliam.setDialogue(" dialogue with Princess");
         pWilliam.setHappiness(0);
         pWilliam.setHealth(100);

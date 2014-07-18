@@ -21,6 +21,7 @@ public class ConversationControl {
         boolean evidence = person.isEvidence();
         InventoryItem[] plyrInventory;
         plyrInventory = AMedievalHarvestFestival.getCurrentGame().getInventory();
+        
         boolean gift = false;
         String actorSays = null;
         if(plyrInventory[Constants.GIFT].getItemQuanity() > 0 
@@ -35,6 +36,7 @@ public class ConversationControl {
             switch (person.getName()) {
                 case "Queen Williams":
                     plyrInventory[Constants.EVIDENCE_THREE_ITEM].setItemQuanity(1);
+                    
                     person.setEvidence(false);
                     break;
                 case "Princess Williams":
@@ -48,20 +50,24 @@ public class ConversationControl {
             actorSays = person.getDialogueHappy();
         }
         
-        else if(gift == true){
-            actorSays = person.getDialogueGift();
+        else if((person.getName().matches("Lord Canaway") || 
+                person.getName().matches("Princess Williams") ||
+                person.getName().matches("Lady Violet")) && gift == true){
             switch (person.getName()) {
                 case "Lord Canaway":
                     plyrInventory[Constants.GENERIC_GIFT].setItemQuanity(0);
                     person.setHappiness(10);
+                    actorSays = person.getDialogueGift();
                     break;
                 case "Princess Williams":
                     plyrInventory[Constants.GIFT].setItemQuanity(0);
                     person.setHappiness(10);
+                    actorSays = person.getDialogueGift();
                     break;
                 case "Lady Violet":
                     plyrInventory[Constants.AWESOME_GIFT].setItemQuanity(0);
                     person.setHappiness(10);
+                    actorSays = person.getDialogueGift();
                     break;
             }
         }
