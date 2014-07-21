@@ -213,21 +213,24 @@ public class GameControl {
         InventoryItem genericGift = new GiftItem(10);
         genericGift.setName("Gift for Canaway          ");
         genericGift.setInventoryType(4);
-        genericGift.setDescription("A set of decorated leather riding boots");
+        genericGift.setDescription("A set of decorated leather riding boots. "
+                + "Gifts are used automatically when you talk to certain people.");
         genericGift.setItemQuanity(1);
         inventory[Constants.GENERIC_GIFT] = genericGift;
         
         InventoryItem gift = new GiftItem(30);
         gift.setName("Gift for Princess         ");
         gift.setInventoryType(4);
-        gift.setDescription("A leather braclet with charms.");
+        gift.setDescription("A leather braclet with charms. "
+                + "Gifts are used automatically when you talk to certain people.");
         gift.setItemQuanity(1);
         inventory[Constants.GIFT] = gift;
         
         InventoryItem awesomeGift = new GiftItem(50);
         awesomeGift.setName("Gift for Violet           ");
         awesomeGift.setInventoryType(4);
-        awesomeGift.setDescription("A leather braclet with charms");
+        awesomeGift.setDescription("A leather braclet with charms. "
+                + "Gifts are used automatically when you talk to certain people.");
         awesomeGift.setItemQuanity(1);
         inventory[Constants.AWESOME_GIFT] = awesomeGift;
        
@@ -321,7 +324,7 @@ public class GameControl {
                 + "dreadful task. How can I help?"
                 + "\n(You had moved out of the storage room as he spoke and now laid the princess down on soft straw for "
                 + "she could not walk yet being tied up for so long. You tell the old man to get water first and then Lady "
-                + "Violet from the gardens. As youn stand you think...)"
+                + "Violet from the gardens. As you stand you think...)"
                 + "\nHere is evidence to help convict the assailant and a witness to my saving her. I should go now to the "
                 + "audience chamber to speak to the servant there.");
         pWilliam.setDialogueGift("Thank you so much for the kind gift. I do pink"
@@ -472,7 +475,7 @@ public class GameControl {
         
         InstanceLocation lordCInstance = new InstanceLocation();
         lordCInstance.setDescription("Description of Room");
-        lordCInstance.setName("Lord Caraway's Room");
+        lordCInstance.setName("Lord Canaway's Room");
         lordCInstance.setItemsStored(null);
         lordCInstance.setEnergyUsed(10);
         lordCInstance.setFluidsUsed(5);
@@ -513,7 +516,9 @@ public class GameControl {
         instances[Constants.SERVANTS_QUARTERS_INSTANCE] = servantsInstance;
         
         InstanceLocation princessInstance = new InstanceLocation();
-        princessInstance.setDescription("Description of Room");
+        princessInstance.setDescription("Description of Room. There is note just peeking from under the pillow. "
+                + "Reading it, it seems that a friend has invited the princess out for an early morning ride in the countryside. "
+                + "Perhaps you can find out who sent the princess the message.");
         princessInstance.setName("Princess Williams' Room");
         princessInstance.setItemsStored(null);
         princessInstance.setEnergyUsed(10);
@@ -661,7 +666,7 @@ public class GameControl {
         instances[Constants.LIBRARY_INSTANCE] = libraryInstance;
     
         InstanceLocation poolInstance = new InstanceLocation();
-        poolInstance.setDescription("Description of Room");
+        poolInstance.setDescription("Description of Pool");
         poolInstance.setName("Pool");
         poolInstance.setItemsStored(null);
         poolInstance.setEnergyUsed(10);
