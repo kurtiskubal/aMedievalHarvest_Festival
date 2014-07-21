@@ -9,6 +9,7 @@ package byui.cit260.aMedievalHarvestFestival.frames;
 import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import static byui.cit260.aMedievalHarvestFestival.control.GameControl.greatestAmount;
+import byui.cit260.aMedievalHarvestFestival.control.InventoryControl;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
 import byui.cit260.aMedievalHarvestFestival.view.GameMenuView;
 import java.awt.event.ActionListener;
@@ -53,6 +54,7 @@ public class InventoryFrame extends javax.swing.JFrame {
         jlExamine = new javax.swing.JLabel();
         jcItems = new javax.swing.JComboBox();
         jbExamine = new javax.swing.JButton();
+        jcItems2 = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -143,7 +145,8 @@ public class InventoryFrame extends javax.swing.JFrame {
                                 .addComponent(jbGreatestQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
                                 .addComponent(jcItems, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jlExamine)
-                            .addComponent(jbExamine, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jbExamine, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcItems2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(20, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpInventoryBodyLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -160,7 +163,8 @@ public class InventoryFrame extends javax.swing.JFrame {
                         .addComponent(jScrollPane1)
                         .addContainerGap())
                     .addGroup(jpInventoryBodyLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                        .addComponent(jcItems2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jbUseITem, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jlExamine)
@@ -191,6 +195,10 @@ public class InventoryFrame extends javax.swing.JFrame {
 
     private void jbUseITemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbUseITemActionPerformed
         // TODO add your handling code here:
+        InventoryItem item = (InventoryItem)jcItems2.getSelectedItem();
+        showMessageDialog(null, InventoryControl.useItem(item));
+        AMedievalHarvestFestival.getGameMenu().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jbUseITemActionPerformed
 
     private void jbGreatestQuantityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbGreatestQuantityActionPerformed
@@ -332,6 +340,24 @@ public class InventoryFrame extends javax.swing.JFrame {
         this.jlExamine = jlExamine;
     }
 
+    public JButton getJbExamine() {
+        return jbExamine;
+    }
+
+    public void setJbExamine(JButton jbExamine) {
+        this.jbExamine = jbExamine;
+    }
+
+    public JComboBox getJcItems2() {
+        return jcItems2;
+    }
+
+    public void setJcItems2(JComboBox jcItems2) {
+        this.jcItems2 = jcItems2;
+    }
+    
+    
+
     
     
     
@@ -348,6 +374,7 @@ public class InventoryFrame extends javax.swing.JFrame {
     private javax.swing.JButton jbGreatestQuantity;
     private javax.swing.JButton jbUseITem;
     private javax.swing.JComboBox jcItems;
+    private javax.swing.JComboBox jcItems2;
     private javax.swing.JLabel jlExamine;
     private javax.swing.JLabel jlInventoryTitle;
     private javax.swing.JPanel jpInventoryBody;

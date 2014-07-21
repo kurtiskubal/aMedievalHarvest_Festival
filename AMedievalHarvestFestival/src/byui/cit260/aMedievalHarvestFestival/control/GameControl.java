@@ -116,6 +116,7 @@ public class GameControl {
         
         InventoryItem apple = new FoodItem(1);
         apple.setName("Apple              ");
+        apple.setConsumableType(1);
         apple.setInventoryType(2);
         apple.setDescription("A delicious hand-picked apple.");
         apple.setItemQuanity(0);
@@ -123,6 +124,7 @@ public class GameControl {
         
         InventoryItem bread = new FoodItem(2);
         bread.setName("Bread              ");
+        bread.setConsumableType(2);
         bread.setInventoryType(2);
         bread.setDescription("Fresh, delicious, homemade bread.");
         bread.setItemQuanity(1);
@@ -130,6 +132,7 @@ public class GameControl {
         
         InventoryItem corn = new FoodItem(3);
         corn.setName("Corn               ");
+        corn.setConsumableType(3);
         corn.setInventoryType(2);
         corn.setDescription("Freshly husked corn from the William's fields.");
         corn.setItemQuanity(0);
@@ -137,6 +140,7 @@ public class GameControl {
         
         InventoryItem beans = new FoodItem(4);
         beans.setName("Beans              ");
+        beans.setConsumableType(4);
         beans.setInventoryType(2);
         beans.setDescription("Delicious black beans.");
         beans.setItemQuanity(0);
@@ -144,6 +148,7 @@ public class GameControl {
         
         InventoryItem peas = new FoodItem(5);
         peas.setName("Peas               ");
+        peas.setConsumableType(5);
         peas.setInventoryType(2);
         peas.setDescription("Freshly harvested peas with churned butter.");
         peas.setItemQuanity(0);
@@ -152,6 +157,7 @@ public class GameControl {
         InventoryItem ale = new BeverageItem(1);
         ale.setName("Ale                    ");
         ale.setInventoryType(3);
+        ale.setConsumableType(1);
         ale.setDescription("A dark-colored alcoholic liquid, smells funny.");
         ale.setItemQuanity(0);
         inventory[Constants.ALE] = ale;
@@ -159,6 +165,7 @@ public class GameControl {
         InventoryItem mead = new BeverageItem(2);
         mead.setName("Mead                   ");
         mead.setInventoryType(3);
+        mead.setConsumableType(2);
         mead.setDescription("An alcoholic liquid with the taste of honey and "
                 + "water.");
         mead.setItemQuanity(0);
@@ -167,6 +174,7 @@ public class GameControl {
         InventoryItem water = new BeverageItem(5);
         water.setName("Water                  ");
         water.setInventoryType(3);
+        water.setConsumableType(5);
         water.setDescription("H20, or as it is now called, clear beer.");
         water.setItemQuanity(2);
         inventory[Constants.WATER] = water;
@@ -174,6 +182,7 @@ public class GameControl {
         InventoryItem cider = new BeverageItem(3);
         cider.setName("Cider                  ");
         cider.setInventoryType(3);
+        cider.setConsumableType(3);
         cider.setDescription("Old apple juice.");
         cider.setItemQuanity(0);
         inventory[Constants.CIDER] = cider;
@@ -181,13 +190,14 @@ public class GameControl {
         InventoryItem wine = new BeverageItem(4);
         wine.setName("Wine                   ");
         wine.setInventoryType(3);
+        wine.setConsumableType(4);
         wine.setDescription("Old grape juice.");
         wine.setItemQuanity(0);
         inventory[Constants.WINE] = wine;
         
         InventoryItem dagger = new WeaponItem();
         dagger.setName("Dagger               ");
-        dagger.setInventoryType(4);
+        dagger.setInventoryType(5);
         dagger.setDescription("A deadly, sharp, short blade. Looks like it can "
                 + "be hidden easily");
         dagger.setItemQuanity(0);
@@ -195,7 +205,7 @@ public class GameControl {
         
         InventoryItem sword = new WeaponItem();
         sword.setName("Sword                ");
-        sword.setInventoryType(4);
+        sword.setInventoryType(5);
         sword.setDescription("A long, edged weapon.");
         sword.setItemQuanity(0);
         inventory[Constants.SWORD] = sword;

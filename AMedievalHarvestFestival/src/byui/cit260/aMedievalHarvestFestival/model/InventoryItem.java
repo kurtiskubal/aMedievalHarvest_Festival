@@ -22,7 +22,8 @@ public class InventoryItem implements Serializable {
     private Integer inventoryType;
     private Integer itemQuanity;
     private String description;
-
+    private Integer consumableType;
+    
     public InventoryItem() {
     }
 
@@ -58,6 +59,18 @@ public class InventoryItem implements Serializable {
         this.description = description;
     }
 
+    public Integer getConsumableType() {
+        return consumableType;
+    }
+
+    public void setConsumableType(Integer consumableType) {
+        this.consumableType = consumableType;
+    }
+
+    
+
+    
+    
     @Override
     public String toString() {
         return "InventoryItem{" + "inventoryType=" + inventoryType + ", itemQuanity=" + itemQuanity + ", description=" + description + '}';

@@ -8,6 +8,10 @@ package byui.cit260.aMedievalHarvestFestival.frames;
 
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.model.MatchingGameLocation;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.TableModel;
 
 /**
@@ -34,9 +38,12 @@ public class MatchingTestFrame extends javax.swing.JFrame {
         {
             for (int j = 0; j < column; j++)
             {
-                if (matches[i][j].getMatchingInstance().isChoosen() == false)
+                if (matches[i][j].getMatchingInstance().isChoosen() == true)
+                    tableModel.setValueAt(matches[i][j].getMatchingInstance().getValue(), i, j);
+                else if (matches[i][j].getMatchingInstance().isMatched() == true)
+                    tableModel.setValueAt("OK", i, j);
+                else
                     tableModel.setValueAt('?', i, j);
-                
             }
         }
         
@@ -78,6 +85,11 @@ public class MatchingTestFrame extends javax.swing.JFrame {
             }
         ));
         jtMatching.setRowHeight(39);
+        jtMatching.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jtMatchingMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jtMatching);
 
         javax.swing.GroupLayout jpMatchingTestBodyLayout = new javax.swing.GroupLayout(jpMatchingTestBody);
@@ -113,6 +125,22 @@ public class MatchingTestFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jtMatchingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtMatchingMouseClicked
+        // TODO add your handling code here:
+        jtMatching.addMouseListener(new MouseAdapter() {
+    
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if (e.getClickCount() == 2) {
+                    JTable target = (JTable)e.getSource();
+                    int row = target.getSelectedRow();
+                    int column = target.getSelectedColumn();
+                    JOptionPane.showMessageDialog(target, row + ',' + column, "Message", JOptionPane.INFORMATION_MESSAGE);
+                }
+            }
+});
+    }//GEN-LAST:event_jtMatchingMouseClicked
 
     /**
      * @param args the command line arguments

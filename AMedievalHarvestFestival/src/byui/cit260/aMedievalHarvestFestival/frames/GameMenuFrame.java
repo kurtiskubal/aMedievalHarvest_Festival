@@ -61,7 +61,6 @@ public class GameMenuFrame extends javax.swing.JFrame {
         jlGameMenuHeading = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtMessage = new javax.swing.JTextArea();
-        jbMatchingTest = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -227,13 +226,6 @@ public class GameMenuFrame extends javax.swing.JFrame {
         jtMessage.setWrapStyleWord(true);
         jScrollPane1.setViewportView(jtMessage);
 
-        jbMatchingTest.setText("jButton1");
-        jbMatchingTest.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbMatchingTestActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jpGameMenuBodyLayout = new javax.swing.GroupLayout(jpGameMenuBody);
         jpGameMenuBody.setLayout(jpGameMenuBodyLayout);
         jpGameMenuBodyLayout.setHorizontalGroup(
@@ -243,8 +235,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpGameMenuBodyLayout.createSequentialGroup()
-                        .addComponent(jbMatchingTest)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jbExit, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(109, 109, 109))
                     .addGroup(jpGameMenuBodyLayout.createSequentialGroup()
@@ -305,9 +296,7 @@ public class GameMenuFrame extends javax.swing.JFrame {
                     .addComponent(jbReadNurseryRhyme, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jbSaveGame))
                 .addGap(18, 18, 18)
-                .addGroup(jpGameMenuBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jbExit)
-                    .addComponent(jbMatchingTest))
+                .addComponent(jbExit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                 .addContainerGap())
@@ -364,6 +353,9 @@ public class GameMenuFrame extends javax.swing.JFrame {
         for (InventoryItem item : items) {
             inventoryMenu.getJcItems().addItem(item);
         }
+        for (InventoryItem item : items) {
+            inventoryMenu.getJcItems2().addItem(item);
+        }
         inventoryMenu.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jbViewInventoryActionPerformed
@@ -412,13 +404,6 @@ public class GameMenuFrame extends javax.swing.JFrame {
     private void jbSaveGameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSaveGameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jbSaveGameActionPerformed
-
-    private void jbMatchingTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbMatchingTestActionPerformed
-        // TODO add your handling code here:
-        MatchingTestFrame matchingTest = new MatchingTestFrame();
-        matchingTest.setVisible(true);
-        this.setVisible(false);
-    }//GEN-LAST:event_jbMatchingTestActionPerformed
 
     public JPanel getjPanel1() {
         return jPanel1;
@@ -599,7 +584,6 @@ public class GameMenuFrame extends javax.swing.JFrame {
     private javax.swing.JButton jbExamineLocation;
     private javax.swing.JButton jbExit;
     private javax.swing.JButton jbLookAtMap;
-    private javax.swing.JButton jbMatchingTest;
     private javax.swing.JButton jbMemoryGame;
     private javax.swing.JButton jbMoveToLoation;
     private javax.swing.JButton jbReadNurseryRhyme;
