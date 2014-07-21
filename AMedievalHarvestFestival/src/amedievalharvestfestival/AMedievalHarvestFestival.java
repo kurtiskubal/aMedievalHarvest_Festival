@@ -11,6 +11,7 @@ import byui.cit260.aMedievalHarvestFestival.frames.GameMenuFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.InventoryFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.MainFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.MapDimensionsFrame;
+import byui.cit260.aMedievalHarvestFestival.frames.MapFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.MatchingGameFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.MoveLocationFrame;
 import byui.cit260.aMedievalHarvestFestival.frames.StartProgramFrame;
@@ -32,6 +33,7 @@ public class AMedievalHarvestFestival {
     private static MatchingGameFrame matchingGameMenu = null;
     private static MapDimensionsFrame mapDimensionsFrame = null;
     private static MoveLocationFrame moveLocationMenu = null;
+    private static MapFrame mapFrame = null;
 
     
     /**
@@ -124,6 +126,14 @@ public class AMedievalHarvestFestival {
 
     public static void setMoveLocationMenu(MoveLocationFrame moveLocationMenu) {
         AMedievalHarvestFestival.moveLocationMenu = moveLocationMenu;
+    }
+
+    public static MapFrame getMapFrame() {
+        return mapFrame;
+    }
+
+    public static void setMapFrame(MapFrame mapFrame) {
+        AMedievalHarvestFestival.mapFrame = mapFrame;
     }
     
     

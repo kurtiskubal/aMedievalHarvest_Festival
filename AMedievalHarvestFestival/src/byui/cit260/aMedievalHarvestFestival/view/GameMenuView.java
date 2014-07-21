@@ -231,7 +231,53 @@ public class GameMenuView extends MenuView{
         
         
     }
-    
+    public static String displayMapString() {
+        String map = null;
+        int lineLength = 0;
+        
+        Location[][] locations = GameControl.getMapLocations();
+        int noColumns = locations[0].length;
+        
+        
+        for (Location[] row : locations) {
+           int count = 0;
+            
+           map += ("\n-------------------------------\n");
+            
+            for (int column = 0; column < noColumns; column++) {
+                
+                map += ("|");
+                Location location = row[column];
+                count = count + 1;
+                if (location.isVisited()) {
+                    InstanceLocation instance = location.getInstance();
+                    if (count == 5) {
+                        map += (instance.getMapSymbol() + "|");
+                        count = 0;
+                    }
+                    else {
+                      map += (instance.getMapSymbol());
+                      
+                    }
+                }
+                else {
+                    if (count == 5) {
+                      map += (" ??? " + "|"); 
+                      count = 0;
+                    }
+                    else {
+                        map += (" ??? ");
+                       
+                    }
+                }
+            
+            }
+            
+        }
+        
+        map += ("\n-------------------------------");
+        return map;
+    }
     public void displayMap() {
         int lineLength = 0;
         
