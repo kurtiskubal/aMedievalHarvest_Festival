@@ -340,6 +340,11 @@ public class GameMenuFrame extends javax.swing.JFrame {
 
     private void jbLookAtMapActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLookAtMapActionPerformed
         // TODO add your handling code here:
+        MapFrame mapFrame = new MapFrame();
+        AMedievalHarvestFestival.setMapFrame(mapFrame);
+        mapFrame.getJtMap().setText(GameMenuView.displayMapString());
+        mapFrame.setVisible(true);
+        this.setVisible(false);
         
     }//GEN-LAST:event_jbLookAtMapActionPerformed
 

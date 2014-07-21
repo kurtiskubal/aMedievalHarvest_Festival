@@ -17,41 +17,17 @@ public class ConsumableControl {
     public static String getPlayerHunger(Player player) {
         double hungerEstimated;
         hungerEstimated = player.getHunger();
-        String message = null;
-        String finalMessage = null;
-        if (hungerEstimated == 0)
-            message = "You are full.";
-        else if (hungerEstimated >= 30)
-            message = "You are getting hungry, but you'll be fine.";
-        else if (hungerEstimated >= 60)
-            message = "You could go for a snack.";
-        else if (hungerEstimated >= 90)
-            message = "Your stomach is making audible rumblings.";
-        else if (hungerEstimated == 100)
-            message = "Luckily you are in a castle filled with food,"
-                    + "\nbecause you are starving.";
-        finalMessage = (player.getName() + ", Lord Pharoah's hunger is " + hungerEstimated + ".\n"
-                                            + message);
+        String finalMessage;
+        
+        finalMessage = (player.getName() + ", Lord Pharoah's hunger is " + hungerEstimated + ".\n");
         return finalMessage;
     }
     
     public static String getPlayerThirst(Player player) {
         int thirstEstimated;
         thirstEstimated = (int) player.getThirst();
-        String message = null;
-        String finalMessage = null;
-        if (thirstEstimated == 0)
-            message = "You are quenched. The liquid in your stomach is sloshing a little bit.";
-        else if (thirstEstimated >= 30)
-            message = "You are getting thirsty, but you'll be fine.";
-        else if (thirstEstimated >= 60)
-            message = "You could go for a drink.";
-        else if (thirstEstimated >= 90)
-            message = "Your tongue is dry.";
-        else if (thirstEstimated == 100)
-            message = "You cannot speak. You need to drink something.";
-        finalMessage = (player.getName() + ", Lord Pharoah's thirst is " + thirstEstimated + ".\n"
-                                            + message);
+        String finalMessage;
+        finalMessage = (player.getName() + ", Lord Pharoah's thirst is " + thirstEstimated + ".\n");
     return finalMessage;
 }
     

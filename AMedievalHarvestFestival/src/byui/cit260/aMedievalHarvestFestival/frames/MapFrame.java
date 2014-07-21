@@ -6,6 +6,13 @@
 
 package byui.cit260.aMedievalHarvestFestival.frames;
 
+import amedievalharvestfestival.AMedievalHarvestFestival;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 /**
  *
  * @author Kurt
@@ -67,7 +74,12 @@ public class MapFrame extends javax.swing.JFrame {
         jtMap.setRows(5);
         jScrollPane1.setViewportView(jtMap);
 
-        jbExit.setText("jButton1");
+        jbExit.setText("Exit");
+        jbExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbExitActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMapBodyLayout = new javax.swing.GroupLayout(jpMapBody);
         jpMapBody.setLayout(jpMapBodyLayout);
@@ -80,8 +92,8 @@ public class MapFrame extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(jpMapBodyLayout.createSequentialGroup()
                 .addGap(164, 164, 164)
-                .addComponent(jbExit)
-                .addContainerGap(163, Short.MAX_VALUE))
+                .addComponent(jbExit, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(148, Short.MAX_VALUE))
         );
         jpMapBodyLayout.setVerticalGroup(
             jpMapBodyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,6 +119,12 @@ public class MapFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbExitActionPerformed
+        // TODO add your handling code here:
+         AMedievalHarvestFestival.getGameMenu().setVisible(true);
+         this.dispose();
+    }//GEN-LAST:event_jbExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,6 +161,55 @@ public class MapFrame extends javax.swing.JFrame {
         });
     }
 
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JButton getJbExit() {
+        return jbExit;
+    }
+
+    public void setJbExit(JButton jbExit) {
+        this.jbExit = jbExit;
+    }
+
+    public JLabel getJlMapTitle() {
+        return jlMapTitle;
+    }
+
+    public void setJlMapTitle(JLabel jlMapTitle) {
+        this.jlMapTitle = jlMapTitle;
+    }
+
+    public JPanel getJpMapBody() {
+        return jpMapBody;
+    }
+
+    public void setJpMapBody(JPanel jpMapBody) {
+        this.jpMapBody = jpMapBody;
+    }
+
+    public JPanel getJpMapHead() {
+        return jpMapHead;
+    }
+
+    public void setJpMapHead(JPanel jpMapHead) {
+        this.jpMapHead = jpMapHead;
+    }
+
+    public JTextArea getJtMap() {
+        return jtMap;
+    }
+
+    public void setJtMap(JTextArea jtMap) {
+        this.jtMap = jtMap;
+    }
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton jbExit;
