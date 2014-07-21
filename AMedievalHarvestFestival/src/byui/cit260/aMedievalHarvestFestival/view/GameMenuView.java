@@ -232,7 +232,7 @@ public class GameMenuView extends MenuView{
         
     }
     public static String displayMapString() {
-        String map = null;
+        String map = " ";
         int lineLength = 0;
         
         Location[][] locations = GameControl.getMapLocations();

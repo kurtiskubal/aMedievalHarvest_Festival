@@ -23,7 +23,7 @@ public class InventoryControl {
             FoodItem usedFood = new FoodItem(item.getConsumableType());
             double hunger = AMedievalHarvestFestival.getPlayer().getHunger();
             hunger -= 5;
-            if (hunger < 0)
+            if (hunger < 0){
                 hunger = 0;
             }
             AMedievalHarvestFestival.getPlayer().setHunger(hunger);
@@ -35,7 +35,7 @@ public class InventoryControl {
             BeverageItem usedBev = new BeverageItem(item.getConsumableType());
             double thirst = AMedievalHarvestFestival.getPlayer().getThirst();
             thirst -= 5;
-            if (thirst < 0)
+            if (thirst < 0){
                 thirst = 0;
             }
             AMedievalHarvestFestival.getPlayer().setThirst(thirst);
