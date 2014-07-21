@@ -27,14 +27,14 @@ public class FoodItem extends InventoryItem {
     //class instance variables
     private Integer foodType = 0;
     private final double weight = randomInRange(1, 10);
-    private final Double fillingFactor = weight * foodType;
+    private final double fillingFactor = weight * foodType;
     
 
     public FoodItem(int type) {
         foodType = type;
     }
     
-    public Double getFillingFactor() {
+    public double getFillingFactor() {
         return fillingFactor;
     }
 

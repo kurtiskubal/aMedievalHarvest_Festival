@@ -23,8 +23,9 @@ public class InventoryControl {
             FoodItem usedFood = new FoodItem(item.getConsumableType());
             double hunger = AMedievalHarvestFestival.getPlayer().getHunger();
             hunger -= usedFood.getFillingFactor();
-            if (hunger < 0)
+            if (hunger < 0){
                 hunger = 0;
+            }
             AMedievalHarvestFestival.getPlayer().setHunger(hunger);
             item.setItemQuanity(item.getItemQuanity() - 1);
             return "You have eaten " + item.getName() + "\n and it brought your hunger down to " +
@@ -34,8 +35,9 @@ public class InventoryControl {
             BeverageItem usedBev = new BeverageItem(item.getConsumableType());
             double thirst = AMedievalHarvestFestival.getPlayer().getThirst();
             thirst -= usedBev.getQuenchFactor();
-            if (thirst < 0)
+            if (thirst < 0){
                 thirst = 0;
+            }
             AMedievalHarvestFestival.getPlayer().setThirst(thirst);
             item.setItemQuanity(item.getItemQuanity() - 1);
             return "You drank " + item.getName() + "\n and it brought your thirst down to " +

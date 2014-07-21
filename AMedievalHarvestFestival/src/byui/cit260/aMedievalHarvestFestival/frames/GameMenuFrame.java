@@ -10,8 +10,6 @@ import amedievalharvestfestival.AMedievalHarvestFestival;
 import byui.cit260.aMedievalHarvestFestival.control.ConsumableControl;
 import byui.cit260.aMedievalHarvestFestival.control.GameControl;
 import byui.cit260.aMedievalHarvestFestival.model.InventoryItem;
-import byui.cit260.aMedievalHarvestFestival.model.MatchingGameLocation;
-import byui.cit260.aMedievalHarvestFestival.model.MatchingInstance;
 import byui.cit260.aMedievalHarvestFestival.view.GameMenuView;
 import javax.swing.JButton;
 import javax.swing.JLabel;
